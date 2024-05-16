@@ -1,7 +1,10 @@
 debug
 release
 .qtc_clangd
+.qmake.stash
 ffmpeg-master-latest-win64-gpl
 yt-dlp.exe
 params.json
 *.pro.user
+Makefile
+Makefile.*
