@@ -4,3 +4,4 @@ release
 ffmpeg-master-latest-win64-gpl
 yt-dlp.exe
 params.json
+*.pro.user
