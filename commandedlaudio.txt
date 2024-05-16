@@ -1,0 +1,1 @@
+yt-dlp.exe -x --audio-format mp3 --audio-quality 192 --ffmpeg-location C:\Users\rbarr\Desktop\ffmpeg-master-latest-win64-gpl\bin -o "%(title)s.%(ext)s" https://www.youtube.com/watch?v=7Q6S19Vvh6s
