@@ -76,6 +76,10 @@ private slots:
 
     void updateSliderValue(int value);
 
+    void updateSliderRange(int value);
+
+    void updateMusicLabel(QUrl musicName);
+
 private:
 
 };

@@ -45,6 +45,14 @@ void audioReader::setPosition(int position){
 }
 
 void audioReader::updateSliderValue(){
-    cout << audioReader::player->position() << endl;
+    cout << "Audio position : " << audioReader::player->position() << endl;
+    emit updateSliderValueSignal(audioReader::player->position());
+
+}
+
+void audioReader::updateSliderRange(){
+    cout << "New audio duration : " << audioReader::player->duration() << endl;
+    emit updateSliderRangeSignal(audioReader::player->duration());
+    emit updateMusicNameSignal(QUrl(audioReader::player->source()));
 
 }

@@ -53,7 +53,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->playlistSelectionComboBox->setCurrentIndex(0);
 
-
 }
 
 MainWindow::~MainWindow()
@@ -248,4 +247,12 @@ void MainWindow::on_playPauseButton_clicked()
 
 void MainWindow::updateSliderValue(int value){
     ui->musicProressSlider->setValue(value);
+}
+
+void MainWindow::updateSliderRange(int value){
+    ui->musicProressSlider->setRange(0, value);
+}
+
+void MainWindow::updateMusicLabel(QUrl musicName){
+    ui->musicNameLabel->setText(musicName.toString());
 }

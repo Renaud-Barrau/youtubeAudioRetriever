@@ -46,6 +46,8 @@ int main(int argc, char *argv[]) {
     MainWindow window;
     paramFile paramFile("params.json");
 
+    //TEMP
+    // emit reader.sendDurationSignal(reader.player->duration());
 
 
 
@@ -103,6 +105,10 @@ int main(int argc, char *argv[]) {
 //      youtubeDownloader -> window
     QObject::connect(&youtubeDownloader, SIGNAL(progressBarUpdate(int)), &window, SLOT(updateProgressBarValue(int)));
 
+    //      raeder -> window
+    QObject::connect(&reader, SIGNAL(updateSliderValueSignal(int)),&window, SLOT(updateSliderValue(int)));
+    QObject::connect(&reader, SIGNAL(updateSliderRangeSignal(int)),&window, SLOT(updateSliderRange(int)));
+    QObject::connect(&reader, SIGNAL(updateMusicNameSignal(QUrl)),&window, SLOT(updateMusicLabel(QUrl)));
 
 
 
