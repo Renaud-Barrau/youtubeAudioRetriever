@@ -1,0 +1,41 @@
+\doxysection{paramfile.\+h}
+\hypertarget{paramfile_8h_source}{}\label{paramfile_8h_source}\mbox{\hyperlink{paramfile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PARAMFILE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PARAMFILE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QTextStream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classparam_file}{paramFile}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classparam_file_af7159f932c4149e9c732718e687a09de}{paramFile}}(\textcolor{keyword}{const}\ QString\ \&filename)\ :\ m\_filename(filename)\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ QString\ \mbox{\hyperlink{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0}{value}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ signals:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparam_file_a8f8adf08e46ae903ad3d01d7971a69f2}{loadParam}}(QString,QString);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7}{paramValueReturn}}(QString,QString);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classparam_file_a840444b93386e41f0109e38d3fa30edf}{readParam}}(\textcolor{keyword}{const}\ QString\ \&key);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}{writeParam}}(\textcolor{keyword}{const}\ QString\ \&key,\ \textcolor{keyword}{const}\ QString\ \&\mbox{\hyperlink{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0}{value}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ QString\ m\_filename;}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PARAMFILE\_H}}
+
+\end{DoxyCode}

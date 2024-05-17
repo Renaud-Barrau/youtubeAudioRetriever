@@ -1,0 +1,74 @@
+\doxysection{audioreader.\+h}
+\hypertarget{audioreader_8h_source}{}\label{audioreader_8h_source}\mbox{\hyperlink{audioreader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ AUDIOREADER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AUDIOREADER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QMediaPlayer>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QFileInfo>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QAudioOutput>}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \#include\ <QMediaPlaylist>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QUrl>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classaudio_reader}{audioReader}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classaudio_reader_a942d6e9a6ec93b434d49cf723a929666}{audioReader}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classaudio_reader_a06e880228fdce5d3995fc0b20e7057ef}{player}}\ =\ \textcolor{keyword}{new}\ QMediaPlayer(\textcolor{keyword}{this});}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classaudio_reader_a8f3e89d813e53d99ea2ad73677c417c4}{positionTimer}}\ =\ \textcolor{keyword}{new}\ QTimer(\textcolor{keyword}{this});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classaudio_reader_a06e880228fdce5d3995fc0b20e7057ef}{audioReader::player}}-\/>setAudioOutput(\&\mbox{\hyperlink{classaudio_reader_ac78b2a9c82bb8ce9f3b03d37cd3cc7da}{audioOutput}});}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classaudio_reader_a06e880228fdce5d3995fc0b20e7057ef}{audioReader::player}}-\/>setSource(QUrl::fromLocalFile(\textcolor{stringliteral}{"{}C:/Users/rbarr/Desktop/musique\_test/Musique/Jack\ Junior\ -\/\ My\ Addiction.mp3"{}}));}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classaudio_reader_a06e880228fdce5d3995fc0b20e7057ef}{audioReader::player}}-\/>pause();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ cout\ <<\ \mbox{\hyperlink{classaudio_reader_a06e880228fdce5d3995fc0b20e7057ef}{audioReader::player}}-\/>duration()\ <<\ endl;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ QObject::connect(\mbox{\hyperlink{classaudio_reader_a8f3e89d813e53d99ea2ad73677c417c4}{positionTimer}},\&QTimer::timeout,\ \textcolor{keyword}{this}\ ,\ \&\mbox{\hyperlink{classaudio_reader_a73f013c29143efa2de026460f058fdce}{audioReader::updateSliderValue}});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ QObject::connect(\mbox{\hyperlink{classaudio_reader_a06e880228fdce5d3995fc0b20e7057ef}{player}},\ \&QMediaPlayer::durationChanged,\ \textcolor{keyword}{this}\ ,\ \&\mbox{\hyperlink{classaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8}{audioReader::updateSliderRange}});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ QTimer\ *\mbox{\hyperlink{classaudio_reader_a8f3e89d813e53d99ea2ad73677c417c4}{positionTimer}};}
+\DoxyCodeLine{00045\ \ \ \ \ QMediaPlayer\ *\mbox{\hyperlink{classaudio_reader_a06e880228fdce5d3995fc0b20e7057ef}{player}};}
+\DoxyCodeLine{00046\ \ \ \ \ QAudioOutput\ \mbox{\hyperlink{classaudio_reader_ac78b2a9c82bb8ce9f3b03d37cd3cc7da}{audioOutput}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_a77ef14cee612339f17b81119baea8db5}{playYouTubeVideo}}(\textcolor{keyword}{const}\ QString\ \&videoUrl);}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_aae7b2e928ad9492cbe8481cad9c86b0c}{playLocalAudio}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_a6d9bc9656a2284829fd792afa28bf0d0}{togglePlayback}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_adb8c04a107c75e24dafcb5f92b4315d3}{changeAudio}}(QString\ path);}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_aada341fac191aff6a5a25f5b8a1b8f2d}{setPosition}}(\textcolor{keywordtype}{int}\ position);}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_a73f013c29143efa2de026460f058fdce}{updateSliderValue}}();}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8}{updateSliderRange}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ signals:}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_a9aff0c5ee0d20106e7882c77b6723113}{updateSliderValueSignal}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_ab0b86172a900938868ce726d4da74ca3}{updateSliderRangeSignal}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classaudio_reader_a6695fdc6cf386cf6aaaf42b4ae1034ab}{updateMusicNameSignal}}(QUrl);}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ AUDIOREADER\_H}}
+
+\end{DoxyCode}

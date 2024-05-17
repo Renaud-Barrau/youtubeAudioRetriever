@@ -1,0 +1,483 @@
+\doxysection{You\+Tube\+API Class Reference}
+\hypertarget{class_you_tube_a_p_i}{}\label{class_you_tube_a_p_i}\index{YouTubeAPI@{YouTubeAPI}}
+
+
+{\ttfamily \#include $<$youtubeapi.\+h$>$}
+
+
+
+Inheritance diagram for You\+Tube\+API\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_you_tube_a_p_i__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for You\+Tube\+API\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_you_tube_a_p_i__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a9296e9f1ad4ad5fa40a7f4f6b6a8b142}{fetch\+Playlist\+Elements}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a3cbda9e07e635353088e1e4cf5ee51b6}{fetch\+Playlists}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a139b11ea0bc05154cc12a5c59d91d896}{get\+Token}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a92092b9c7c15579b5f6249b10062fa51}{timer\+Timeout}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a972fbda68c56ac9c2656e375012c4f57}{retrieve\+Access\+Token}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a020f4a9911f6eb03d5d0e2157523a05c}{retrieve\+Access\+Token\+Info}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a56eba955a21c604ea83bb471fe58d7d4}{print\+Token}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a27f2da751c6074a0bad09b000794fbf4}{update\+Request\+Source}} (QString new\+Request)
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a7d410aa5a4f8879de630488ec144b849}{update\+Playlist\+Id}} (int index)
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_ab6ca267b5732261153918c178314494a}{update\+Params}} (QString, QString)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a308bf4e5776f529914e80acfe042f278}{fetch\+Playlist\+Element\+Signal}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a19f05e424a6c1fa77db60e0f5bf2cf8d}{fetch\+Playlists\+Signal}} ()
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_af0245b052f8d8b7632ad35fa2c6af0f4}{signal\+Timer\+Timeout}} (QString, QString, QString)
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_ab8a87dfc207cc2e325f7aaf9330d103b}{video\+Data\+Loaded}} (QVector$<$ QString $>$, QVector$<$ QString $>$, QVector$<$ QString $>$, QString)
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_ac3ef55996d3e08dfb75fd7ba649dc2ce}{playlist\+List\+Loaded}} (QVector$<$ QString $>$, QVector$<$ QString $>$)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_you_tube_a_p_i_ac3ba9f24c449a40c3f206a04298b6784}{You\+Tube\+API}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a546d6e903755f7ed5f26e9aba6bb766c}{process\+Playlists\+Elements}} (const QByte\+Array \&data)
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a5fd11e04b20f22e930bc1444aa23b203}{process\+Playlists}} (const QByte\+Array \&data)
+\item 
+void \mbox{\hyperlink{class_you_tube_a_p_i_a6cf10d00c5770e9f2b9d2fae564d58d7}{check\+Token\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{class_you_tube_a_p_i_abb3021db19b69d741fcfbc82b4a55f16}{Api}}
+\item 
+QString \mbox{\hyperlink{class_you_tube_a_p_i_a5c8e72246c89a401b1e7ae279a160cd0}{client\+Id}}
+\item 
+QString \mbox{\hyperlink{class_you_tube_a_p_i_a410f09120b7f3d91673382f007d9d081}{client\+Secret\+Code}}
+\item 
+QString \mbox{\hyperlink{class_you_tube_a_p_i_a10d72aeab996c6cc38c48bcb7c4c8a7b}{refresh\+Token}}
+\item 
+QString \mbox{\hyperlink{class_you_tube_a_p_i_ae19532880b5c06b52fee69c645444289}{access\+Token}}
+\item 
+int \mbox{\hyperlink{class_you_tube_a_p_i_a1ed3e8cd8b3f0537db9d54a96e4a1f3b}{max\+Results}} = 3
+\item 
+QNetwork\+Access\+Manager \mbox{\hyperlink{class_you_tube_a_p_i_a6acfba4acff0c31401514868f83d70c9}{manager}}
+\item 
+QNetwork\+Reply \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_you_tube_a_p_i_a2a33fb8070a1eac5465b0e5c9f9b0373}{get\+Token\+Reply}}
+\item 
+QNetwork\+Reply \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_you_tube_a_p_i_ad8d43f4efa1a49ee6461065772f24611}{check\+Token\+Info\+Reply}}
+\item 
+QTimer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_you_tube_a_p_i_acd7a6327818e78cc77cfa7870140a41f}{timer}} = new QTimer()
+\item 
+const int \mbox{\hyperlink{class_you_tube_a_p_i_a54564306c1dbe98b62ce6ae2787967f2}{refresh\+Time}} = 3500000
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_you_tube_a_p_i_aa57991add51a98b4dc00eac0e20dd86a}{video\+Id\+Array}}
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_you_tube_a_p_i_a0d4d1d53b13f99c4bf72b4d2d2be68b2}{video\+Title\+Array}}
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_you_tube_a_p_i_ab89c03871c7f032b759ce665b898fe73}{video\+Thumbnails\+Url\+Array}}
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_you_tube_a_p_i_aaa3337e9bd28aece1e417f753a9075fd}{playlist\+Name\+Array}}
+\item 
+QVector$<$ QString $>$ \mbox{\hyperlink{class_you_tube_a_p_i_a92c60a9254dfa295601657fbcca69ae7}{playlist\+Id\+Array}}
+\item 
+QString \mbox{\hyperlink{class_you_tube_a_p_i_ade6610db39d3e430cc2b09b71c91afaa}{request\+Source}}
+\item 
+QString \mbox{\hyperlink{class_you_tube_a_p_i_a482d080709a69cdc63020eedf46cd36b}{playlist\+Name}}
+\item 
+QString \mbox{\hyperlink{class_you_tube_a_p_i_aa309bbecd1d74608203557ddd51f46b2}{playlist\+Id}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_you_tube_a_p_i_ac3ba9f24c449a40c3f206a04298b6784}\label{class_you_tube_a_p_i_ac3ba9f24c449a40c3f206a04298b6784} 
+\index{YouTubeAPI@{YouTubeAPI}!YouTubeAPI@{YouTubeAPI}}
+\index{YouTubeAPI@{YouTubeAPI}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{YouTubeAPI()}{YouTubeAPI()}}
+{\footnotesize\ttfamily You\+Tube\+API\+::\+You\+Tube\+API (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_ac3ba9f24c449a40c3f206a04298b6784_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_you_tube_a_p_i_a6cf10d00c5770e9f2b9d2fae564d58d7}\label{class_you_tube_a_p_i_a6cf10d00c5770e9f2b9d2fae564d58d7} 
+\index{YouTubeAPI@{YouTubeAPI}!checkTokenInfo@{checkTokenInfo}}
+\index{checkTokenInfo@{checkTokenInfo}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{checkTokenInfo()}{checkTokenInfo()}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::check\+Token\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a6cf10d00c5770e9f2b9d2fae564d58d7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a9296e9f1ad4ad5fa40a7f4f6b6a8b142}\label{class_you_tube_a_p_i_a9296e9f1ad4ad5fa40a7f4f6b6a8b142} 
+\index{YouTubeAPI@{YouTubeAPI}!fetchPlaylistElements@{fetchPlaylistElements}}
+\index{fetchPlaylistElements@{fetchPlaylistElements}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{fetchPlaylistElements}{fetchPlaylistElements}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::fetch\+Playlist\+Elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a9296e9f1ad4ad5fa40a7f4f6b6a8b142_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a308bf4e5776f529914e80acfe042f278}\label{class_you_tube_a_p_i_a308bf4e5776f529914e80acfe042f278} 
+\index{YouTubeAPI@{YouTubeAPI}!fetchPlaylistElementSignal@{fetchPlaylistElementSignal}}
+\index{fetchPlaylistElementSignal@{fetchPlaylistElementSignal}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{fetchPlaylistElementSignal}{fetchPlaylistElementSignal}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::fetch\+Playlist\+Element\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a308bf4e5776f529914e80acfe042f278_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a3cbda9e07e635353088e1e4cf5ee51b6}\label{class_you_tube_a_p_i_a3cbda9e07e635353088e1e4cf5ee51b6} 
+\index{YouTubeAPI@{YouTubeAPI}!fetchPlaylists@{fetchPlaylists}}
+\index{fetchPlaylists@{fetchPlaylists}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{fetchPlaylists}{fetchPlaylists}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::fetch\+Playlists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a3cbda9e07e635353088e1e4cf5ee51b6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a19f05e424a6c1fa77db60e0f5bf2cf8d}\label{class_you_tube_a_p_i_a19f05e424a6c1fa77db60e0f5bf2cf8d} 
+\index{YouTubeAPI@{YouTubeAPI}!fetchPlaylistsSignal@{fetchPlaylistsSignal}}
+\index{fetchPlaylistsSignal@{fetchPlaylistsSignal}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{fetchPlaylistsSignal}{fetchPlaylistsSignal}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::fetch\+Playlists\+Signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a19f05e424a6c1fa77db60e0f5bf2cf8d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a139b11ea0bc05154cc12a5c59d91d896}\label{class_you_tube_a_p_i_a139b11ea0bc05154cc12a5c59d91d896} 
+\index{YouTubeAPI@{YouTubeAPI}!getToken@{getToken}}
+\index{getToken@{getToken}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{getToken}{getToken}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::get\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a139b11ea0bc05154cc12a5c59d91d896_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_ac3ef55996d3e08dfb75fd7ba649dc2ce}\label{class_you_tube_a_p_i_ac3ef55996d3e08dfb75fd7ba649dc2ce} 
+\index{YouTubeAPI@{YouTubeAPI}!playlistListLoaded@{playlistListLoaded}}
+\index{playlistListLoaded@{playlistListLoaded}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{playlistListLoaded}{playlistListLoaded}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::playlist\+List\+Loaded (\begin{DoxyParamCaption}\item[{QVector$<$ QString $>$}]{,  }\item[{QVector$<$ QString $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_ac3ef55996d3e08dfb75fd7ba649dc2ce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a56eba955a21c604ea83bb471fe58d7d4}\label{class_you_tube_a_p_i_a56eba955a21c604ea83bb471fe58d7d4} 
+\index{YouTubeAPI@{YouTubeAPI}!printToken@{printToken}}
+\index{printToken@{printToken}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{printToken}{printToken}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::print\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_you_tube_a_p_i_a5fd11e04b20f22e930bc1444aa23b203}\label{class_you_tube_a_p_i_a5fd11e04b20f22e930bc1444aa23b203} 
+\index{YouTubeAPI@{YouTubeAPI}!processPlaylists@{processPlaylists}}
+\index{processPlaylists@{processPlaylists}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{processPlaylists()}{processPlaylists()}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::process\+Playlists (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a5fd11e04b20f22e930bc1444aa23b203_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a546d6e903755f7ed5f26e9aba6bb766c}\label{class_you_tube_a_p_i_a546d6e903755f7ed5f26e9aba6bb766c} 
+\index{YouTubeAPI@{YouTubeAPI}!processPlaylistsElements@{processPlaylistsElements}}
+\index{processPlaylistsElements@{processPlaylistsElements}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{processPlaylistsElements()}{processPlaylistsElements()}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::process\+Playlists\+Elements (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a546d6e903755f7ed5f26e9aba6bb766c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a972fbda68c56ac9c2656e375012c4f57}\label{class_you_tube_a_p_i_a972fbda68c56ac9c2656e375012c4f57} 
+\index{YouTubeAPI@{YouTubeAPI}!retrieveAccessToken@{retrieveAccessToken}}
+\index{retrieveAccessToken@{retrieveAccessToken}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{retrieveAccessToken}{retrieveAccessToken}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::retrieve\+Access\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a972fbda68c56ac9c2656e375012c4f57_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a972fbda68c56ac9c2656e375012c4f57_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a020f4a9911f6eb03d5d0e2157523a05c}\label{class_you_tube_a_p_i_a020f4a9911f6eb03d5d0e2157523a05c} 
+\index{YouTubeAPI@{YouTubeAPI}!retrieveAccessTokenInfo@{retrieveAccessTokenInfo}}
+\index{retrieveAccessTokenInfo@{retrieveAccessTokenInfo}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{retrieveAccessTokenInfo}{retrieveAccessTokenInfo}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::retrieve\+Access\+Token\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a020f4a9911f6eb03d5d0e2157523a05c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_af0245b052f8d8b7632ad35fa2c6af0f4}\label{class_you_tube_a_p_i_af0245b052f8d8b7632ad35fa2c6af0f4} 
+\index{YouTubeAPI@{YouTubeAPI}!signalTimerTimeout@{signalTimerTimeout}}
+\index{signalTimerTimeout@{signalTimerTimeout}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{signalTimerTimeout}{signalTimerTimeout}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::signal\+Timer\+Timeout (\begin{DoxyParamCaption}\item[{QString}]{,  }\item[{QString}]{,  }\item[{QString}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_af0245b052f8d8b7632ad35fa2c6af0f4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_a92092b9c7c15579b5f6249b10062fa51}\label{class_you_tube_a_p_i_a92092b9c7c15579b5f6249b10062fa51} 
+\index{YouTubeAPI@{YouTubeAPI}!timerTimeout@{timerTimeout}}
+\index{timerTimeout@{timerTimeout}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{timerTimeout}{timerTimeout}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::timer\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_a92092b9c7c15579b5f6249b10062fa51_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_you_tube_a_p_i_ab6ca267b5732261153918c178314494a}\label{class_you_tube_a_p_i_ab6ca267b5732261153918c178314494a} 
+\index{YouTubeAPI@{YouTubeAPI}!updateParams@{updateParams}}
+\index{updateParams@{updateParams}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{updateParams}{updateParams}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::update\+Params (\begin{DoxyParamCaption}\item[{QString}]{key,  }\item[{QString}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_you_tube_a_p_i_a7d410aa5a4f8879de630488ec144b849}\label{class_you_tube_a_p_i_a7d410aa5a4f8879de630488ec144b849} 
+\index{YouTubeAPI@{YouTubeAPI}!updatePlaylistId@{updatePlaylistId}}
+\index{updatePlaylistId@{updatePlaylistId}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{updatePlaylistId}{updatePlaylistId}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::update\+Playlist\+Id (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_you_tube_a_p_i_a27f2da751c6074a0bad09b000794fbf4}\label{class_you_tube_a_p_i_a27f2da751c6074a0bad09b000794fbf4} 
+\index{YouTubeAPI@{YouTubeAPI}!updateRequestSource@{updateRequestSource}}
+\index{updateRequestSource@{updateRequestSource}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{updateRequestSource}{updateRequestSource}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::update\+Request\+Source (\begin{DoxyParamCaption}\item[{QString}]{new\+Request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\Hypertarget{class_you_tube_a_p_i_ab8a87dfc207cc2e325f7aaf9330d103b}\label{class_you_tube_a_p_i_ab8a87dfc207cc2e325f7aaf9330d103b} 
+\index{YouTubeAPI@{YouTubeAPI}!videoDataLoaded@{videoDataLoaded}}
+\index{videoDataLoaded@{videoDataLoaded}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{videoDataLoaded}{videoDataLoaded}}
+{\footnotesize\ttfamily void You\+Tube\+API\+::video\+Data\+Loaded (\begin{DoxyParamCaption}\item[{QVector$<$ QString $>$}]{,  }\item[{QVector$<$ QString $>$}]{,  }\item[{QVector$<$ QString $>$}]{,  }\item[{QString}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_you_tube_a_p_i_ab8a87dfc207cc2e325f7aaf9330d103b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_you_tube_a_p_i_ae19532880b5c06b52fee69c645444289}\label{class_you_tube_a_p_i_ae19532880b5c06b52fee69c645444289} 
+\index{YouTubeAPI@{YouTubeAPI}!accessToken@{accessToken}}
+\index{accessToken@{accessToken}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{accessToken}{accessToken}}
+{\footnotesize\ttfamily QString You\+Tube\+API\+::access\+Token}
+
+\Hypertarget{class_you_tube_a_p_i_abb3021db19b69d741fcfbc82b4a55f16}\label{class_you_tube_a_p_i_abb3021db19b69d741fcfbc82b4a55f16} 
+\index{YouTubeAPI@{YouTubeAPI}!Api@{Api}}
+\index{Api@{Api}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{Api}{Api}}
+{\footnotesize\ttfamily QString You\+Tube\+API\+::\+Api}
+
+\Hypertarget{class_you_tube_a_p_i_ad8d43f4efa1a49ee6461065772f24611}\label{class_you_tube_a_p_i_ad8d43f4efa1a49ee6461065772f24611} 
+\index{YouTubeAPI@{YouTubeAPI}!checkTokenInfoReply@{checkTokenInfoReply}}
+\index{checkTokenInfoReply@{checkTokenInfoReply}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{checkTokenInfoReply}{checkTokenInfoReply}}
+{\footnotesize\ttfamily QNetwork\+Reply\texorpdfstring{$\ast$}{*} You\+Tube\+API\+::check\+Token\+Info\+Reply}
+
+\Hypertarget{class_you_tube_a_p_i_a5c8e72246c89a401b1e7ae279a160cd0}\label{class_you_tube_a_p_i_a5c8e72246c89a401b1e7ae279a160cd0} 
+\index{YouTubeAPI@{YouTubeAPI}!clientId@{clientId}}
+\index{clientId@{clientId}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{clientId}{clientId}}
+{\footnotesize\ttfamily QString You\+Tube\+API\+::client\+Id}
+
+\Hypertarget{class_you_tube_a_p_i_a410f09120b7f3d91673382f007d9d081}\label{class_you_tube_a_p_i_a410f09120b7f3d91673382f007d9d081} 
+\index{YouTubeAPI@{YouTubeAPI}!clientSecretCode@{clientSecretCode}}
+\index{clientSecretCode@{clientSecretCode}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{clientSecretCode}{clientSecretCode}}
+{\footnotesize\ttfamily QString You\+Tube\+API\+::client\+Secret\+Code}
+
+\Hypertarget{class_you_tube_a_p_i_a2a33fb8070a1eac5465b0e5c9f9b0373}\label{class_you_tube_a_p_i_a2a33fb8070a1eac5465b0e5c9f9b0373} 
+\index{YouTubeAPI@{YouTubeAPI}!getTokenReply@{getTokenReply}}
+\index{getTokenReply@{getTokenReply}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{getTokenReply}{getTokenReply}}
+{\footnotesize\ttfamily QNetwork\+Reply\texorpdfstring{$\ast$}{*} You\+Tube\+API\+::get\+Token\+Reply}
+
+\Hypertarget{class_you_tube_a_p_i_a6acfba4acff0c31401514868f83d70c9}\label{class_you_tube_a_p_i_a6acfba4acff0c31401514868f83d70c9} 
+\index{YouTubeAPI@{YouTubeAPI}!manager@{manager}}
+\index{manager@{manager}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{manager}{manager}}
+{\footnotesize\ttfamily QNetwork\+Access\+Manager You\+Tube\+API\+::manager}
+
+\Hypertarget{class_you_tube_a_p_i_a1ed3e8cd8b3f0537db9d54a96e4a1f3b}\label{class_you_tube_a_p_i_a1ed3e8cd8b3f0537db9d54a96e4a1f3b} 
+\index{YouTubeAPI@{YouTubeAPI}!maxResults@{maxResults}}
+\index{maxResults@{maxResults}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{maxResults}{maxResults}}
+{\footnotesize\ttfamily int You\+Tube\+API\+::max\+Results = 3}
+
+\Hypertarget{class_you_tube_a_p_i_aa309bbecd1d74608203557ddd51f46b2}\label{class_you_tube_a_p_i_aa309bbecd1d74608203557ddd51f46b2} 
+\index{YouTubeAPI@{YouTubeAPI}!playlistId@{playlistId}}
+\index{playlistId@{playlistId}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{playlistId}{playlistId}}
+{\footnotesize\ttfamily QString You\+Tube\+API\+::playlist\+Id}
+
+\Hypertarget{class_you_tube_a_p_i_a92c60a9254dfa295601657fbcca69ae7}\label{class_you_tube_a_p_i_a92c60a9254dfa295601657fbcca69ae7} 
+\index{YouTubeAPI@{YouTubeAPI}!playlistIdArray@{playlistIdArray}}
+\index{playlistIdArray@{playlistIdArray}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{playlistIdArray}{playlistIdArray}}
+{\footnotesize\ttfamily QVector$<$QString$>$ You\+Tube\+API\+::playlist\+Id\+Array}
+
+\Hypertarget{class_you_tube_a_p_i_a482d080709a69cdc63020eedf46cd36b}\label{class_you_tube_a_p_i_a482d080709a69cdc63020eedf46cd36b} 
+\index{YouTubeAPI@{YouTubeAPI}!playlistName@{playlistName}}
+\index{playlistName@{playlistName}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{playlistName}{playlistName}}
+{\footnotesize\ttfamily QString You\+Tube\+API\+::playlist\+Name}
+
+\Hypertarget{class_you_tube_a_p_i_aaa3337e9bd28aece1e417f753a9075fd}\label{class_you_tube_a_p_i_aaa3337e9bd28aece1e417f753a9075fd} 
+\index{YouTubeAPI@{YouTubeAPI}!playlistNameArray@{playlistNameArray}}
+\index{playlistNameArray@{playlistNameArray}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{playlistNameArray}{playlistNameArray}}
+{\footnotesize\ttfamily QVector$<$QString$>$ You\+Tube\+API\+::playlist\+Name\+Array}
+
+\Hypertarget{class_you_tube_a_p_i_a54564306c1dbe98b62ce6ae2787967f2}\label{class_you_tube_a_p_i_a54564306c1dbe98b62ce6ae2787967f2} 
+\index{YouTubeAPI@{YouTubeAPI}!refreshTime@{refreshTime}}
+\index{refreshTime@{refreshTime}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{refreshTime}{refreshTime}}
+{\footnotesize\ttfamily const int You\+Tube\+API\+::refresh\+Time = 3500000}
+
+\Hypertarget{class_you_tube_a_p_i_a10d72aeab996c6cc38c48bcb7c4c8a7b}\label{class_you_tube_a_p_i_a10d72aeab996c6cc38c48bcb7c4c8a7b} 
+\index{YouTubeAPI@{YouTubeAPI}!refreshToken@{refreshToken}}
+\index{refreshToken@{refreshToken}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{refreshToken}{refreshToken}}
+{\footnotesize\ttfamily QString You\+Tube\+API\+::refresh\+Token}
+
+\Hypertarget{class_you_tube_a_p_i_ade6610db39d3e430cc2b09b71c91afaa}\label{class_you_tube_a_p_i_ade6610db39d3e430cc2b09b71c91afaa} 
+\index{YouTubeAPI@{YouTubeAPI}!requestSource@{requestSource}}
+\index{requestSource@{requestSource}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{requestSource}{requestSource}}
+{\footnotesize\ttfamily QString You\+Tube\+API\+::request\+Source}
+
+\Hypertarget{class_you_tube_a_p_i_acd7a6327818e78cc77cfa7870140a41f}\label{class_you_tube_a_p_i_acd7a6327818e78cc77cfa7870140a41f} 
+\index{YouTubeAPI@{YouTubeAPI}!timer@{timer}}
+\index{timer@{timer}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily QTimer\texorpdfstring{$\ast$}{*} You\+Tube\+API\+::timer = new QTimer()}
+
+\Hypertarget{class_you_tube_a_p_i_aa57991add51a98b4dc00eac0e20dd86a}\label{class_you_tube_a_p_i_aa57991add51a98b4dc00eac0e20dd86a} 
+\index{YouTubeAPI@{YouTubeAPI}!videoIdArray@{videoIdArray}}
+\index{videoIdArray@{videoIdArray}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{videoIdArray}{videoIdArray}}
+{\footnotesize\ttfamily QVector$<$QString$>$ You\+Tube\+API\+::video\+Id\+Array}
+
+\Hypertarget{class_you_tube_a_p_i_ab89c03871c7f032b759ce665b898fe73}\label{class_you_tube_a_p_i_ab89c03871c7f032b759ce665b898fe73} 
+\index{YouTubeAPI@{YouTubeAPI}!videoThumbnailsUrlArray@{videoThumbnailsUrlArray}}
+\index{videoThumbnailsUrlArray@{videoThumbnailsUrlArray}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{videoThumbnailsUrlArray}{videoThumbnailsUrlArray}}
+{\footnotesize\ttfamily QVector$<$QString$>$ You\+Tube\+API\+::video\+Thumbnails\+Url\+Array}
+
+\Hypertarget{class_you_tube_a_p_i_a0d4d1d53b13f99c4bf72b4d2d2be68b2}\label{class_you_tube_a_p_i_a0d4d1d53b13f99c4bf72b4d2d2be68b2} 
+\index{YouTubeAPI@{YouTubeAPI}!videoTitleArray@{videoTitleArray}}
+\index{videoTitleArray@{videoTitleArray}!YouTubeAPI@{YouTubeAPI}}
+\doxysubsubsection{\texorpdfstring{videoTitleArray}{videoTitleArray}}
+{\footnotesize\ttfamily QVector$<$QString$>$ You\+Tube\+API\+::video\+Title\+Array}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{youtubeapi_8h}{youtubeapi.\+h}}\item 
+\mbox{\hyperlink{youtubeapi_8cpp}{youtubeapi.\+cpp}}\end{DoxyCompactItemize}
