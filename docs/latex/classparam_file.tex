@@ -2,6 +2,11 @@
 \hypertarget{classparam_file}{}\label{classparam_file}\index{paramFile@{paramFile}}
 
 
+The \doxylink{classparam_file}{param\+File} class represent the object in charge of loading and saving important data into a parameter file.  
+
+
+
+
 {\ttfamily \#include $<$paramfile.\+h$>$}
 
 
@@ -26,16 +31,14 @@ Collaboration diagram for param\+File\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{classparam_file_a840444b93386e41f0109e38d3fa30edf}{read\+Param}} (const QString \&key)
-\item 
+\begin{DoxyCompactList}\small\item\em This method reads a specific parameter identified by his key passed in parameter. This function uses the QJson\+Document and QJson\+Object to navigate through the required value. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}{write\+Param}} (const QString \&key, const QString \&\mbox{\hyperlink{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0}{value}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This method writes a specific parameter with a specific key associated to it. This function uses the QJson\+Document and QJson\+Object to navigate through the required value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{classparam_file_a8f8adf08e46ae903ad3d01d7971a69f2}{load\+Param}} (QString, QString)
-\item 
 void \mbox{\hyperlink{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7}{param\+Value\+Return}} (QString, QString)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This signal is emited to send the loaded value in \doxylink{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0}{param\+File\+::value} to a slot connected to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -45,83 +48,109 @@ void \mbox{\hyperlink{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7}{param\+
 \begin{DoxyCompactItemize}
 \item 
 QString \mbox{\hyperlink{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0}{value}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This value holds the last fetched parameter. it works as a buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The \doxylink{classparam_file}{param\+File} class represent the object in charge of loading and saving important data into a parameter file. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classparam_file_af7159f932c4149e9c732718e687a09de}\label{classparam_file_af7159f932c4149e9c732718e687a09de} 
-\index{paramFile@{paramFile}!paramFile@{paramFile}}
+\Hypertarget{classparam_file_af7159f932c4149e9c732718e687a09de}\index{paramFile@{paramFile}!paramFile@{paramFile}}
 \index{paramFile@{paramFile}!paramFile@{paramFile}}
 \doxysubsubsection{\texorpdfstring{paramFile()}{paramFile()}}
-{\footnotesize\ttfamily param\+File\+::param\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+{\footnotesize\ttfamily \label{classparam_file_af7159f932c4149e9c732718e687a09de} 
+param\+File\+::param\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
 
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classparam_file_a8f8adf08e46ae903ad3d01d7971a69f2}\label{classparam_file_a8f8adf08e46ae903ad3d01d7971a69f2} 
-\index{paramFile@{paramFile}!loadParam@{loadParam}}
-\index{loadParam@{loadParam}!paramFile@{paramFile}}
-\doxysubsubsection{\texorpdfstring{loadParam}{loadParam}}
-{\footnotesize\ttfamily void param\+File\+::load\+Param (\begin{DoxyParamCaption}\item[{QString}]{,  }\item[{QString}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=264pt]{classparam_file_a8f8adf08e46ae903ad3d01d7971a69f2_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7}\label{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7} 
-\index{paramFile@{paramFile}!paramValueReturn@{paramValueReturn}}
+\Hypertarget{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7}\index{paramFile@{paramFile}!paramValueReturn@{paramValueReturn}}
 \index{paramValueReturn@{paramValueReturn}!paramFile@{paramFile}}
 \doxysubsubsection{\texorpdfstring{paramValueReturn}{paramValueReturn}}
-{\footnotesize\ttfamily void param\+File\+::param\+Value\+Return (\begin{DoxyParamCaption}\item[{QString}]{,  }\item[{QString}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+{\footnotesize\ttfamily \label{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7} 
+void param\+File\+::param\+Value\+Return (\begin{DoxyParamCaption}\item[{QString}]{}{, }\item[{QString}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+This signal is emited to send the loaded value in \doxylink{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0}{param\+File\+::value} to a slot connected to it. 
+
+This signal is sent in different part of the code such as \+:
+\begin{DoxyItemize}
+\item At the end of the read\+Param method.
+\item At the startup of the application to fetch data from the params.\+json file.
+\end{DoxyItemize}
+
+Arguments are key and velue. Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classparam_file_a840444b93386e41f0109e38d3fa30edf}\label{classparam_file_a840444b93386e41f0109e38d3fa30edf} 
-\index{paramFile@{paramFile}!readParam@{readParam}}
+\Hypertarget{classparam_file_a840444b93386e41f0109e38d3fa30edf}\index{paramFile@{paramFile}!readParam@{readParam}}
 \index{readParam@{readParam}!paramFile@{paramFile}}
 \doxysubsubsection{\texorpdfstring{readParam}{readParam}}
-{\footnotesize\ttfamily bool param\+File\+::read\+Param (\begin{DoxyParamCaption}\item[{const QString \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+{\footnotesize\ttfamily \label{classparam_file_a840444b93386e41f0109e38d3fa30edf} 
+bool param\+File\+::read\+Param (\begin{DoxyParamCaption}\item[{const QString \&}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+This method reads a specific parameter identified by his key passed in parameter. This function uses the QJson\+Document and QJson\+Object to navigate through the required value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NOTE \+: This method DOES NOT return the value of the parameter. Instead, it returns a bool to notify if operation failed or not and emits a signal with the value in parameter as a QString, so it can be catched by others classes.
+\end{DoxyReturn}
+Emits the signal \doxylink{classparam_file_a9fd83a6ce37b1d084b8b3ed9341d54f7}{param\+Value\+Return} Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classparam_file_a840444b93386e41f0109e38d3fa30edf_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=265pt]{classparam_file_a840444b93386e41f0109e38d3fa30edf_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}\label{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a} 
-\index{paramFile@{paramFile}!writeParam@{writeParam}}
+\Hypertarget{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}\index{paramFile@{paramFile}!writeParam@{writeParam}}
 \index{writeParam@{writeParam}!paramFile@{paramFile}}
 \doxysubsubsection{\texorpdfstring{writeParam}{writeParam}}
-{\footnotesize\ttfamily bool param\+File\+::write\+Param (\begin{DoxyParamCaption}\item[{const QString \&}]{key,  }\item[{const QString \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+{\footnotesize\ttfamily \label{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a} 
+bool param\+File\+::write\+Param (\begin{DoxyParamCaption}\item[{const QString \&}]{key}{, }\item[{const QString \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
+
+
+This method writes a specific parameter with a specific key associated to it. This function uses the QJson\+Document and QJson\+Object to navigate through the required value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NOTE \+: This method returns a bool to notify if operation failed or not. 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0}\label{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0} 
-\index{paramFile@{paramFile}!value@{value}}
+\Hypertarget{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0}\index{paramFile@{paramFile}!value@{value}}
 \index{value@{value}!paramFile@{paramFile}}
 \doxysubsubsection{\texorpdfstring{value}{value}}
-{\footnotesize\ttfamily QString param\+File\+::value}
+{\footnotesize\ttfamily \label{classparam_file_a739d277496c1b565e4f6fef8ad2b47f0} 
+QString param\+File\+::value}
+
+
+
+This value holds the last fetched parameter. it works as a buffer. 
 
 
 

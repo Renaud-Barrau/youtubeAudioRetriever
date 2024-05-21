@@ -1,7 +1,7 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef mainWindow_H
+#define mainWindow_H
 
-#include <QMainWindow>
+#include <QmainWindow>
 #include <QObject>
 #include <QString>
 #include <QFileDialog>
@@ -15,18 +15,18 @@
 using namespace std;
 
 namespace Ui {
-class MainWindow;
+class mainWindow;
 }
 
-class MainWindow : public QMainWindow
+class mainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    Ui::MainWindow *ui;
+    Ui::mainWindow *ui;
 
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    explicit mainWindow(QWidget *parent = nullptr);
+    ~mainWindow();
 
 signals:
     // void downloadButtonPressed(QString,QString,QString);
@@ -84,4 +84,4 @@ private:
 
 };
 
-#endif // MAINWINDOW_H
+#endif // mainWindow_H

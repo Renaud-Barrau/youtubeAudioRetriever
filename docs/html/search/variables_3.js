@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ffmpegpath_0',['ffmpegPath',['../classyoutubedownloader.html#ab5fe58c846944be714d5a7f4f11e949d',1,'youtubedownloader']]]
+  ['ffmpegpath_0',['ffmpegPath',['../classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97',1,'youtubeDownloader']]]
 ];

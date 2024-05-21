@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['youtubeapi_0',['YouTubeAPI',['../class_you_tube_a_p_i.html#ac3ba9f24c449a40c3f206a04298b6784',1,'YouTubeAPI']]],
-  ['youtubedownloader_1',['youtubedownloader',['../classyoutubedownloader.html#af1d99239de2cdc55edfa9e6d9ea79b14',1,'youtubedownloader']]]
+  ['youtubeapi_0',['youtubeApi',['../classyoutube_api.html#a48dee190bf7f7b13c63d374af3f92816',1,'youtubeApi']]],
+  ['youtubedownloader_1',['youtubeDownloader',['../classyoutube_downloader.html#a29b4871f2cd7b4d32a2c2be5d008eb16',1,'youtubeDownloader']]]
 ];

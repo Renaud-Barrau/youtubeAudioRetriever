@@ -1,4 +1,4 @@
 var youtubedownloader_8h =
 [
-    [ "youtubedownloader", "classyoutubedownloader.html", "classyoutubedownloader" ]
+    [ "youtubeDownloader", "classyoutube_downloader.html", "classyoutube_downloader" ]
 ];

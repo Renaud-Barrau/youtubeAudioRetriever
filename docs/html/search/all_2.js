@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['downloadall_0',['downloadAll',['../classyoutubedownloader.html#ad3ebeb2883a8a0142a2aa9bbb7d0b017',1,'youtubedownloader']]],
-  ['downloadbuttonpressed_1',['downloadButtonPressed',['../class_main_window.html#a0165e3768eecf587214be6232f69d27d',1,'MainWindow']]],
-  ['downloadqueue_2',['downloadQueue',['../classyoutubedownloader.html#a97344cfec8ec5f60e0d02e3c22c922b3',1,'youtubedownloader']]]
+  ['downloadall_0',['downloadAll',['../classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28',1,'youtubeDownloader']]],
+  ['downloadbuttonpressed_1',['downloadButtonPressed',['../classmain_window.html#a96bf723c25270a537517d724502fd653',1,'mainWindow']]],
+  ['downloadqueue_2',['downloadQueue',['../classyoutube_downloader.html#a128e2cb90c3bdee987c41cc49745d077',1,'youtubeDownloader']]]
 ];

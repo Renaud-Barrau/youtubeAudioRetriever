@@ -1,4 +1,9 @@
-
+/**
+ * @file youtubedownloader.h
+ * @brief This file handle the download of mp3 files using yt-dlp.
+ *
+ * This 3rd party package can be found here : [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+ */
 #ifndef YOUTUBEDOWNLOADER_H
 #define YOUTUBEDOWNLOADER_H
 
@@ -21,32 +26,57 @@
 using namespace std;
 
 
-class youtubedownloader : public QObject
+class youtubeDownloader : public QObject
 {
     Q_OBJECT
 public:
-////////////////////    CONSTRUCTEUR    ////////////////////
-    explicit youtubedownloader(QObject *parent = nullptr){
+////////////////////    CONSTRUCTOR    ////////////////////
+    explicit youtubeDownloader(QObject *parent = nullptr){
 //        videoId = "LlN8MPS7KQs";
 //        videoTitle = "oneheart x reidenshi - snowfall";
 
     };
 
 ////////////////////    ATTRIBUTS   ////////////////////
+
+    /**
+     * @brief QString that holds the command to send to yt-dlp executable. The value is overwritten for every new command.
+     */
     QString command;
+    /**
+     * @brief Path to the music folder (parent).
+     *
+     * This value is stored as a parmater in params.json.
+     * Can be changed at anytime with the GUI.
+     */
     QString musicFolder;
-    QString ffmpegPath;// = "C:/Users/rbarr/OneDrive/Bureau/build-youtube_manager-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/ffmpeg-master-latest-win64-gpl/bin";
-//    string videoId;
-//    string videoTitle;
+    /**
+     * @brief Path to the ffmpeg bin folder. FFmpeg is a dependency needed for yt-dlp to work properly.
+     *
+     * ffmpeg builds can be downloaded from the yt-dlp repository [here](https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file).
+     *
+     * This value is stored as a parmater in params.json.
+     * Can be changed at anytime with the GUI.
+     */
+    QString ffmpegPath;
 
     int result;
     int increment;
+
+    /**
+     * @brief Represent the value of the progress bar. This value is used to match visual progression with actual download load.
+     *
+     */
     int progressBarValue;
-    // QNetworkReply* reply;
+
+    /**
+     * @brief QQueue object that stores a list of command. The queue is filled with the youtubeDownloader::downloadAll method, and dequeued every time a download is complete. (1 download at a time)
+     *
+     */
     QQueue<QString> downloadQueue;
 
 
-////////////////////    METHODES    ////////////////////
+////////////////////    METHODS    ////////////////////
     void formatCommand(QString videoTitle, QString videoId, QString playlistName);
     void execCommand(QString command);
     void startNextDownload();
@@ -59,6 +89,7 @@ public slots:
 
 
 signals:
+
     void progressBarUpdate(int);
 };
 

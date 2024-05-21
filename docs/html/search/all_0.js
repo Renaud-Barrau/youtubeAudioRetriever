@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['accesstoken_0',['accessToken',['../class_you_tube_a_p_i.html#ae19532880b5c06b52fee69c645444289',1,'YouTubeAPI']]],
-  ['api_1',['Api',['../class_you_tube_a_p_i.html#abb3021db19b69d741fcfbc82b4a55f16',1,'YouTubeAPI']]],
+  ['accesstoken_0',['accessToken',['../classyoutube_api.html#a7f250c59f09cd59de048565aba11e812',1,'youtubeApi']]],
+  ['api_1',['Api',['../classyoutube_api.html#a9d5205d0f7865e9690c4048f8bd5eba9',1,'youtubeApi']]],
   ['audiooutput_2',['audioOutput',['../classaudio_reader.html#ac78b2a9c82bb8ce9f3b03d37cd3cc7da',1,'audioReader']]],
   ['audioreader_3',['audioReader',['../classaudio_reader.html',1,'audioReader'],['../classaudio_reader.html#a942d6e9a6ec93b434d49cf723a929666',1,'audioReader::audioReader()']]],
   ['audioreader_2ecpp_4',['audioreader.cpp',['../audioreader_8cpp.html',1,'']]],

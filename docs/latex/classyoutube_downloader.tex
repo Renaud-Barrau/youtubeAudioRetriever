@@ -1,0 +1,234 @@
+\doxysection{youtube\+Downloader Class Reference}
+\hypertarget{classyoutube_downloader}{}\label{classyoutube_downloader}\index{youtubeDownloader@{youtubeDownloader}}
+
+
+{\ttfamily \#include $<$youtubedownloader.\+h$>$}
+
+
+
+Inheritance diagram for youtube\+Downloader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classyoutube_downloader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for youtube\+Downloader\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classyoutube_downloader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28}{download\+All}} (QVector$<$ QString $>$, QVector$<$ QString $>$, QVector$<$ QString $>$, QString playlist\+Name)
+\item 
+void \mbox{\hyperlink{classyoutube_downloader_aec971eecff2c02500a4dd4f9ef9c047f}{update\+Params}} (QString, QString)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a}{progress\+Bar\+Update}} (int)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classyoutube_downloader_a29b4871f2cd7b4d32a2c2be5d008eb16}{youtube\+Downloader}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+void \mbox{\hyperlink{classyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2}{format\+Command}} (QString video\+Title, QString video\+Id, QString playlist\+Name)
+\item 
+void \mbox{\hyperlink{classyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b}{exec\+Command}} (QString \mbox{\hyperlink{classyoutube_downloader_a7158e78581e300cac28da1f4dfd9a17f}{command}})
+\item 
+void \mbox{\hyperlink{classyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d}{start\+Next\+Download}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{classyoutube_downloader_a7158e78581e300cac28da1f4dfd9a17f}{command}}
+\begin{DoxyCompactList}\small\item\em QString that holds the command to send to yt-\/dlp executable. The value is overwritten for every new command. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classyoutube_downloader_abdb051381e17ed27b061f254bb371d46}{music\+Folder}}
+\begin{DoxyCompactList}\small\item\em Path to the music folder (parent). \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classyoutube_downloader_a5323dd8eb6785bf65e93f376b16d4f97}{ffmpeg\+Path}}
+\begin{DoxyCompactList}\small\item\em Path to the ffmpeg bin folder. FFmpeg is a dependency needed for yt-\/dlp to work properly. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classyoutube_downloader_a7b94203d57b37fd3a31067637d02dd0a}{result}}
+\item 
+int \mbox{\hyperlink{classyoutube_downloader_a0540178ae7ef75167056cc33edef12a4}{increment}}
+\item 
+int \mbox{\hyperlink{classyoutube_downloader_aee62a4b7718a33f605aec99a8c008aae}{progress\+Bar\+Value}}
+\begin{DoxyCompactList}\small\item\em Represent the value of the progress bar. This value is used to match visual progression with actual download load. \end{DoxyCompactList}\item 
+QQueue$<$ QString $>$ \mbox{\hyperlink{classyoutube_downloader_a128e2cb90c3bdee987c41cc49745d077}{download\+Queue}}
+\begin{DoxyCompactList}\small\item\em QQueue object that stores a list of command. The queue is filled with the \doxylink{classyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28}{youtube\+Downloader\+::download\+All} method, and dequeued every time a download is complete. (1 download at a time) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classyoutube_downloader_a29b4871f2cd7b4d32a2c2be5d008eb16}\index{youtubeDownloader@{youtubeDownloader}!youtubeDownloader@{youtubeDownloader}}
+\index{youtubeDownloader@{youtubeDownloader}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{youtubeDownloader()}{youtubeDownloader()}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a29b4871f2cd7b4d32a2c2be5d008eb16} 
+youtube\+Downloader\+::youtube\+Downloader (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28}\index{youtubeDownloader@{youtubeDownloader}!downloadAll@{downloadAll}}
+\index{downloadAll@{downloadAll}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{downloadAll}{downloadAll}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28} 
+void youtube\+Downloader\+::download\+All (\begin{DoxyParamCaption}\item[{QVector$<$ QString $>$}]{video\+Title\+Array}{, }\item[{QVector$<$ QString $>$}]{video\+Id\+Array}{, }\item[{QVector$<$ QString $>$}]{video\+Thumbnails\+Url\+Array}{, }\item[{QString}]{playlist\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b}\index{youtubeDownloader@{youtubeDownloader}!execCommand@{execCommand}}
+\index{execCommand@{execCommand}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{execCommand()}{execCommand()}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b} 
+void youtube\+Downloader\+::exec\+Command (\begin{DoxyParamCaption}\item[{QString}]{command}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2}\index{youtubeDownloader@{youtubeDownloader}!formatCommand@{formatCommand}}
+\index{formatCommand@{formatCommand}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{formatCommand()}{formatCommand()}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2} 
+void youtube\+Downloader\+::format\+Command (\begin{DoxyParamCaption}\item[{QString}]{video\+Title}{, }\item[{QString}]{video\+Id}{, }\item[{QString}]{playlist\+Name}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a}\index{youtubeDownloader@{youtubeDownloader}!progressBarUpdate@{progressBarUpdate}}
+\index{progressBarUpdate@{progressBarUpdate}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{progressBarUpdate}{progressBarUpdate}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a} 
+void youtube\+Downloader\+::progress\+Bar\+Update (\begin{DoxyParamCaption}\item[{int}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d}\index{youtubeDownloader@{youtubeDownloader}!startNextDownload@{startNextDownload}}
+\index{startNextDownload@{startNextDownload}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{startNextDownload()}{startNextDownload()}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d} 
+void youtube\+Downloader\+::start\+Next\+Download (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classyoutube_downloader_aec971eecff2c02500a4dd4f9ef9c047f}\index{youtubeDownloader@{youtubeDownloader}!updateParams@{updateParams}}
+\index{updateParams@{updateParams}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{updateParams}{updateParams}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_aec971eecff2c02500a4dd4f9ef9c047f} 
+void youtube\+Downloader\+::update\+Params (\begin{DoxyParamCaption}\item[{QString}]{key}{, }\item[{QString}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classyoutube_downloader_a7158e78581e300cac28da1f4dfd9a17f}\index{youtubeDownloader@{youtubeDownloader}!command@{command}}
+\index{command@{command}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{command}{command}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a7158e78581e300cac28da1f4dfd9a17f} 
+QString youtube\+Downloader\+::command}
+
+
+
+QString that holds the command to send to yt-\/dlp executable. The value is overwritten for every new command. 
+
+\Hypertarget{classyoutube_downloader_a128e2cb90c3bdee987c41cc49745d077}\index{youtubeDownloader@{youtubeDownloader}!downloadQueue@{downloadQueue}}
+\index{downloadQueue@{downloadQueue}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{downloadQueue}{downloadQueue}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a128e2cb90c3bdee987c41cc49745d077} 
+QQueue$<$QString$>$ youtube\+Downloader\+::download\+Queue}
+
+
+
+QQueue object that stores a list of command. The queue is filled with the \doxylink{classyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28}{youtube\+Downloader\+::download\+All} method, and dequeued every time a download is complete. (1 download at a time) 
+
+\Hypertarget{classyoutube_downloader_a5323dd8eb6785bf65e93f376b16d4f97}\index{youtubeDownloader@{youtubeDownloader}!ffmpegPath@{ffmpegPath}}
+\index{ffmpegPath@{ffmpegPath}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{ffmpegPath}{ffmpegPath}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a5323dd8eb6785bf65e93f376b16d4f97} 
+QString youtube\+Downloader\+::ffmpeg\+Path}
+
+
+
+Path to the ffmpeg bin folder. FFmpeg is a dependency needed for yt-\/dlp to work properly. 
+
+ffmpeg builds can be downloaded from the yt-\/dlp repository \href{https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file}{\texttt{ here}}.
+
+This value is stored as a parmater in params.\+json. Can be changed at anytime with the GUI. \Hypertarget{classyoutube_downloader_a0540178ae7ef75167056cc33edef12a4}\index{youtubeDownloader@{youtubeDownloader}!increment@{increment}}
+\index{increment@{increment}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{increment}{increment}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a0540178ae7ef75167056cc33edef12a4} 
+int youtube\+Downloader\+::increment}
+
+\Hypertarget{classyoutube_downloader_abdb051381e17ed27b061f254bb371d46}\index{youtubeDownloader@{youtubeDownloader}!musicFolder@{musicFolder}}
+\index{musicFolder@{musicFolder}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{musicFolder}{musicFolder}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_abdb051381e17ed27b061f254bb371d46} 
+QString youtube\+Downloader\+::music\+Folder}
+
+
+
+Path to the music folder (parent). 
+
+This value is stored as a parmater in params.\+json. Can be changed at anytime with the GUI. \Hypertarget{classyoutube_downloader_aee62a4b7718a33f605aec99a8c008aae}\index{youtubeDownloader@{youtubeDownloader}!progressBarValue@{progressBarValue}}
+\index{progressBarValue@{progressBarValue}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{progressBarValue}{progressBarValue}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_aee62a4b7718a33f605aec99a8c008aae} 
+int youtube\+Downloader\+::progress\+Bar\+Value}
+
+
+
+Represent the value of the progress bar. This value is used to match visual progression with actual download load. 
+
+\Hypertarget{classyoutube_downloader_a7b94203d57b37fd3a31067637d02dd0a}\index{youtubeDownloader@{youtubeDownloader}!result@{result}}
+\index{result@{result}!youtubeDownloader@{youtubeDownloader}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily \label{classyoutube_downloader_a7b94203d57b37fd3a31067637d02dd0a} 
+int youtube\+Downloader\+::result}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{youtubedownloader_8h}{youtubedownloader.\+h}}\item 
+\mbox{\hyperlink{youtubedownloader_8cpp}{youtubedownloader.\+cpp}}\end{DoxyCompactItemize}
