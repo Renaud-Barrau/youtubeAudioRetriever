@@ -146,10 +146,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a29b4871f2cd7b4d32a2c2be5d008eb16" id="r_a29b4871f2cd7b4d32a2c2be5d008eb16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29b4871f2cd7b4d32a2c2be5d008eb16">youtubeDownloader</a> (QObject *parent=nullptr)</td></tr>
 <tr class="separator:a29b4871f2cd7b4d32a2c2be5d008eb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fba11b5e23ebc4cea08150b1cc94db2" id="r_a9fba11b5e23ebc4cea08150b1cc94db2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fba11b5e23ebc4cea08150b1cc94db2">formatCommand</a> (QString videoTitle, QString videoId, QString playlistName)</td></tr>
+<tr class="memdesc:a9fba11b5e23ebc4cea08150b1cc94db2"><td class="mdescLeft">&#160;</td><td class="mdescRight">format the command to be executed with the yt-dlp.exe. The command is stored in the <a class="el" href="#a7158e78581e300cac28da1f4dfd9a17f" title="QString that holds the command to send to yt-dlp executable. The value is overwritten for every new c...">youtubeDownloader::command</a> QString  <br /></td></tr>
 <tr class="separator:a9fba11b5e23ebc4cea08150b1cc94db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ca25de6505a546ff66698e45eb6f1b" id="r_ae2ca25de6505a546ff66698e45eb6f1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2ca25de6505a546ff66698e45eb6f1b">execCommand</a> (QString <a class="el" href="#a7158e78581e300cac28da1f4dfd9a17f">command</a>)</td></tr>
+<tr class="memdesc:ae2ca25de6505a546ff66698e45eb6f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a Qprocess and execute yt-dlp.exe with the command as a parameter. This method also handles the refresh of the progressBar value.  <br /></td></tr>
 <tr class="separator:ae2ca25de6505a546ff66698e45eb6f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a118d28eadd74aaa9131519ef5c7d9f3d" id="r_a118d28eadd74aaa9131519ef5c7d9f3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a118d28eadd74aaa9131519ef5c7d9f3d">startNextDownload</a> ()</td></tr>
+<tr class="memdesc:a118d28eadd74aaa9131519ef5c7d9f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">load the next command from the  <br /></td></tr>
 <tr class="separator:a118d28eadd74aaa9131519ef5c7d9f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -163,9 +166,8 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5323dd8eb6785bf65e93f376b16d4f97" id="r_a5323dd8eb6785bf65e93f376b16d4f97"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5323dd8eb6785bf65e93f376b16d4f97">ffmpegPath</a></td></tr>
 <tr class="memdesc:a5323dd8eb6785bf65e93f376b16d4f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to the ffmpeg bin folder. FFmpeg is a dependency needed for yt-dlp to work properly.  <br /></td></tr>
 <tr class="separator:a5323dd8eb6785bf65e93f376b16d4f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b94203d57b37fd3a31067637d02dd0a" id="r_a7b94203d57b37fd3a31067637d02dd0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b94203d57b37fd3a31067637d02dd0a">result</a></td></tr>
-<tr class="separator:a7b94203d57b37fd3a31067637d02dd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0540178ae7ef75167056cc33edef12a4" id="r_a0540178ae7ef75167056cc33edef12a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0540178ae7ef75167056cc33edef12a4">increment</a></td></tr>
+<tr class="memdesc:a0540178ae7ef75167056cc33edef12a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer that represents the increment value for 1 download in the progressBar. Updated everytime the <a class="el" href="#a06ba9dd3d11aa108623d6108ca7d8a28">youtubeDownloader::downloadAll</a> method is called.  <br /></td></tr>
 <tr class="separator:a0540178ae7ef75167056cc33edef12a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee62a4b7718a33f605aec99a8c008aae" id="r_aee62a4b7718a33f605aec99a8c008aae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee62a4b7718a33f605aec99a8c008aae">progressBarValue</a></td></tr>
 <tr class="memdesc:aee62a4b7718a33f605aec99a8c008aae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represent the value of the progress bar. This value is used to match visual progression with actual download load.  <br /></td></tr>
@@ -243,13 +245,13 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28_cgraph.png" border="0" usemap="#aclassyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28_cgraph" alt=""/></div>
 <map name="aclassyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28_cgraph" id="aclassyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28_cgraph">
 <area shape="rect" title=" " alt="" coords="5,68,148,111"/>
-<area shape="rect" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title=" " alt="" coords="196,35,338,77"/>
+<area shape="rect" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title="Starts a Qprocess and execute yt&#45;dlp.exe with the command as a parameter. This method also handles th..." alt="" coords="196,35,338,77"/>
 <area shape="poly" title=" " alt="" coords="148,74,180,69,181,74,149,79"/>
-<area shape="rect" href="classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2" title=" " alt="" coords="196,101,338,144"/>
+<area shape="rect" href="classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2" title="format the command to be executed with the yt&#45;dlp.exe. The command is stored in the youtubeDownloader..." alt="" coords="196,101,338,144"/>
 <area shape="poly" title=" " alt="" coords="149,99,181,105,180,110,148,104"/>
 <area shape="rect" href="classyoutube_downloader.html#a3d1f09719016c7f59d6f6f00157e0c6a" title=" " alt="" coords="576,5,719,48"/>
 <area shape="poly" title=" " alt="" coords="333,31,386,20,476,14,560,16,560,21,476,19,386,25,334,37"/>
-<area shape="rect" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title=" " alt="" coords="386,35,528,77"/>
+<area shape="rect" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title="load the next command from the" alt="" coords="386,35,528,77"/>
 <area shape="poly" title=" " alt="" coords="339,62,371,62,371,68,339,67"/>
 <area shape="poly" title=" " alt="" coords="386,50,354,50,354,44,386,45"/>
 <area shape="poly" title=" " alt="" coords="529,42,561,37,561,43,529,48"/>
@@ -272,15 +274,25 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Starts a Qprocess and execute yt-dlp.exe with the command as a parameter. This method also handles the refresh of the progressBar value. </p>
+<p>Emits the signal <a class="el" href="#a3d1f09719016c7f59d6f6f00157e0c6a">progressBarUpdate</a> to update the frontend.</p>
+<p>At the end of the QProcess, <a class="el" href="#a118d28eadd74aaa9131519ef5c7d9f3d" title="load the next command from the">youtubeDownloader::startNextDownload</a> is called.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">command</td><td>QString that represent the command to be executed. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_cgraph.png" border="0" usemap="#aclassyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_cgraph" alt=""/></div>
 <map name="aclassyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_cgraph" id="aclassyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,148,77"/>
+<area shape="rect" title="Starts a Qprocess and execute yt&#45;dlp.exe with the command as a parameter. This method also handles th..." alt="" coords="5,35,148,77"/>
 <area shape="rect" href="classyoutube_downloader.html#a3d1f09719016c7f59d6f6f00157e0c6a" title=" " alt="" coords="386,5,528,48"/>
 <area shape="poly" title=" " alt="" coords="143,31,195,20,285,14,370,16,370,21,285,19,196,25,144,37"/>
-<area shape="rect" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title=" " alt="" coords="196,35,338,77"/>
+<area shape="rect" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title="load the next command from the" alt="" coords="196,35,338,77"/>
 <area shape="poly" title=" " alt="" coords="148,62,180,62,180,68,148,67"/>
 <area shape="poly" title=" " alt="" coords="195,50,163,50,163,44,195,45"/>
 <area shape="poly" title=" " alt="" coords="338,42,370,37,371,43,339,48"/>
@@ -291,10 +303,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_icgraph.png" border="0" usemap="#aclassyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_icgraph" alt=""/></div>
 <map name="aclassyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_icgraph" id="aclassyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b_icgraph">
-<area shape="rect" title=" " alt="" coords="196,72,338,115"/>
+<area shape="rect" title="Starts a Qprocess and execute yt&#45;dlp.exe with the command as a parameter. This method also handles th..." alt="" coords="196,72,338,115"/>
 <area shape="rect" href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28" title=" " alt="" coords="5,5,148,48"/>
 <area shape="poly" title=" " alt="" coords="189,69,139,51,140,46,191,64"/>
-<area shape="rect" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title=" " alt="" coords="5,72,148,115"/>
+<area shape="rect" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title="load the next command from the" alt="" coords="5,72,148,115"/>
 <area shape="poly" title=" " alt="" coords="180,105,148,105,148,99,180,100"/>
 <area shape="poly" title=" " alt="" coords="163,82,195,82,195,87,163,87"/>
 </map>
@@ -325,12 +337,22 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>format the command to be executed with the yt-dlp.exe. The command is stored in the <a class="el" href="#a7158e78581e300cac28da1f4dfd9a17f" title="QString that holds the command to send to yt-dlp executable. The value is overwritten for every new c...">youtubeDownloader::command</a> QString </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">videoTitle</td><td>Title of the video to be added to the command (used for output file name). </td></tr>
+    <tr><td class="paramname">videoId</td><td>Id of the video used for the request, as it appears in the URL of the video (after the watch?v= ). </td></tr>
+    <tr><td class="paramname">playlistName</td><td>Name of the playlist selected, used to rename the output mp3 files. </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2_icgraph.png" border="0" usemap="#aclassyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2_icgraph" alt=""/></div>
 <map name="aclassyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2_icgraph" id="aclassyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2_icgraph">
-<area shape="rect" title=" " alt="" coords="196,5,338,48"/>
+<area shape="rect" title="format the command to be executed with the yt&#45;dlp.exe. The command is stored in the youtubeDownloader..." alt="" coords="196,5,338,48"/>
 <area shape="rect" href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28" title=" " alt="" coords="5,5,148,48"/>
 <area shape="poly" title=" " alt="" coords="180,29,148,29,148,24,180,24"/>
 </map>
@@ -366,9 +388,9 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a_icgraph.png" border="0" usemap="#aclassyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a_icgraph" alt=""/></div>
 <map name="aclassyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a_icgraph" id="aclassyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a_icgraph">
 <area shape="rect" title=" " alt="" coords="386,72,528,115"/>
-<area shape="rect" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title=" " alt="" coords="196,43,338,85"/>
+<area shape="rect" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title="Starts a Qprocess and execute yt&#45;dlp.exe with the command as a parameter. This method also handles th..." alt="" coords="196,43,338,85"/>
 <area shape="poly" title=" " alt="" coords="370,83,338,78,339,72,371,77"/>
-<area shape="rect" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title=" " alt="" coords="5,72,148,115"/>
+<area shape="rect" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title="load the next command from the" alt="" coords="5,72,148,115"/>
 <area shape="poly" title=" " alt="" coords="370,99,338,100,196,100,148,99,148,93,196,95,338,95,370,94"/>
 <area shape="rect" href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28" title=" " alt="" coords="5,5,148,48"/>
 <area shape="poly" title=" " alt="" coords="180,50,147,43,149,38,181,44"/>
@@ -393,13 +415,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>load the next command from the </p>
+<p>Emits the signal <a class="el" href="#a3d1f09719016c7f59d6f6f00157e0c6a">progressBarUpdate</a> to update the frontend.</p>
+<p>At the end of the QProcess, <a class="el" href="#a118d28eadd74aaa9131519ef5c7d9f3d" title="load the next command from the">youtubeDownloader::startNextDownload</a> is called. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_cgraph.png" border="0" usemap="#aclassyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_cgraph" alt=""/></div>
 <map name="aclassyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_cgraph" id="aclassyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,148,48"/>
-<area shape="rect" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title=" " alt="" coords="196,5,338,48"/>
+<area shape="rect" title="load the next command from the" alt="" coords="5,5,148,48"/>
+<area shape="rect" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title="Starts a Qprocess and execute yt&#45;dlp.exe with the command as a parameter. This method also handles th..." alt="" coords="196,5,338,48"/>
 <area shape="poly" title=" " alt="" coords="148,33,180,33,180,38,148,38"/>
 <area shape="rect" href="classyoutube_downloader.html#a3d1f09719016c7f59d6f6f00157e0c6a" title=" " alt="" coords="386,35,528,77"/>
 <area shape="poly" title=" " alt="" coords="144,46,196,57,285,63,370,61,370,67,285,69,195,63,143,51"/>
@@ -412,8 +438,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_icgraph.png" border="0" usemap="#aclassyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_icgraph" alt=""/></div>
 <map name="aclassyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_icgraph" id="aclassyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d_icgraph">
-<area shape="rect" title=" " alt="" coords="386,5,528,48"/>
-<area shape="rect" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title=" " alt="" coords="196,5,338,48"/>
+<area shape="rect" title="load the next command from the" alt="" coords="386,5,528,48"/>
+<area shape="rect" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title="Starts a Qprocess and execute yt&#45;dlp.exe with the command as a parameter. This method also handles th..." alt="" coords="196,5,338,48"/>
 <area shape="poly" title=" " alt="" coords="370,38,338,38,338,33,370,33"/>
 <area shape="poly" title=" " alt="" coords="353,15,385,15,385,21,353,20"/>
 <area shape="rect" href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28" title=" " alt="" coords="5,5,148,48"/>
@@ -515,6 +541,8 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>integer that represents the increment value for 1 download in the progressBar. Updated everytime the <a class="el" href="#a06ba9dd3d11aa108623d6108ca7d8a28">youtubeDownloader::downloadAll</a> method is called. </p>
+
 </div>
 </div>
 <a id="abdb051381e17ed27b061f254bb371d46" name="abdb051381e17ed27b061f254bb371d46"></a>
@@ -547,20 +575,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Represent the value of the progress bar. This value is used to match visual progression with actual download load. </p>
-
-</div>
-</div>
-<a id="a7b94203d57b37fd3a31067637d02dd0a" name="a7b94203d57b37fd3a31067637d02dd0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b94203d57b37fd3a31067637d02dd0a">&#9670;&#160;</a></span>result</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int youtubeDownloader::result</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

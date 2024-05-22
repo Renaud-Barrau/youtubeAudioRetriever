@@ -88,7 +88,6 @@ var NAVTREEINDEX0 =
 "classyoutube_downloader.html#a3d1f09719016c7f59d6f6f00157e0c6a":[2,0,4,4],
 "classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97":[2,0,4,9],
 "classyoutube_downloader.html#a7158e78581e300cac28da1f4dfd9a17f":[2,0,4,7],
-"classyoutube_downloader.html#a7b94203d57b37fd3a31067637d02dd0a":[2,0,4,13],
 "classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2":[2,0,4,3],
 "classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46":[2,0,4,11],
 "classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b":[2,0,4,2],

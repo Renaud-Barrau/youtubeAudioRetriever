@@ -60,7 +60,10 @@ public:
      */
     QString ffmpegPath;
 
-    int result;
+    /**
+     * @brief integer that represents the increment value for 1 download in the progressBar. Updated everytime the youtubeDownloader::downloadAll method is called.
+     *
+     */
     int increment;
 
     /**
@@ -77,8 +80,37 @@ public:
 
 
 ////////////////////    METHODS    ////////////////////
+    /**
+     * @fn formatCommand
+     * @brief format the command to be executed with the yt-dlp.exe. The command is stored in the youtubeDownloader::command QString
+     *
+     * @param videoTitle    Title of the video to be added to the command (used for output file name).
+     * @param videoId   Id of the video used for the request, as it appears in the URL of the video (after the watch?v= ).
+     * @param playlistName  Name of the playlist selected, used to rename the output mp3 files.
+     *
+    */
     void formatCommand(QString videoTitle, QString videoId, QString playlistName);
+    /**
+     * @fn execCommand
+     * @brief Starts a Qprocess and execute yt-dlp.exe with the command as a parameter. This method also handles the refresh of the progressBar value.
+     *
+     * Emits the signal \ref progressBarUpdate to update the frontend.
+     *
+     * At the end of the QProcess, youtubeDownloader::startNextDownload is called.
+     *
+     * @param command   QString that represent the command to be executed.
+     *
+    */
     void execCommand(QString command);
+    /**
+     * @fn startNextDownload
+     * @brief load the next command from the
+     *
+     * Emits the signal \ref progressBarUpdate to update the frontend.
+     *
+     * At the end of the QProcess, youtubeDownloader::startNextDownload is called.
+     *
+    */
     void startNextDownload();
 
 

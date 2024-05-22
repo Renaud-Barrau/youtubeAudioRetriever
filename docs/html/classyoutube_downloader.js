@@ -12,6 +12,5 @@ var classyoutube_downloader =
     [ "ffmpegPath", "classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97", null ],
     [ "increment", "classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4", null ],
     [ "musicFolder", "classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46", null ],
-    [ "progressBarValue", "classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae", null ],
-    [ "result", "classyoutube_downloader.html#a7b94203d57b37fd3a31067637d02dd0a", null ]
+    [ "progressBarValue", "classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae", null ]
 ];
