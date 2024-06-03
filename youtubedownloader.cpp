@@ -9,11 +9,11 @@ void youtubeDownloader::formatCommand(QString videoTitle, QString videoId, QStri
     command = "yt-dlp.exe -x --audio-format mp3 --audio-quality 192 --write-thumbnail --ffmpeg-location ";
     // command = " -x --audio-format mp3 --audio-quality 192 --write-thumbnail --ffmpeg-location ";
     command += youtubeDownloader::ffmpegPath;
-    command += " -P ";
+    command += " -P \"";
     command += youtubeDownloader::musicFolder;
     command += "/";
     command += playlistName;
-    command += " -o \"";
+    command += "\" -o \"";
     command += videoTitle;
     command += "\" https://www.youtube.com/watch?v=";
     command += videoId;

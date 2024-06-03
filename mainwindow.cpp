@@ -101,16 +101,16 @@ void mainWindow::on_saveParamsButton_clicked()
 
 void mainWindow::receivedParamStartup(QString key, QString value){
     if(key == "apiKey"){
-        ui->apiKeyTextEdit->insertPlainText(value);
+        ui->apiKeyTextEdit->setPlainText(value);
     }
     else if(key == "clientId"){
-        ui->clientIdTextEdit->insertPlainText(value);
+        ui->clientIdTextEdit->setPlainText(value);
     }
     else if(key == "clientSecretCode"){
-        ui->clientSecretCodeTextEdit->insertPlainText(value);
+        ui->clientSecretCodeTextEdit->setPlainText(value);
     }
     else if(key == "refreshToken"){
-        ui->refreshTokenTextEdit->insertPlainText(value);
+        ui->refreshTokenTextEdit->setPlainText(value);
     }
     else if(key == "musicFolder"){
         ui->musicFolderRepository->setText(value);

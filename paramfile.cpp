@@ -70,6 +70,7 @@ bool paramFile::writeParam(const QString &key, const QString &value)
         }
     }
 
+    obj[key] = "";
     obj[key] = value;
     doc.setObject(obj);
 

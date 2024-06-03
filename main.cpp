@@ -88,8 +88,7 @@ int main(int argc, char *argv[]) {
     // Récupère le valeur dont la clé est passée en paramètre du signal
     QObject::connect(&window, SIGNAL(requestParam(QString)), &paramFile, SLOT(readParam(QString)));
 
-//      paramFile -> window
-    QObject::connect(&paramFile, SIGNAL(paramValueReturn(QString,QString)), &window, SLOT(receivedParamStartup(QString,QString)));
+
 
 
 //                  RECEPTION DES DONNEES ISSUES DU PARAM FILE                  //
@@ -98,6 +97,11 @@ int main(int argc, char *argv[]) {
 
 //      paramFile -> youtube
     QObject::connect(&paramFile, SIGNAL(paramValueReturn(QString,QString)), &youtube, SLOT(updateParams(QString,QString)));
+
+    //      paramFile -> window
+    QObject::connect(&paramFile, SIGNAL(paramValueReturn(QString,QString)), &window, SLOT(receivedParamStartup(QString,QString)));
+
+
 //////////////////////////////////////////////////////////////////////////////////
 
 
