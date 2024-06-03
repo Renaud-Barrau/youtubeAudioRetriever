@@ -1,5 +1,10 @@
 \doxysection{paramfile.\+h File Reference}
 \hypertarget{paramfile_8h}{}\label{paramfile_8h}\index{paramfile.h@{paramfile.h}}
+
+
+This file handle the read/write access to the params.\+json file that stores important data, sush as \+:  
+
+
 {\ttfamily \#include $<$QObject$>$}\newline
 {\ttfamily \#include $<$QFile$>$}\newline
 {\ttfamily \#include $<$QText\+Stream$>$}\newline
@@ -24,4 +29,17 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classparam_file}{param\+File}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \doxylink{classparam_file}{param\+File} class represent the object in charge of loading and saving important data into a parameter file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file handle the read/write access to the params.\+json file that stores important data, sush as \+: 
+
+
+\begin{DoxyItemize}
+\item API credentials for OAUTH identification (Api key, client ID, client secret code, refresh token)
+\item path for ffmpeg dependency
+\item path for music folder output
+\end{DoxyItemize}
+
+Read and write function make use of QJson\+Document and Qjson\+Object to deals with the param file and browse in the different keys 

@@ -1,9 +1,9 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "mainWindow.h"
+#include "ui_mainWindow.h"
 
-MainWindow::MainWindow(QWidget *parent) :
+mainWindow::mainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::mainWindow)
 {
     ui->setupUi(this);
 
@@ -55,12 +55,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
-MainWindow::~MainWindow()
+mainWindow::~mainWindow()
 {
     delete ui;
 }
 
-void MainWindow::on_downloadButton_clicked()
+void mainWindow::on_downloadButton_clicked()
 {
     cout << "Download button pressed" << endl;
     emit requestSourceDeclarator("fetchPlaylistElements");
@@ -79,12 +79,12 @@ void MainWindow::on_downloadButton_clicked()
     emit downloadButtonPressed();
 }
 
-void MainWindow::on_checkBox_stateChanged(int arg1)
+void mainWindow::on_checkBox_stateChanged(int arg1)
 {
     cout << arg1 << endl;
 }
 
-void MainWindow::on_saveParamsButton_clicked()
+void mainWindow::on_saveParamsButton_clicked()
 {
     cout << "Save params button pressed" << endl;
     QString apiKeyText = ui->apiKeyTextEdit->toPlainText();
@@ -99,7 +99,7 @@ void MainWindow::on_saveParamsButton_clicked()
 
 }
 
-void MainWindow::receivedParamStartup(QString key, QString value){
+void mainWindow::receivedParamStartup(QString key, QString value){
     if(key == "apiKey"){
         ui->apiKeyTextEdit->insertPlainText(value);
     }
@@ -122,13 +122,13 @@ void MainWindow::receivedParamStartup(QString key, QString value){
         ui->videoNumberTextEdit->setText(value);
     }
     else{
-        cout << " [-] " << "Error in MainWindow::receivedParam(QString key, QString value)" << endl;
+        cout << " [-] " << "Error in mainWindow::receivedParam(QString key, QString value)" << endl;
         cout << " --> " << "unknown key" << endl;
     }
 
 }
 
-void MainWindow::on_lockApiSettingsCheckBox_stateChanged(int arg1)
+void mainWindow::on_lockApiSettingsCheckBox_stateChanged(int arg1)
 {
     if(arg1 == 0){
         ui->apiKeyTextEdit->setReadOnly(false);
@@ -152,7 +152,7 @@ void MainWindow::on_lockApiSettingsCheckBox_stateChanged(int arg1)
     }
 }
 
-void MainWindow::on_locateMusicFolderButton_clicked()
+void mainWindow::on_locateMusicFolderButton_clicked()
 {
     QString folderPath = QFileDialog::getExistingDirectory(nullptr, "Sélectionner un dossier", "", QFileDialog::ShowDirsOnly);
      // Vérifier si un dossier a été sélectionné
@@ -166,7 +166,7 @@ void MainWindow::on_locateMusicFolderButton_clicked()
      }
 }
 
-void MainWindow::on_locateFfpmegButton_clicked()
+void mainWindow::on_locateFfpmegButton_clicked()
 {
     QString ffpmegPath = QFileDialog::getExistingDirectory(nullptr, "Sélectionner un fichier", "", QFileDialog::ShowDirsOnly);
         // Vérifier si un fichier a été sélectionné
@@ -180,17 +180,17 @@ void MainWindow::on_locateFfpmegButton_clicked()
     }
 }
 
-void MainWindow::updateProgressBarValue(int value){
+void mainWindow::updateProgressBarValue(int value){
     ui->downloadProgressBar->setValue(value);
 }
 
-void MainWindow::on_playlistSelectionComboBox_activated(int index)
+void mainWindow::on_playlistSelectionComboBox_activated(int index)
 {
     cout << "selected playlist index : " << index << endl;
     emit playlistIndex(index);
 }
 
-void MainWindow::updatePlaylistList(QVector<QString> playlistNameArray,QVector<QString> playlistIdArray){
+void mainWindow::updatePlaylistList(QVector<QString> playlistNameArray,QVector<QString> playlistIdArray){
     cout << ui->playlistSelectionComboBox->currentIndex() << endl;
     for(int i = 0; i < playlistNameArray.size(); ++i){
         if(ui->playlistSelectionComboBox->findText(playlistNameArray.at(i)) == -1){
@@ -201,7 +201,7 @@ void MainWindow::updatePlaylistList(QVector<QString> playlistNameArray,QVector<Q
     emit playlistIndex(0);
 }
 
-void MainWindow::on_fetchPlaylistButton_clicked()
+void mainWindow::on_fetchPlaylistButton_clicked()
 {
     cout << "fetch playlist button pressed " << endl;
     emit requestSourceDeclarator("fetchPlaylists");
@@ -216,11 +216,11 @@ void MainWindow::on_fetchPlaylistButton_clicked()
 
 }
 
-void MainWindow::videoNumberEnterPressed(){
+void mainWindow::videoNumberEnterPressed(){
 
 }
 
-void MainWindow::on_videoNumberTextEdit_textChanged()
+void mainWindow::on_videoNumberTextEdit_textChanged()
 {
     if(ui->videoNumberTextEdit->toPlainText().endsWith('\n')){
         if(1 <= ui->videoNumberTextEdit->toPlainText().toInt() && ui->videoNumberTextEdit->toPlainText().toInt() <= 50 ){
@@ -240,19 +240,19 @@ void MainWindow::on_videoNumberTextEdit_textChanged()
     }
 }
 
-void MainWindow::on_playPauseButton_clicked()
+void mainWindow::on_playPauseButton_clicked()
 {
     emit playPauseButtonPressed();
 }
 
-void MainWindow::updateSliderValue(int value){
+void mainWindow::updateSliderValue(int value){
     ui->musicProressSlider->setValue(value);
 }
 
-void MainWindow::updateSliderRange(int value){
+void mainWindow::updateSliderRange(int value){
     ui->musicProressSlider->setRange(0, value);
 }
 
-void MainWindow::updateMusicLabel(QUrl musicName){
+void mainWindow::updateMusicLabel(QUrl musicName){
     ui->musicNameLabel->setText(musicName.toString());
 }

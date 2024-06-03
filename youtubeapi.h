@@ -21,12 +21,12 @@
 
 using namespace std;
 
-class YouTubeAPI : public QObject
+class youtubeApi : public QObject
 {
     Q_OBJECT
 public:
 ////////////////////    CONSTRUCTEUR    ////////////////////
-    explicit YouTubeAPI(QObject *parent = nullptr) : QObject(parent) {
+    explicit youtubeApi(QObject *parent = nullptr) : QObject(parent) {
 //        accessToken = "";
 
         timer->setInterval(refreshTime);

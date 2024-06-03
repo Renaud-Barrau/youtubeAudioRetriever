@@ -1,5 +1,5 @@
  #include <QApplication>
-// #include <QMainWindow>
+// #include <QmainWindow>
  #include <QVBoxLayout>
 // #include <QQuickWidget>
 #include <QDesktopServices>
@@ -7,7 +7,7 @@
 #include <QAudioOutput>
 // #include <QtWebEngineWidgets>
 #include <QWebEngineView>
-#include <QMainWindow>
+#include <QmainWindow>
 #include <QFileDialog>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -24,10 +24,10 @@
 #include <string>
 #include <shellapi.h>
 
-#include <youtubeapi.h>
+#include <youtubeApi.h>
 #include <audioreader.h>
-#include <youtubedownloader.h>
-#include <mainwindow.h>
+#include <youtubeDownloader.h>
+#include <mainWindow.h>
 #include <paramfile.h>
 
 
@@ -40,10 +40,10 @@ using namespace std;
 int main(int argc, char *argv[]) {
 
     QApplication a(argc, argv);
-    YouTubeAPI youtube;
-    youtubedownloader youtubeDownloader;
+    youtubeApi youtube;
+    youtubeDownloader youtubeDownloader;
     audioReader reader;
-    MainWindow window;
+    mainWindow window;
     paramFile paramFile("params.json");
 
     //TEMP
@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
     QObject::connect(&window, SIGNAL(requestParam(QString)), &paramFile, SLOT(readParam(QString)));
 
 //      paramFile -> window
-    QObject::connect(&paramFile, SIGNAL(loadParam(QString,QString)), &window, SLOT(receivedParamStartup(QString,QString)));
+    QObject::connect(&paramFile, SIGNAL(paramValueReturn(QString,QString)), &window, SLOT(receivedParamStartup(QString,QString)));
 
 
 //                  RECEPTION DES DONNEES ISSUES DU PARAM FILE                  //
@@ -114,31 +114,31 @@ int main(int argc, char *argv[]) {
 
 
     paramFile.readParam("apiKey");
-    emit paramFile.loadParam("apiKey", paramFile.value);
+    emit paramFile.paramValueReturn("apiKey", paramFile.value);
     youtube.Api = paramFile.value;
 
     paramFile.readParam("clientId");
-    emit paramFile.loadParam("clientId", paramFile.value);
+    emit paramFile.paramValueReturn("clientId", paramFile.value);
     youtube.clientId = paramFile.value;
 
     paramFile.readParam("clientSecretCode");
-    emit paramFile.loadParam("clientSecretCode", paramFile.value);
+    emit paramFile.paramValueReturn("clientSecretCode", paramFile.value);
     youtube.clientSecretCode = paramFile.value;
 
     paramFile.readParam("refreshToken");
-    emit paramFile.loadParam("refreshToken", paramFile.value);
+    emit paramFile.paramValueReturn("refreshToken", paramFile.value);
     youtube.refreshToken = paramFile.value;
 
     paramFile.readParam("musicFolder");
-    emit paramFile.loadParam("musicFolder", paramFile.value);
+    emit paramFile.paramValueReturn("musicFolder", paramFile.value);
     youtubeDownloader.musicFolder = paramFile.value;
 
     paramFile.readParam("ffpmegPath");
-    emit paramFile.loadParam("ffpmegPath", paramFile.value);
+    emit paramFile.paramValueReturn("ffpmegPath", paramFile.value);
     youtubeDownloader.ffmpegPath = paramFile.value;
 
     paramFile.readParam("videoNumber");
-    emit paramFile.loadParam("videoNumber", paramFile.value);
+    emit paramFile.paramValueReturn("videoNumber", paramFile.value);
     youtube.maxResults = paramFile.value.toInt();
 
 
@@ -157,7 +157,7 @@ int main(int argc, char *argv[]) {
 //    youtubeDownloader.execCommand();
 
 
-//     QMainWindow mainWindow;
+//     QmainWindow mainWindow;
     // QWebEngineView *view = new QWebEngineView(&mainWindow);
     // view->setUrl(QUrl("https://www.youtube.com/watch?v=D_nnzo9feT0"));
     // mainWindow.setCentralWidget(view);

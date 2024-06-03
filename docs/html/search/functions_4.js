@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['fetchplaylistbuttonpressed_0',['fetchPlaylistButtonPressed',['../class_main_window.html#a72ec4a81fcfd5094f23855ea76955839',1,'MainWindow']]],
-  ['fetchplaylistelements_1',['fetchPlaylistElements',['../class_you_tube_a_p_i.html#a9296e9f1ad4ad5fa40a7f4f6b6a8b142',1,'YouTubeAPI']]],
-  ['fetchplaylistelementsignal_2',['fetchPlaylistElementSignal',['../class_you_tube_a_p_i.html#a308bf4e5776f529914e80acfe042f278',1,'YouTubeAPI']]],
-  ['fetchplaylists_3',['fetchPlaylists',['../class_you_tube_a_p_i.html#a3cbda9e07e635353088e1e4cf5ee51b6',1,'YouTubeAPI']]],
-  ['fetchplaylistssignal_4',['fetchPlaylistsSignal',['../class_you_tube_a_p_i.html#a19f05e424a6c1fa77db60e0f5bf2cf8d',1,'YouTubeAPI']]],
-  ['formatcommand_5',['formatCommand',['../classyoutubedownloader.html#aeefa3bcfaa43798d7443e714e165aaba',1,'youtubedownloader']]]
+  ['fetchplaylistbuttonpressed_0',['fetchPlaylistButtonPressed',['../classmain_window.html#a08f109af27b0e150d75323b0aef24287',1,'mainWindow']]],
+  ['fetchplaylistelements_1',['fetchPlaylistElements',['../classyoutube_api.html#a7646c6f546099d7b07006e3b1c62ba08',1,'youtubeApi']]],
+  ['fetchplaylistelementsignal_2',['fetchPlaylistElementSignal',['../classyoutube_api.html#a6d5dc1ab92e9b34a2788e3911de17c25',1,'youtubeApi']]],
+  ['fetchplaylists_3',['fetchPlaylists',['../classyoutube_api.html#a16c112616d66b7d9d3f63b1fa4c75354',1,'youtubeApi']]],
+  ['fetchplaylistssignal_4',['fetchPlaylistsSignal',['../classyoutube_api.html#a849d69a00d62a986ac9f661c97ee1a8d',1,'youtubeApi']]],
+  ['formatcommand_5',['formatCommand',['../classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2',1,'youtubeDownloader']]]
 ];

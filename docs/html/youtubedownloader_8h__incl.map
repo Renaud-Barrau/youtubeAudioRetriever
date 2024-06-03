@@ -1,5 +1,5 @@
 <map id="youtubedownloader.h" name="youtubedownloader.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="624,5,768,32"/>
+<area shape="rect" id="Node000001" title="This file handle the download of mp3 files using yt&#45;dlp." alt="" coords="624,5,768,32"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,80,75,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="624,26,390,44,242,60,90,82,90,77,242,55,390,38,624,21"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="99,80,272,107"/>

@@ -1,11 +1,11 @@
 var searchData=
 [
   ['ui_0',['Ui',['../namespace_ui.html',1,'']]],
-  ['ui_1',['ui',['../class_main_window.html#a35466a70ed47252a0191168126a352a5',1,'MainWindow']]],
+  ['ui_1',['ui',['../classmain_window.html#aa0e40d0240b1ed74cfdbbfc0bce5fca4',1,'mainWindow']]],
   ['updatemusicnamesignal_2',['updateMusicNameSignal',['../classaudio_reader.html#a6695fdc6cf386cf6aaaf42b4ae1034ab',1,'audioReader']]],
-  ['updateparams_3',['updateParams',['../class_you_tube_a_p_i.html#ab6ca267b5732261153918c178314494a',1,'YouTubeAPI::updateParams()'],['../classyoutubedownloader.html#ad57af4a115d72ca991fc49ae270d9680',1,'youtubedownloader::updateParams()']]],
-  ['updateplaylistid_4',['updatePlaylistId',['../class_you_tube_a_p_i.html#a7d410aa5a4f8879de630488ec144b849',1,'YouTubeAPI']]],
-  ['updaterequestsource_5',['updateRequestSource',['../class_you_tube_a_p_i.html#a27f2da751c6074a0bad09b000794fbf4',1,'YouTubeAPI']]],
+  ['updateparams_3',['updateParams',['../classyoutube_api.html#aa380735d935be26b8a3267eea75514eb',1,'youtubeApi::updateParams()'],['../classyoutube_downloader.html#aec971eecff2c02500a4dd4f9ef9c047f',1,'youtubeDownloader::updateParams()']]],
+  ['updateplaylistid_4',['updatePlaylistId',['../classyoutube_api.html#a91693c00f39ed155f303eaa80eb7b571',1,'youtubeApi']]],
+  ['updaterequestsource_5',['updateRequestSource',['../classyoutube_api.html#a37317fec76a10cb5cb4f347a3e85e082',1,'youtubeApi']]],
   ['updatesliderrange_6',['updateSliderRange',['../classaudio_reader.html#a670038b6b31216b6f3d2d60d4cfc9cb8',1,'audioReader']]],
   ['updatesliderrangesignal_7',['updateSliderRangeSignal',['../classaudio_reader.html#ab0b86172a900938868ce726d4da74ca3',1,'audioReader']]],
   ['updateslidervalue_8',['updateSliderValue',['../classaudio_reader.html#a73f013c29143efa2de026460f058fdce',1,'audioReader']]],
