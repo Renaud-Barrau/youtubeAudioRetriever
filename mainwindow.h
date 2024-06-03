@@ -9,8 +9,11 @@
 #include <QStandardItemModel>
 #include <QFileSystemModel>
 #include <QMovie>
+#include <QKeySequence>
 
 #include <iostream>
+
+#include "playlistmenu.h"
 
 using namespace std;
 
@@ -24,6 +27,7 @@ class mainWindow : public QMainWindow
 
 public:
     Ui::mainWindow *ui;
+    QDialog *playlistMenuDialog;
 
     explicit mainWindow(QWidget *parent = nullptr);
     ~mainWindow();
@@ -79,6 +83,9 @@ private slots:
     void updateSliderRange(int value);
 
     void updateMusicLabel(QUrl musicName);
+
+
+
 
 private:
 

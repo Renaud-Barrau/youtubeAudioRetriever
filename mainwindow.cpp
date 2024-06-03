@@ -7,6 +7,10 @@ mainWindow::mainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->actionApi_credidentials->setShortcut(QKeySequence::New);
+
+
+
 //////////          API FRAME           //////////
 
     ui->apiKeyTextEdit->setWordWrapMode(QTextOption::NoWrap);

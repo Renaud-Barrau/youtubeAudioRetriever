@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     paramfile.cpp \
+    playlistmenu.cpp \
     youtubeapi.cpp \
     youtubedownloader.cpp
 
@@ -21,11 +22,13 @@ HEADERS += \
     audioreader.h \
     mainwindow.h \
     paramfile.h \
+    playlistmenu.h \
     youtubeapi.h \
     youtubedownloader.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    playlistmenu.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
