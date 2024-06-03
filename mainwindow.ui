@@ -436,7 +436,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>MusicName</string>
     </property>
    </widget>
   </widget>
