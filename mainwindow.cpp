@@ -6,8 +6,12 @@ mainWindow::mainWindow(QWidget *parent) :
     ui(new Ui::mainWindow)
 {
     ui->setupUi(this);
+    audioReaderObject = new audioReader(this);
 
-    ui->actionApi_credidentials->setShortcut(QKeySequence::New);
+    QObject::connect(audioReaderObject, SIGNAL(updateSliderValueSignal(int)),this, SLOT(updateSliderValue(int)));
+    QObject::connect(audioReaderObject, SIGNAL(updateSliderRangeSignal(int)),this, SLOT(updateSliderRange(int)));
+    QObject::connect(audioReaderObject, SIGNAL(updateMusicNameSignal(QUrl)), this, SLOT(updateMusicLabel(QUrl)));
+    // ui->apiCredentials->setShortcut(QKeySequence::New);
 
 
 
@@ -246,17 +250,26 @@ void mainWindow::on_videoNumberTextEdit_textChanged()
 
 void mainWindow::on_playPauseButton_clicked()
 {
-    emit playPauseButtonPressed();
+    audioReaderObject->togglePlayback();
 }
 
 void mainWindow::updateSliderValue(int value){
-    ui->musicProressSlider->setValue(value);
+    ui->musicProgressSlider->setValue(value);
 }
 
 void mainWindow::updateSliderRange(int value){
-    ui->musicProressSlider->setRange(0, value);
+    ui->musicProgressSlider->setRange(0, value);
 }
 
 void mainWindow::updateMusicLabel(QUrl musicName){
     ui->musicNameLabel->setText(musicName.toString());
+}
+
+void mainWindow::on_apiCredentials_triggered(){
+    apiSettingsObject = new apiSettings(this);
+    apiSettingsObject->exec();
+}
+
+void mainWindow::on_musicProgressSlider_sliderMoved(int value){
+    audioReaderObject->setPosition(value);
 }

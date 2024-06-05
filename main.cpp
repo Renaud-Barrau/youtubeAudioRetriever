@@ -25,7 +25,7 @@
 #include <shellapi.h>
 
 #include <youtubeApi.h>
-#include <audioreader.h>
+// #include <audioreader.h>
 #include <youtubeDownloader.h>
 #include <mainWindow.h>
 #include <paramfile.h>
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
     youtubeApi youtube;
     youtubeDownloader youtubeDownloader;
-    audioReader reader;
+    // audioReader reader;
     mainWindow window;
     paramFile paramFile("params.json");
 
@@ -82,7 +82,7 @@ int main(int argc, char *argv[]) {
     QObject::connect(&window, SIGNAL(saveVideoNumber(QString,QString)), &paramFile, SLOT(writeParam(QString,QString)));
 
 //      window -> reader
-    QObject::connect(&window, SIGNAL(playPauseButtonPressed()), &reader, SLOT(togglePlayback()));
+    // QObject::connect(&window, SIGNAL(playPauseButtonPressed()), &reader, SLOT(togglePlayback()));
 
 
     // Récupère le valeur dont la clé est passée en paramètre du signal
@@ -109,10 +109,10 @@ int main(int argc, char *argv[]) {
 //      youtubeDownloader -> window
     QObject::connect(&youtubeDownloader, SIGNAL(progressBarUpdate(int)), &window, SLOT(updateProgressBarValue(int)));
 
-    //      raeder -> window
-    QObject::connect(&reader, SIGNAL(updateSliderValueSignal(int)),&window, SLOT(updateSliderValue(int)));
-    QObject::connect(&reader, SIGNAL(updateSliderRangeSignal(int)),&window, SLOT(updateSliderRange(int)));
-    QObject::connect(&reader, SIGNAL(updateMusicNameSignal(QUrl)),&window, SLOT(updateMusicLabel(QUrl)));
+    //      reader -> window
+    // QObject::connect(&reader, SIGNAL(updateSliderValueSignal(int)),&window, SLOT(updateSliderValue(int)));
+    // QObject::connect(&reader, SIGNAL(updateSliderRangeSignal(int)),&window, SLOT(updateSliderRange(int)));
+    // QObject::connect(&reader, SIGNAL(updateMusicNameSignal(QUrl)),&window, SLOT(updateMusicLabel(QUrl)));
 
 
 

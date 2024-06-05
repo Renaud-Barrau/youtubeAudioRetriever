@@ -13,7 +13,8 @@
 
 #include <iostream>
 
-#include "playlistmenu.h"
+#include "apisettings.h"
+#include "audioreader.h"
 
 using namespace std;
 
@@ -26,8 +27,10 @@ class mainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+
     Ui::mainWindow *ui;
-    QDialog *playlistMenuDialog;
+    apiSettings *apiSettingsObject;
+    audioReader *audioReaderObject;
 
     explicit mainWindow(QWidget *parent = nullptr);
     ~mainWindow();
@@ -43,7 +46,7 @@ signals:
     void playlistIndex(int);
     void requestParam(QString);
     void saveVideoNumber(QString,QString);
-    void playPauseButtonPressed();
+    // void playPauseButtonPressed();
 
 
 
@@ -83,6 +86,10 @@ private slots:
     void updateSliderRange(int value);
 
     void updateMusicLabel(QUrl musicName);
+
+    void on_apiCredentials_triggered();
+
+    void on_musicProgressSlider_sliderMoved(int value);
 
 
 

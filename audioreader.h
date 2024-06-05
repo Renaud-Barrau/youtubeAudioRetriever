@@ -24,17 +24,17 @@ public:
 
 
 
-        player = new QMediaPlayer(this);
-        positionTimer = new QTimer(this);
+    player = new QMediaPlayer(this);
+    positionTimer = new QTimer(this);
 
-        audioReader::player->setAudioOutput(&audioOutput);
-        audioReader::player->setSource(QUrl::fromLocalFile("C:/Users/rbarr/Desktop/musique_test/Musique/Jack Junior - My Addiction.mp3"));
-        audioReader::player->pause();
-        cout << audioReader::player->duration() << endl;
+    audioReader::player->setAudioOutput(&audioOutput);
+    audioReader::player->setSource(QUrl::fromLocalFile("C:/Users/rbarr/Desktop/musique_test2/Musique/Jack Junior - My Addiction.mp3"));
+    audioReader::player->pause();
+    cout << audioReader::player->duration() << endl;
 
 
-        QObject::connect(positionTimer,&QTimer::timeout, this , &audioReader::updateSliderValue);
-        QObject::connect(player, &QMediaPlayer::durationChanged, this , &audioReader::updateSliderRange);
+    QObject::connect(positionTimer,&QTimer::timeout, this , &audioReader::updateSliderValue);
+    QObject::connect(player, &QMediaPlayer::durationChanged, this , &audioReader::updateSliderRange);
 
 
     };

@@ -10,25 +10,25 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    apisettings.cpp \
     audioreader.cpp \
     main.cpp \
     mainwindow.cpp \
     paramfile.cpp \
-    playlistmenu.cpp \
     youtubeapi.cpp \
     youtubedownloader.cpp
 
 HEADERS += \
+    apisettings.h \
     audioreader.h \
     mainwindow.h \
     paramfile.h \
-    playlistmenu.h \
     youtubeapi.h \
     youtubedownloader.h
 
 FORMS += \
-    mainwindow.ui \
-    playlistmenu.ui
+    apisettings.ui \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
