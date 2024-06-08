@@ -1,9 +1,0 @@
-<map id="YouTubeAPI::getToken" name="YouTubeAPI::getToken">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,160,73"/>
-<area shape="rect" id="Node000002" href="$class_you_tube_a_p_i.html#a972fbda68c56ac9c2656e375012c4f57" title=" " alt="" coords="208,39,394,81"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,57,192,57,192,63,160,63"/>
-<area shape="rect" id="Node000003" href="$class_you_tube_a_p_i.html#a308bf4e5776f529914e80acfe042f278" title=" " alt="" coords="446,5,618,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="394,44,430,39,430,44,395,49"/>
-<area shape="rect" id="Node000004" href="$class_you_tube_a_p_i.html#a19f05e424a6c1fa77db60e0f5bf2cf8d" title=" " alt="" coords="442,72,621,115"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="395,71,427,76,426,81,394,76"/>
-</map>
