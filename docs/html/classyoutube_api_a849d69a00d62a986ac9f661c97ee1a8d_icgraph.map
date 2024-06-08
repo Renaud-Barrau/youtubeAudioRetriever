@@ -1,9 +1,0 @@
-<map id="youtubeApi::fetchPlaylistsSignal" name="youtubeApi::fetchPlaylistsSignal">
-<area shape="rect" id="Node000001" title=" " alt="" coords="428,35,600,77"/>
-<area shape="rect" id="Node000002" href="$classyoutube_api.html#a854ec1a2b234de3759868567b6f922fd" title=" " alt="" coords="201,5,380,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,45,380,41,381,36,413,40"/>
-<area shape="rect" id="Node000004" href="$classyoutube_api.html#a48dee190bf7f7b13c63d374af3f92816" title=" " alt="" coords="211,72,370,99"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="414,72,371,78,370,72,413,67"/>
-<area shape="rect" id="Node000003" href="$classyoutube_api.html#a14a356ef9451170e71bca441dcc5d33f" title=" " alt="" coords="5,13,153,40"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="185,29,153,29,153,24,185,24"/>
-</map>

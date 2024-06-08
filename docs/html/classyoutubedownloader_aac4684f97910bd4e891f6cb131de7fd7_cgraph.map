@@ -1,9 +1,0 @@
-<map id="youtubedownloader::startNextDownload" name="youtubedownloader::startNextDownload">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,146,48"/>
-<area shape="rect" id="Node000002" href="$classyoutubedownloader.html#a71a2f51c269620680fe0027bb7f6c645" title=" " alt="" coords="194,5,334,48"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,33,178,33,178,38,146,38"/>
-<area shape="rect" id="Node000003" href="$classyoutubedownloader.html#a304a89e4f77018554f28d2470fda7665" title=" " alt="" coords="382,35,522,77"/>
-<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="142,46,194,57,283,63,366,61,367,66,283,69,193,63,141,51"/>
-<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="193,21,161,20,161,15,193,15"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,35,367,40,366,45,334,40"/>
-</map>
