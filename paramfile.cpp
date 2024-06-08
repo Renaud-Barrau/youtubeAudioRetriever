@@ -15,7 +15,7 @@
  * @return NOTE : This method DOES NOT return the value of the parameter.
  * Instead, it returns a bool to notify if operation failed or not and emits a signal with the value in parameter as a QString, so it can be catched by others classes.
  *
- * Emits the signal \ref paramValueReturn
+ *
  */
 QString paramFile::readParam(const QString &key)
 {

@@ -33,30 +33,15 @@ class mainWindow : public QMainWindow
 public:
 
     Ui::mainWindow *ui;
-    std::shared_ptr<apiSettings> apiSettingsObject;
-//    apiSettings *apiSettingsObject;
-    audioReader *audioReaderObject;
 
     std::shared_ptr<paramFile> paramFileObject;
-    youtubeDownloader *youtubeDownloaderObject;
-    youtubeApi *youtubeApiObject;
+    std::shared_ptr<youtubeDownloader> youtubeDownloaderObject;
+    std::shared_ptr<youtubeApi> youtubeApiObject;
+    std::shared_ptr<audioReader> audioReaderObject;
+    std::shared_ptr<apiSettings> apiSettingsObject;
 
     explicit mainWindow(QWidget *parent = nullptr);
     ~mainWindow();
-
-signals:
-    // void downloadButtonPressed(QString,QString,QString);
-    void downloadButtonPressed();
-    void saveButtonPressed(QString,QString);
-    void locateMusicFolderButtonPressed(QString,QString);
-    void locateFfmpegPathButtonPressed(QString,QString);
-    void fetchPlaylistButtonPressed();
-    void requestSourceDeclarator(QString);
-    void playlistIndex(int);
-    void requestParam(QString);
-    void saveVideoNumber(QString,QString);
-    // void playPauseButtonPressed();
-
 
 
 
@@ -64,9 +49,9 @@ private slots:
     void on_downloadButton_clicked();
     void on_checkBox_stateChanged(int arg1);
 
-    void on_saveParamsButton_clicked();
+    // void on_saveParamsButton_clicked();
 
-    void on_lockApiSettingsCheckBox_stateChanged(int arg1);
+    // void on_lockApiSettingsCheckBox_stateChanged(int arg1);
 
     void on_locateMusicFolderButton_clicked();
 

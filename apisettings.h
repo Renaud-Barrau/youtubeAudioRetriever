@@ -15,10 +15,12 @@ class apiSettings : public QDialog
     Q_OBJECT
 
 public:
-    explicit apiSettings(std::shared_ptr<paramFile> ptr);
+    std::shared_ptr<paramFile> paramFileObject;
+
+
+    apiSettings(std::shared_ptr<paramFile> paramFilePtr);
     ~apiSettings();
 
-    std::shared_ptr<paramFile> paramFileObject;
 
 
 private slots:

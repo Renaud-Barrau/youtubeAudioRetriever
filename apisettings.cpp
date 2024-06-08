@@ -1,10 +1,10 @@
 #include "apisettings.h"
 #include "ui_apisettings.h"
 
-apiSettings::apiSettings(std::shared_ptr<paramFile> ptr)
+apiSettings::apiSettings(std::shared_ptr<paramFile> paramFilePtr)
     :
-    paramFileObject(ptr),
-    ui(new Ui::apiSettings)
+    ui(new Ui::apiSettings),
+    paramFileObject(paramFilePtr)
 
 {
     ui->setupUi(this);
@@ -35,6 +35,10 @@ apiSettings::~apiSettings()
 {
     delete ui;
 }
+
+// void apiSettings::setParamFilePtr(std::shared_ptr<paramFile> ptr){
+//     paramFileObject = ptr;
+// }
 
 
 void apiSettings::on_lockApiSettingsCheckBox_stateChanged(int arg1)

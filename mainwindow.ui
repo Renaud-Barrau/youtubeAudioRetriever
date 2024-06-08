@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1019</width>
-    <height>697</height>
+    <height>454</height>
    </rect>
   </property>
   <property name="cursor">
@@ -20,9 +20,9 @@
    <widget class="QSlider" name="musicProgressSlider">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>530</y>
-      <width>741</width>
+      <x>10</x>
+      <y>270</y>
+      <width>551</width>
       <height>21</height>
      </rect>
     </property>
@@ -38,158 +38,6 @@
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
-   </widget>
-   <widget class="QWidget" name="ApiFrame" native="true">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>591</width>
-      <height>171</height>
-     </rect>
-    </property>
-    <widget class="QTextEdit" name="apiKeyTextEdit">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>10</y>
-       <width>481</width>
-       <height>26</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="apiKeyLabel">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>10</y>
-       <width>49</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>API key</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="saveParamsButton">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>140</y>
-       <width>80</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Save</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="clientIdLabel">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>40</y>
-       <width>49</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>client ID</string>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="clientIdTextEdit">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>40</y>
-       <width>481</width>
-       <height>26</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="clientSecretLabel">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>70</y>
-       <width>101</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>client secret code</string>
-     </property>
-     <property name="scaledContents">
-      <bool>false</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-     <property name="wordWrap">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="clientSecretCodeTextEdit">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>70</y>
-       <width>481</width>
-       <height>26</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="refreshTokenTextEdit">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>100</y>
-       <width>481</width>
-       <height>26</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="refreshTokenLabel">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>100</y>
-       <width>91</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>refresh token</string>
-     </property>
-     <property name="scaledContents">
-      <bool>false</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-     </property>
-     <property name="wordWrap">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="lockApiSettingsCheckBox">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>140</y>
-       <width>101</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Lock settings</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QWidget" name="downloadFrame" native="true">
     <property name="geometry">
@@ -377,24 +225,11 @@
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="Line" name="line_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>170</y>
-      <width>581</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
    <widget class="QLabel" name="thumbnailImageLabel">
     <property name="geometry">
      <rect>
-      <x>800</x>
-      <y>350</y>
+      <x>600</x>
+      <y>330</y>
       <width>121</width>
       <height>81</height>
      </rect>
@@ -406,8 +241,8 @@
    <widget class="QTreeView" name="treeView">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>300</y>
+      <x>100</x>
+      <y>20</y>
       <width>371</width>
       <height>221</height>
      </rect>
@@ -416,8 +251,8 @@
    <widget class="QPushButton" name="playPauseButton">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>570</y>
+      <x>250</x>
+      <y>310</y>
       <width>83</width>
       <height>29</height>
      </rect>
@@ -429,9 +264,9 @@
    <widget class="QLabel" name="musicNameLabel">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>620</y>
-      <width>691</width>
+      <x>10</x>
+      <y>370</y>
+      <width>561</width>
       <height>16</height>
      </rect>
     </property>
@@ -471,6 +306,7 @@
      <string>Settings</string>
     </property>
     <addaction name="apiCredentials"/>
+    <addaction name="actionRessources_paths"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -500,6 +336,11 @@
    </property>
    <property name="font">
     <font/>
+   </property>
+  </action>
+  <action name="actionRessources_paths">
+   <property name="text">
+    <string>Ressources paths</string>
    </property>
   </action>
  </widget>
