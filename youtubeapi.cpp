@@ -57,17 +57,15 @@ void youtubeApi::processPlaylistsElements(const QByteArray &data)
     foreach (const QJsonValue &value, items) {
         QJsonObject playlist = value.toObject();
         QString title = playlist.value("snippet").toObject().value("title").toString();
-//        QString id = playlist.value("id").toString();
         QString videoId = playlist.value("snippet").toObject().value("resourceId").toObject().value("videoId").toString();
         QString videoThumbnailUrl = playlist.value("snippet").toObject().value("thumbnails").toObject().value("maxres").toObject().value("url").toString();
-//        int index = playlist.value("snippet").toObject().value("position").toInt();
         cout << "Title: " << title.toStdString() << " | videoId : " << videoId.toStdString() << " | thumbnail URL : " << videoThumbnailUrl.toStdString() << endl;
         youtubeApi::videoTitleArray.append(title);
         youtubeApi::videoIdArray.append(videoId);
         youtubeApi::videoThumbnailsUrlArray.append(videoThumbnailUrl);
 
     }
-    emit videoDataLoaded(youtubeApi::videoTitleArray,youtubeApi::videoIdArray,youtubeApi::videoThumbnailsUrlArray,youtubeApi::playlistName);
+//    emit videoDataLoaded(youtubeApi::videoTitleArray,youtubeApi::videoIdArray,youtubeApi::videoThumbnailsUrlArray,youtubeApi::playlistName);
 }
 
 void youtubeApi::fetchPlaylists(){
@@ -133,9 +131,9 @@ void youtubeApi::getToken()
     QUrl url("https://oauth2.googleapis.com/token");
     QUrlQuery query;
     query.addQueryItem("grant_type", "refresh_token");
-    query.addQueryItem("client_id", youtubeApi::clientId);
-    query.addQueryItem("client_secret", youtubeApi::clientSecretCode);
-    query.addQueryItem("refresh_token", youtubeApi::refreshToken);
+    query.addQueryItem("client_id", clientId);
+    query.addQueryItem("client_secret", clientSecretCode);
+    query.addQueryItem("refresh_token", refreshToken);
 
     // Ajouter les paramètres à l'URL de la requête
     url.setQuery(query);
@@ -191,10 +189,12 @@ void youtubeApi::retrieveAccessToken(){
         cout << "Error:" << getTokenReply->errorString().toStdString() << endl;
 
     }if(youtubeApi::requestSource == "fetchPlaylistElements"){
-        emit fetchPlaylistElementSignal();
+//        emit fetchPlaylistElementSignal();
+        youtubeApi::fetchPlaylistElements();
     }
     else if (youtubeApi::requestSource == "fetchPlaylists"){
-        emit fetchPlaylistsSignal();
+//        emit fetchPlaylistsSignal();
+        youtubeApi::fetchPlaylists();
     }
     else{
         cout << "no suitable request declarator" << endl;

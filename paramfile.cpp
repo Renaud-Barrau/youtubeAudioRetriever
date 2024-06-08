@@ -17,12 +17,12 @@
  *
  * Emits the signal \ref paramValueReturn
  */
-bool paramFile::readParam(const QString &key)
+QString paramFile::readParam(const QString &key)
 {
     QFile file(paramFile::m_filename);
     if (!file.open(QIODevice::ReadOnly)) {
         cout << "Failed to open file for reading" << endl;
-        return false;
+        return "0";
     }
 
     QJsonDocument doc = QJsonDocument::fromJson(file.readAll());
@@ -31,14 +31,15 @@ bool paramFile::readParam(const QString &key)
     if (doc.isObject()) {
         QJsonObject obj = doc.object();
         if (obj.contains(key)) {
-            paramFile::value = obj[key].toString();
-            emit paramValueReturn(key,paramFile::value);
-            return true;
+//            paramFile::value = obj[key].toString();
+//            emit paramValueReturn(key,paramFile::value);
+            cout << "return value : " << obj[key].toString().toStdString() << endl;
+            return obj[key].toString();
         }
     }
 
-    qWarning() << "Key not found in file";
-    return false;
+    cout << "Key not found in file" << endl;
+    return "0";
 }
 
 

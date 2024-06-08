@@ -10,11 +10,15 @@
 #include <QFileSystemModel>
 #include <QMovie>
 #include <QKeySequence>
+#include <memory> // Pour std::shared_ptr
 
 #include <iostream>
 
 #include "apisettings.h"
 #include "audioreader.h"
+#include "paramfile.h"
+#include <youtubeDownloader.h>
+#include <youtubeapi.h>
 
 using namespace std;
 
@@ -29,8 +33,13 @@ class mainWindow : public QMainWindow
 public:
 
     Ui::mainWindow *ui;
-    apiSettings *apiSettingsObject;
+    std::shared_ptr<apiSettings> apiSettingsObject;
+//    apiSettings *apiSettingsObject;
     audioReader *audioReaderObject;
+
+    std::shared_ptr<paramFile> paramFileObject;
+    youtubeDownloader *youtubeDownloaderObject;
+    youtubeApi *youtubeApiObject;
 
     explicit mainWindow(QWidget *parent = nullptr);
     ~mainWindow();
@@ -56,8 +65,6 @@ private slots:
     void on_checkBox_stateChanged(int arg1);
 
     void on_saveParamsButton_clicked();
-
-    void receivedParamStartup(QString,QString);
 
     void on_lockApiSettingsCheckBox_stateChanged(int arg1);
 

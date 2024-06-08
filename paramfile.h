@@ -38,6 +38,9 @@ public:
      */
     QString value;
 
+
+
+
 signals:
 
     /**
@@ -53,7 +56,7 @@ signals:
     void paramValueReturn(QString,QString);
 
 public slots:
-    bool readParam(const QString &key);
+    QString readParam(const QString &key);
     bool writeParam(const QString &key, const QString &value);
 
 private:

@@ -3,10 +3,19 @@
 
 mainWindow::mainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::mainWindow)
+    ui(new Ui::mainWindow),
+    paramFileObject(std::make_shared<paramFile>("params.json")),
+    apiSettingsObject(std::make_shared<apiSettings>())
 {
     ui->setupUi(this);
+
+
     audioReaderObject = new audioReader(this);
+
+    youtubeDownloaderObject = new youtubeDownloader(this);
+    youtubeApiObject = new youtubeApi(this);
+
+
 
     QObject::connect(audioReaderObject, SIGNAL(updateSliderValueSignal(int)),this, SLOT(updateSliderValue(int)));
     QObject::connect(audioReaderObject, SIGNAL(updateSliderRangeSignal(int)),this, SLOT(updateSliderRange(int)));
@@ -31,6 +40,15 @@ mainWindow::mainWindow(QWidget *parent) :
 
 
     ui->lockApiSettingsCheckBox->setCheckState(Qt::Checked);
+
+    // SETUP TEXT EDIT AT STARTUP
+    ui->apiKeyTextEdit->setPlainText(paramFileObject->readParam("apiKey"));
+    ui->clientIdTextEdit->setPlainText(paramFileObject->readParam("clientId"));
+    ui->clientSecretCodeTextEdit->setPlainText(paramFileObject->readParam("clientSecretCode"));
+    ui->refreshTokenTextEdit->setPlainText(paramFileObject->readParam("refreshToken"));
+    ui->musicFolderRepository->setText(paramFileObject->readParam("musicFolder"));
+    ui->ffpmegPath->setText(paramFileObject->readParam("ffmpegPath"));
+
 
 //////////          DOWNLOAD FRAME           //////////
     ui->musicFolderRepository->setWordWrap(true);
@@ -94,47 +112,15 @@ void mainWindow::on_checkBox_stateChanged(int arg1)
 
 void mainWindow::on_saveParamsButton_clicked()
 {
+
     cout << "Save params button pressed" << endl;
-    QString apiKeyText = ui->apiKeyTextEdit->toPlainText();
-    QString clientIdText = ui->clientIdTextEdit->toPlainText();
-    QString clientSecretText = ui->clientSecretCodeTextEdit->toPlainText();
-    QString refreshTokenText = ui->refreshTokenTextEdit->toPlainText();
-
-    emit saveButtonPressed("apiKey",apiKeyText);
-    emit saveButtonPressed("clientId",clientIdText);
-    emit saveButtonPressed("clientSecretCode",clientSecretText);
-    emit saveButtonPressed("refreshToken",refreshTokenText);
-
+    paramFileObject->writeParam("apiKey", ui->apiKeyTextEdit->toPlainText());
+    paramFileObject->writeParam("clientId", ui->clientIdTextEdit->toPlainText());
+    paramFileObject->writeParam("clientSecretCode", ui->clientSecretCodeTextEdit->toPlainText());
+    paramFileObject->writeParam("refreshToken", ui->refreshTokenTextEdit->toPlainText());
 }
 
-void mainWindow::receivedParamStartup(QString key, QString value){
-    if(key == "apiKey"){
-        ui->apiKeyTextEdit->setPlainText(value);
-    }
-    else if(key == "clientId"){
-        ui->clientIdTextEdit->setPlainText(value);
-    }
-    else if(key == "clientSecretCode"){
-        ui->clientSecretCodeTextEdit->setPlainText(value);
-    }
-    else if(key == "refreshToken"){
-        ui->refreshTokenTextEdit->setPlainText(value);
-    }
-    else if(key == "musicFolder"){
-        ui->musicFolderRepository->setText(value);
-    }
-    else if(key == "ffpmegPath"){
-        ui->ffpmegPath->setText(value);
-    }
-    else if(key == "videoNumber"){
-        ui->videoNumberTextEdit->setText(value);
-    }
-    else{
-        cout << " [-] " << "Error in mainWindow::receivedParam(QString key, QString value)" << endl;
-        cout << " --> " << "unknown key" << endl;
-    }
 
-}
 
 void mainWindow::on_lockApiSettingsCheckBox_stateChanged(int arg1)
 {
@@ -167,7 +153,8 @@ void mainWindow::on_locateMusicFolderButton_clicked()
      if (!folderPath.isEmpty()) {
         cout << "Chemin sélectionné : " << folderPath.toStdString() << endl;
         ui->musicFolderRepository->setText(folderPath);
-        emit locateMusicFolderButtonPressed("musicFolder", folderPath);
+        paramFileObject->writeParam("musicFolder", folderPath);
+//        emit locateMusicFolderButtonPressed("musicFolder", folderPath);
      }
      else{
          cout << "Error while selecting folder" << endl;
@@ -181,7 +168,8 @@ void mainWindow::on_locateFfpmegButton_clicked()
         if (!ffpmegPath.isEmpty()) {
         cout << "Chemin sélectionné : " << ffpmegPath.toStdString() << endl;
         ui->ffpmegPath->setText(ffpmegPath);
-        emit locateFfmpegPathButtonPressed("ffpmegPath", ffpmegPath);
+        paramFileObject->writeParam("ffmpegPath", ffpmegPath);
+//        emit locateFfmpegPathButtonPressed("ffpmegPath", ffpmegPath);
     }
     else{
         cout << "Error while selecting folder" << endl;
@@ -200,27 +188,34 @@ void mainWindow::on_playlistSelectionComboBox_activated(int index)
 
 void mainWindow::updatePlaylistList(QVector<QString> playlistNameArray,QVector<QString> playlistIdArray){
     cout << ui->playlistSelectionComboBox->currentIndex() << endl;
-    for(int i = 0; i < playlistNameArray.size(); ++i){
-        if(ui->playlistSelectionComboBox->findText(playlistNameArray.at(i)) == -1){
-            ui->playlistSelectionComboBox->addItem(playlistNameArray.at(i));
+    for(int i = 0; i < youtubeApiObject->playlistNameArray.size(); ++i){
+        if(ui->playlistSelectionComboBox->findText(youtubeApiObject->playlistNameArray.at(i)) == -1){
+            ui->playlistSelectionComboBox->addItem(youtubeApiObject->playlistNameArray.at(i));
         }
     }
     cout << ui->playlistSelectionComboBox->currentIndex() << endl;
-    emit playlistIndex(0);
+//    emit playlistIndex(0);
+    youtubeApiObject->playlistId = youtubeApiObject->playlistIdArray.at(0);
+    youtubeApiObject->playlistName = youtubeApiObject->playlistNameArray.at(0);
 }
 
 void mainWindow::on_fetchPlaylistButton_clicked()
 {
     cout << "fetch playlist button pressed " << endl;
-    emit requestSourceDeclarator("fetchPlaylists");
+//    emit requestSourceDeclarator("fetchPlaylists");
+    youtubeApiObject->requestSource = "fetchPlaylists";
 
     // for YouTubeAPI
-    emit requestParam("apiKey");
-    emit requestParam("clientId");
-    emit requestParam("clientSecretCode");
-    emit requestParam("refreshToken");
+//    emit requestParam("apiKey");
+//    emit requestParam("clientId");
+//    emit requestParam("clientSecretCode");
+//    emit requestParam("refreshToken");
+    youtubeApiObject->Api = paramFileObject->readParam("apiKey");
+    youtubeApiObject->clientId = paramFileObject->readParam("clientId");
+    youtubeApiObject->clientSecretCode = paramFileObject->readParam("clientSecretCode");
+    youtubeApiObject->refreshToken = paramFileObject->readParam("refreshToken");
 
-    emit fetchPlaylistButtonPressed();
+    youtubeApiObject->getToken();
 
 }
 
@@ -235,7 +230,9 @@ void mainWindow::on_videoNumberTextEdit_textChanged()
             cout << "video number selected is : " << ui->videoNumberTextEdit->toPlainText().toStdString() << endl;
             QString textTemp = ui->videoNumberTextEdit->toPlainText();
             textTemp.chop(1);
-            emit saveVideoNumber("videoNumber",textTemp);
+//            emit saveVideoNumber("videoNumber",textTemp);
+            paramFileObject->writeParam("videoNumber",textTemp);
+
 
         }
         else{
@@ -266,7 +263,7 @@ void mainWindow::updateMusicLabel(QUrl musicName){
 }
 
 void mainWindow::on_apiCredentials_triggered(){
-    apiSettingsObject = new apiSettings(this);
+    apiSettingsObject = new apiSettings(paramFileObject);
     apiSettingsObject->exec();
 }
 

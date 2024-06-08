@@ -28,7 +28,7 @@ public:
     positionTimer = new QTimer(this);
 
     audioReader::player->setAudioOutput(&audioOutput);
-    audioReader::player->setSource(QUrl::fromLocalFile("C:/Users/rbarr/Desktop/musique_test2/Musique/Jack Junior - My Addiction.mp3"));
+    audioReader::player->setSource(QUrl::fromLocalFile("C:/Users/rbarr/Desktop/musique_test/Musique/Jack Junior - My Addiction.mp3"));
     audioReader::player->pause();
     cout << audioReader::player->duration() << endl;
 

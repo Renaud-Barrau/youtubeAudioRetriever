@@ -33,8 +33,8 @@ public:
         timer->start();
 
         // Signal émit une fois que le access token a été chargé dans YouTubeAPI::accessToken -> lance le fetch des playlists
-        connect(this, SIGNAL(fetchPlaylistElementSignal()), this, SLOT(fetchPlaylistElements()));
-        connect(this, SIGNAL(fetchPlaylistsSignal()), this, SLOT(fetchPlaylists()));
+//        connect(this, SIGNAL(fetchPlaylistElementSignal()), this, SLOT(fetchPlaylistElements()));
+//        connect(this, SIGNAL(fetchPlaylistsSignal()), this, SLOT(fetchPlaylists()));
 
 
         // Signal émit lorsque le timer arrive au bout de 1h -> récupération d'un nouveau token avec getToken
