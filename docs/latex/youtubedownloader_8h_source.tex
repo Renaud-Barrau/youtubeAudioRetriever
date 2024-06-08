@@ -1,0 +1,68 @@
+\doxysection{youtubedownloader.\+h}
+\hypertarget{youtubedownloader_8h_source}{}\label{youtubedownloader_8h_source}\mbox{\hyperlink{youtubedownloader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ YOUTUBEDOWNLOADER\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ YOUTUBEDOWNLOADER\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QNetworkRequest>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QNetworkReply>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QProcess>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QQueue>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QDir>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classyoutube_downloader}{youtubeDownloader}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classyoutube_downloader_a29b4871f2cd7b4d32a2c2be5d008eb16}{youtubeDownloader}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \ \ \ \ \ \ videoId\ =\ "{}LlN8MPS7KQs"{};}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \ \ \ \ \ \ \ videoTitle\ =\ "{}oneheart\ x\ reidenshi\ -\/\ snowfall"{};}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_downloader_a7158e78581e300cac28da1f4dfd9a17f}{command}};}
+\DoxyCodeLine{00052\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_downloader_abdb051381e17ed27b061f254bb371d46}{musicFolder}};}
+\DoxyCodeLine{00061\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_downloader_a5323dd8eb6785bf65e93f376b16d4f97}{ffmpegPath}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classyoutube_downloader_a0540178ae7ef75167056cc33edef12a4}{increment}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classyoutube_downloader_aee62a4b7718a33f605aec99a8c008aae}{progressBarValue}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ QQueue<QString>\ \mbox{\hyperlink{classyoutube_downloader_a128e2cb90c3bdee987c41cc49745d077}{downloadQueue}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_downloader_a9fba11b5e23ebc4cea08150b1cc94db2}{formatCommand}}(QString\ videoTitle,\ QString\ videoId,\ QString\ playlistName);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_downloader_ae2ca25de6505a546ff66698e45eb6f1b}{execCommand}}(QString\ \mbox{\hyperlink{classyoutube_downloader_a7158e78581e300cac28da1f4dfd9a17f}{command}});}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_downloader_a118d28eadd74aaa9131519ef5c7d9f3d}{startNextDownload}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_downloader_a06ba9dd3d11aa108623d6108ca7d8a28}{downloadAll}}(QVector<QString>,QVector<QString>,QVector<QString>,QString\ playlistName);}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_downloader_aec971eecff2c02500a4dd4f9ef9c047f}{updateParams}}(QString,QString);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ signals:}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_downloader_a3d1f09719016c7f59d6f6f00157e0c6a}{progressBarUpdate}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00126\ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ YOUTUBEDOWNLOADER\_H}}
+
+\end{DoxyCode}

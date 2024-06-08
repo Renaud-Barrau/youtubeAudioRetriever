@@ -1,0 +1,13 @@
+<map id="youtubedownloader::downloadAll" name="youtubedownloader::downloadAll">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,68,146,111"/>
+<area shape="rect" id="Node000002" href="$classyoutubedownloader.html#a71a2f51c269620680fe0027bb7f6c645" title=" " alt="" coords="194,35,334,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,74,178,69,179,74,146,80"/>
+<area shape="rect" id="Node000005" href="$classyoutubedownloader.html#aeefa3bcfaa43798d7443e714e165aaba" title=" " alt="" coords="194,101,334,144"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="146,99,179,105,178,110,145,104"/>
+<area shape="rect" id="Node000003" href="$classyoutubedownloader.html#a304a89e4f77018554f28d2470fda7665" title=" " alt="" coords="570,5,711,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="329,31,382,20,471,14,555,16,555,22,471,19,382,25,331,37"/>
+<area shape="rect" id="Node000004" href="$classyoutubedownloader.html#aac4684f97910bd4e891f6cb131de7fd7" title=" " alt="" coords="382,35,522,77"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="334,62,367,62,367,68,334,67"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="382,50,349,50,349,44,382,45"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="522,42,554,37,555,43,523,48"/>
+</map>
