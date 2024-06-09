@@ -10,3 +10,4 @@ params.json
 *.pro.user.*
 Makefile
 Makefile.*
+.vscode
