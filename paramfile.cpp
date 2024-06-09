@@ -9,12 +9,12 @@
 /**
  * @fn paramFile::readParam(const QString &key)
  * @brief This method reads a specific parameter identified by his key passed in parameter.
- * This function uses the QJsonDocument and QJsonObject to navigate through the required value.
+ * This function uses the QJsonDocument and QJsonObject to navigate through the file and fetch the required value.
  *
  * @param key
- * @return NOTE : This method DOES NOT return the value of the parameter.
- * Instead, it returns a bool to notify if operation failed or not and emits a signal with the value in parameter as a QString, so it can be catched by others classes.
+ * @return A QString that represent the value fetched
  *
+ * "0" otherwise
  *
  */
 QString paramFile::readParam(const QString &key)

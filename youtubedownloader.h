@@ -32,15 +32,12 @@ class youtubeDownloader : public QObject
 public:
 ////////////////////    CONSTRUCTOR    ////////////////////
     explicit youtubeDownloader(QObject *parent = nullptr){
-//        videoId = "LlN8MPS7KQs";
-//        videoTitle = "oneheart x reidenshi - snowfall";
-
     };
 
 ////////////////////    ATTRIBUTS   ////////////////////
 
     /**
-     * @brief QString that holds the command to send to yt-dlp executable. The value is overwritten for every new command.
+     * @brief QString that holds the command to send to yt-dlp executable. The value is overwritten every new command.
      */
     QString command;
     /**

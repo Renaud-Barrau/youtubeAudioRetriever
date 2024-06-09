@@ -41,6 +41,12 @@ int main(int argc, char *argv[]) {
 
     QApplication a(argc, argv);
     mainWindow window;
+    QFile file("C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/style.css");
+    if (file.open(QFile::ReadOnly)) {
+        QString styleSheet = QLatin1String(file.readAll());
+        a.setStyleSheet(styleSheet);
+        file.close();
+    }
 
     window.show();
 

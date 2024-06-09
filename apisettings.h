@@ -1,7 +1,7 @@
 #ifndef APISETTINGS_H
 #define APISETTINGS_H
 
-#include <memory> // Pour std::shared_ptr
+#include <memory> // For std::shared_ptr
 
 #include "paramfile.h"
 #include <QDialog>

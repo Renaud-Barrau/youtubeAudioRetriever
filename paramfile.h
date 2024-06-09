@@ -5,7 +5,7 @@
  * - path for ffmpeg dependency
  * - path for music folder output
  *
- * Read and write function make use of QJsonDocument and QjsonObject to deals with the param file and browse in the different keys
+ * Read and write function make use of QJsonDocument and QjsonObject to deals with the param file and browse in the different keys.
  */
 
 
@@ -33,27 +33,6 @@ public:
     explicit paramFile(const QString &filename) : m_filename(filename){
         };
 
-    /**
-     * @brief This value holds the last fetched parameter. it works as a buffer.
-     */
-    QString value;
-
-
-
-
-signals:
-
-    /**
-     * @fn paramValueReturn
-     * @brief This signal is emited to send the loaded value in paramFile::value to a slot connected to it.
-     *
-     * This signal is sent in different part of the code such as :
-     * - At the end of the readParam method.
-     * - At the startup of the application to fetch data from the params.json file.
-     *
-     * Arguments are key and velue.
-    */
-    void paramValueReturn(QString,QString);
 
 public slots:
     QString readParam(const QString &key);

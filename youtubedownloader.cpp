@@ -5,9 +5,7 @@
 #include "youtubeDownloader.h"
 
 void youtubeDownloader::formatCommand(QString videoTitle, QString videoId, QString playlistName){
-//    yt-dlp.exe -x --audio-format mp3 --audio-quality 192 --ffmpeg-location C:/Users/rbarr/OneDrive/Bureau/build-youtube_manager-Desktop_Qt_6_7_0_MSVC2019_64bit-Debug/ffmpeg-master-latest-win64-gpl/bin -o blabla https://www.youtube.com/watch?v=7Q6S19Vvh6s
     command = "yt-dlp.exe -x --audio-format mp3 --audio-quality 192 --write-thumbnail --ffmpeg-location ";
-    // command = " -x --audio-format mp3 --audio-quality 192 --write-thumbnail --ffmpeg-location ";
     command += youtubeDownloader::ffmpegPath;
     command += " -P \"";
     command += youtubeDownloader::musicFolder;
@@ -24,21 +22,17 @@ void youtubeDownloader::formatCommand(QString videoTitle, QString videoId, QStri
 
 void youtubeDownloader::execCommand(QString command){
     QProcess *process = new QProcess(this);
-    // QString program = "yt-dlp.exe";
     process->startCommand(command);
     connect(process, &QProcess::finished,this, [=]() {
         process->deleteLater(); // Supprime le processus une fois terminé
         youtubeDownloader::progressBarValue += youtubeDownloader::increment;
-        emit progressBarUpdate(youtubeDownloader::progressBarValue);
+        // emit progressBarUpdate(youtubeDownloader::progressBarValue);
         startNextDownload(); // Begin next download
     });
 
 }
 
 void youtubeDownloader::downloadAll(QVector<QString> videoTitleArray,QVector<QString> videoIdArray,QVector<QString> videoThumbnailsUrlArray, QString playlistName){
-
-//    int i = 0;
-
     cout << playlistName.toStdString() << endl;
     QString newFolderPath = youtubeDownloader::musicFolder + "/" + playlistName;
     cout << "chemin playlist" << newFolderPath.toStdString() << endl;
@@ -97,7 +91,7 @@ void youtubeDownloader::startNextDownload() {
         youtubeDownloader::execCommand(command);
     }
     else{
-        emit progressBarUpdate(100);
+        // emit progressBarUpdate(100);
         cout << "all download finished" << endl;
 
     }

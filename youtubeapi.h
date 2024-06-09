@@ -1,3 +1,30 @@
+/**
+ * @file youtubeapi.h
+ * @brief This file handle the login process with OAuth2.0 to retrieve personnal data on your youtube account.
+ * You must create a project [here](https://console.cloud.google.com) in order to have your API key, client ID and client secret code.
+ * Also, you will need a "Refresh token". A refresh token is a token created by google and linked yo your account that allows you to generate an "acces token".
+ * The only purpose of the refresh token is to generate acces token.
+ * Refresh tokens are infinites, whereas access token are only valid for 1 hour.
+ *
+ * You only need to provide to this application a refresh token, as it will handle the generation of access token by itself.
+ *
+ * To obtains a refresh token, you can visit the [OAuth2.0 playground](https://developers.google.com/oauthplayground).
+ * On the right side, you need to click on the configuration button and check "Use your own OAuth credentials", then input your data.
+ *
+ * Then on the left side, scroll down to the "YouTube Data API v3 v3" (version might change), unroll the menu and select which option you want.
+ * For this application, you need at least the https://www.googleapis.com/auth/youtube option.
+ * Then click on the "Authorize API's" and follow the process.
+ * If everything went fine, you should be redirected to a page with a "exchange authorization code for tokens" button.
+ * Finally, you should find your refresh token in the HTTP Json response section.
+ * As far as I have experienced it, a refresh token should start with "1//".
+ *
+ *
+ *
+ *
+ */
+
+
+
 #ifndef YOUTUBEAPI_H
 #define YOUTUBEAPI_H
 
@@ -27,19 +54,10 @@ class youtubeApi : public QObject
 public:
 ////////////////////    CONSTRUCTEUR    ////////////////////
     explicit youtubeApi(QObject *parent = nullptr) : QObject(parent){
-//        accessToken = "";
 
         timer->setInterval(refreshTime);
         timer->start();
 
-        // Signal émit une fois que le access token a été chargé dans YouTubeAPI::accessToken -> lance le fetch des playlists
-//        connect(this, SIGNAL(fetchPlaylistElementSignal()), this, SLOT(fetchPlaylistElements()));
-//        connect(this, SIGNAL(fetchPlaylistsSignal()), this, SLOT(fetchPlaylists()));
-
-
-        // Signal émit lorsque le timer arrive au bout de 1h -> récupération d'un nouveau token avec getToken
-//        connect(timer, SIGNAL(timeout()), this, SLOT(timerTimeout()));
-//        connect(this, SIGNAL(signalTimerTimeout(QString,QString,QString)), this, SLOT(getToken(QString,QString,QString)));
     }
 
 
@@ -77,12 +95,12 @@ public:
     void processPlaylists(const QByteArray &data);
     void checkTokenInfo();
 
-signals:
-    void fetchPlaylistElementSignal();
-    void fetchPlaylistsSignal();
-    void signalTimerTimeout(QString,QString,QString);
-    void videoDataLoaded(QVector<QString>,QVector<QString>,QVector<QString>,QString);
-    void playlistListLoaded(QVector<QString>,QVector<QString>);
+// signals:
+//     void fetchPlaylistElementSignal();
+//     void fetchPlaylistsSignal();
+//     void signalTimerTimeout(QString,QString,QString);
+//     void videoDataLoaded(QVector<QString>,QVector<QString>,QVector<QString>,QString);
+//     void playlistListLoaded(QVector<QString>,QVector<QString>);
 
 
 public slots:

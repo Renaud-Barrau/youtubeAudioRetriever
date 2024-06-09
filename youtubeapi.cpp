@@ -1,15 +1,25 @@
+/**
+ * @file youtubeapi.cpp
+ * @brief Implementation of the youtubeApi class
+
+ */
+
+
 #include "youtubeApi.h"
 #include <iostream>
-// #include <unistd.h>
 
-
+/**
+ * @fn youtubeApi::fetchPlaylistElements()
+ * @brief fetch elements of a specific playlist identified by it's playlistId.
+ * Wait for the server's reply, then call youtubeApi::processPlaylistElements(const QByteArray &data)
+ *
+ */
 void youtubeApi::fetchPlaylistElements()
 {
     if(youtubeApi::playlistId == ""){
         cout << "fetch playlist first before downloading" << endl;
         return;
     }
-    // QUrl url("https://www.googleapis.com/youtube/v3/playlists");
     QUrl url("https://www.googleapis.com/youtube/v3/playlistItems");
     QUrlQuery query;
     query.addQueryItem("part", "snippet");
@@ -19,16 +29,10 @@ void youtubeApi::fetchPlaylistElements()
     query.addQueryItem("maxResults", QString::number(youtubeApi::maxResults));
     url.setQuery(query);
 
-    //cout << url.toString().toStdString() << endl;
 
     QNetworkRequest request(url);
     request.setRawHeader(QByteArray("Authorization"), QByteArray("Bearer ") + youtubeApi::accessToken.toUtf8());
     request.setRawHeader(QByteArray("Accept"), QByteArray("application/json"));
-//    int i = 0;
-//    while(i < request.rawHeaderList().length()){
-//        cout << "Raw Header " << i << " : " << request.rawHeaderList()[i].toStdString() << endl;
-//        i++;
-//    }
 
     QNetworkReply *reply = manager.get(request);
 
@@ -43,6 +47,11 @@ void youtubeApi::fetchPlaylistElements()
     });
 }
 
+
+/**
+ * @fn youtubeApi::processPlaylistsElements(const QByteArray &data)
+ * @brief extract usefull data from the Json response such as titles, video IDs and ThumbnailUrls.
+ */
 void youtubeApi::processPlaylistsElements(const QByteArray &data)
 {
     QJsonDocument doc = QJsonDocument::fromJson(data);
@@ -68,10 +77,9 @@ void youtubeApi::processPlaylistsElements(const QByteArray &data)
 //    emit videoDataLoaded(youtubeApi::videoTitleArray,youtubeApi::videoIdArray,youtubeApi::videoThumbnailsUrlArray,youtubeApi::playlistName);
 }
 
+
+
 void youtubeApi::fetchPlaylists(){
-    // QUrl url("https://www.googleapis.com/youtube/v3/playlists");
-
-
     QUrl url("https://www.googleapis.com/youtube/v3/playlists");
     QUrlQuery query;
     query.addQueryItem("part", "snippet");
@@ -122,7 +130,7 @@ void youtubeApi::processPlaylists(const QByteArray &data)
         cout << "Playlist Title: " << playlistTitle.toStdString() << " | Playlist Id : " << playlistId.toStdString() << endl;
 
     }
-    emit playlistListLoaded(youtubeApi::playlistNameArray,youtubeApi::playlistIdArray);
+    // emit playlistListLoaded(youtubeApi::playlistNameArray,youtubeApi::playlistIdArray);
 }
 
 // void youtubeApi::getToken(QString clientId,QString clientSecretCode,QString refreshToken)
@@ -221,7 +229,7 @@ void youtubeApi::printToken(){
 }
 
 void youtubeApi::timerTimeout(){
-    emit signalTimerTimeout(youtubeApi::clientId,youtubeApi::clientSecretCode,youtubeApi::refreshToken);
+    // emit signalTimerTimeout(youtubeApi::clientId,youtubeApi::clientSecretCode,youtubeApi::refreshToken);
 }
 
 void youtubeApi::updateRequestSource(QString newRequest){
