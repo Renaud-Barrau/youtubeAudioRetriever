@@ -1,8 +1,6 @@
 /**
  * @file youtubedownloader.h
- * @brief This file handle the download of mp3 files using yt-dlp.
- *
- * This 3rd party package can be found here : [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+ * @brief Header of the youtubeDownloader class
  */
 #ifndef YOUTUBEDOWNLOADER_H
 #define YOUTUBEDOWNLOADER_H
@@ -25,101 +23,59 @@
 
 using namespace std;
 
-
+/**
+ * @brief The youtubeDownloader class is used to download and extract audio from
+ * YouTube videos using the yt-dlp.exe executable.
+ */
 class youtubeDownloader : public QObject
 {
     Q_OBJECT
 public:
-////////////////////    CONSTRUCTOR    ////////////////////
     explicit youtubeDownloader(QObject *parent = nullptr){
     };
 
-////////////////////    ATTRIBUTS   ////////////////////
-
     /**
-     * @brief QString that holds the command to send to yt-dlp executable. The value is overwritten every new command.
+     * @brief The command string to be executed for downloading and extracting audio.
      */
     QString command;
     /**
-     * @brief Path to the music folder (parent).
-     *
-     * This value is stored as a parmater in params.json.
-     * Can be changed at anytime with the GUI.
+     * @brief The path to the directory where the downloaded audio files will be saved.
      */
     QString musicFolder;
     /**
-     * @brief Path to the ffmpeg bin folder. FFmpeg is a dependency needed for yt-dlp to work properly.
-     *
-     * ffmpeg builds can be downloaded from the yt-dlp repository [here](https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file).
-     *
-     * This value is stored as a parmater in params.json.
-     * Can be changed at anytime with the GUI.
+     * @brief The path to the ffmpeg bin folder.
      */
     QString ffmpegPath;
-
     /**
-     * @brief integer that represents the increment value for 1 download in the progressBar. Updated everytime the youtubeDownloader::downloadAll method is called.
-     *
+     * @brief The value by which the progress bar will be incremented after each
+     * successful download.
      */
     int increment;
-
     /**
-     * @brief Represent the value of the progress bar. This value is used to match visual progression with actual download load.
-     *
+     * @brief The current value of the progress bar.
      */
     int progressBarValue;
-
     /**
-     * @brief QQueue object that stores a list of command. The queue is filled with the youtubeDownloader::downloadAll method, and dequeued every time a download is complete. (1 download at a time)
-     *
+     * @brief A queue of command strings to be executed for downloading and extracting
+     * audio.
      */
     QQueue<QString> downloadQueue;
 
 
-////////////////////    METHODS    ////////////////////
-    /**
-     * @fn formatCommand
-     * @brief format the command to be executed with the yt-dlp.exe. The command is stored in the youtubeDownloader::command QString
-     *
-     * @param videoTitle    Title of the video to be added to the command (used for output file name).
-     * @param videoId   Id of the video used for the request, as it appears in the URL of the video (after the watch?v= ).
-     * @param playlistName  Name of the playlist selected, used to rename the output mp3 files.
-     *
-    */
     void formatCommand(QString videoTitle, QString videoId, QString playlistName);
-    /**
-     * @fn execCommand
-     * @brief Starts a Qprocess and execute yt-dlp.exe with the command as a parameter. This method also handles the refresh of the progressBar value.
-     *
-     * Emits the signal \ref progressBarUpdate to update the frontend.
-     *
-     * At the end of the QProcess, youtubeDownloader::startNextDownload is called.
-     *
-     * @param command   QString that represent the command to be executed.
-     *
-    */
     void execCommand(QString command);
-    /**
-     * @fn startNextDownload
-     * @brief load the next command from the
-     *
-     * Emits the signal \ref progressBarUpdate to update the frontend.
-     *
-     * At the end of the QProcess, youtubeDownloader::startNextDownload is called.
-     *
-    */
     void startNextDownload();
 
 
 public slots:
     void downloadAll(QVector<QString>,QVector<QString>,QVector<QString>,QString playlistName);
-    void updateParams(QString,QString);
+//    void updateParams(QString,QString);
 
 
 
 signals:
 
-    void progressBarUpdate(int);
+    //void progressBarUpdate(int);
 };
 
 #endif // YOUTUBEDOWNLOADER_H

@@ -22,11 +22,6 @@ mainWindow::mainWindow(QWidget *parent) :
 
 
 
-
-
-
-
-
 //////////          DOWNLOAD FRAME           //////////
 
     ui->musicFolderRepository->setText(paramFileObject->readParam("musicFolder"));
@@ -68,6 +63,7 @@ mainWindow::~mainWindow()
 
 void mainWindow::on_downloadButton_clicked()
 {
+    youtubeApiObject->requestSource = "fetchPlaylistElements";
     cout << "Download button pressed" << endl;
 
 
@@ -134,14 +130,8 @@ void mainWindow::updatePlaylistList(QVector<QString> playlistNameArray,QVector<Q
 void mainWindow::on_fetchPlaylistButton_clicked()
 {
     cout << "fetch playlist button pressed " << endl;
-//    emit requestSourceDeclarator("fetchPlaylists");
     youtubeApiObject->requestSource = "fetchPlaylists";
 
-    // for YouTubeAPI
-//    emit requestParam("apiKey");
-//    emit requestParam("clientId");
-//    emit requestParam("clientSecretCode");
-//    emit requestParam("refreshToken");
     youtubeApiObject->Api = paramFileObject->readParam("apiKey");
     youtubeApiObject->clientId = paramFileObject->readParam("clientId");
     youtubeApiObject->clientSecretCode = paramFileObject->readParam("clientSecretCode");
