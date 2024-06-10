@@ -1,0 +1,5 @@
+<map id="youtubeApi::retrieveAccessTokenInfo" name="youtubeApi::retrieveAccessTokenInfo">
+<area shape="rect" id="Node000001" title="Retrieves the access token information from the Google OAuth 2.0 API." alt="" coords="238,5,417,48"/>
+<area shape="rect" id="Node000002" href="$classyoutube_api.html#af23c64dcfe3464b9791b5fd6fef03c0f" title="Checks the validity of the current access token." alt="" coords="5,13,190,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,29,190,29,190,24,222,24"/>
+</map>

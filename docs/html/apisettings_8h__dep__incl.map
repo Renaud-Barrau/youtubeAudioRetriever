@@ -1,0 +1,11 @@
+<map id="apisettings.h" name="apisettings.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="76,5,172,32"/>
+<area shape="rect" id="Node000002" href="$apisettings_8cpp.html" title=" " alt="" coords="5,80,115,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,46,73,81,69,78,101,42"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8h.html" title=" " alt="" coords="138,80,241,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="147,42,180,78,176,81,143,45"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="92,155,167,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="171,120,142,156,138,153,167,117"/>
+<area shape="rect" id="Node000005" href="$mainwindow_8cpp.html" title=" " alt="" coords="191,155,308,181"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="211,117,241,153,237,156,207,120"/>
+</map>

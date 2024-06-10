@@ -1,0 +1,36 @@
+\doxysection{paramfile.\+h}
+\hypertarget{paramfile_8h_source}{}\label{paramfile_8h_source}\mbox{\hyperlink{paramfile_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ PARAMFILE\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PARAMFILE\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QTextStream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classparam_file}{paramFile}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classparam_file_af7159f932c4149e9c732718e687a09de}{paramFile}}(\textcolor{keyword}{const}\ QString\ \&filename)\ :\ m\_filename(filename)\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00049\ \ \ \ \ QString\ \mbox{\hyperlink{classparam_file_a981a8360b7803cb320bc5b58c1b41c35}{readParam}}(\textcolor{keyword}{const}\ QString\ \&key);}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}{writeParam}}(\textcolor{keyword}{const}\ QString\ \&key,\ \textcolor{keyword}{const}\ QString\ \&value);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00056\ \ \ \ \ QString\ m\_filename;}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PARAMFILE\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,10 @@
+<map id="youtubeDownloader::downloadAll" name="youtubeDownloader::downloadAll">
+<area shape="rect" id="Node000001" title="Downloads all the videos in a playlist and extracts their audio." alt="" coords="5,39,148,81"/>
+<area shape="rect" id="Node000002" href="$classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b" title="Executes the command to extract and download audio from a YouTube video using the yt&#45;dlp...." alt="" coords="196,5,338,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,45,180,39,181,44,149,50"/>
+<area shape="rect" id="Node000004" href="$classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2" title="Formats the command to extract and download audio from a YouTube video using the yt&#45;dlp...." alt="" coords="196,72,338,115"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="149,70,181,76,180,81,148,75"/>
+<area shape="rect" id="Node000003" href="$classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d" title="Starts the next download in the queue, if any." alt="" coords="386,5,528,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="339,33,371,33,371,38,339,38"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="386,21,354,20,354,15,386,15"/>
+</map>

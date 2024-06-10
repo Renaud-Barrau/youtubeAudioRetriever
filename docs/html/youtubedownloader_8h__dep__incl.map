@@ -1,0 +1,12 @@
+<map id="youtubedownloader.h" name="youtubedownloader.h">
+<area shape="rect" id="Node000001" title="Header of the youtubeDownloader class." alt="" coords="59,5,202,32"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="5,155,80,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,44,85,61,70,81,54,120,47,155,41,154,49,119,66,79,81,58,100,40"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8h.html" title=" " alt="" coords="79,80,182,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,48,133,80,128,80,128,48"/>
+<area shape="rect" id="Node000005" href="$youtubedownloader_8cpp.html" title="Implementation of the youtubeDownloader class." alt="" coords="205,80,363,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="172,37,258,77,256,82,170,41"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="105,119,59,156,56,152,102,115"/>
+<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title=" " alt="" coords="104,155,221,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="145,120,159,153,155,155,140,122"/>
+</map>

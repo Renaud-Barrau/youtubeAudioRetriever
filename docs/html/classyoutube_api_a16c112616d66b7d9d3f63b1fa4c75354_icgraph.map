@@ -1,0 +1,7 @@
+<map id="youtubeApi::fetchPlaylists" name="youtubeApi::fetchPlaylists">
+<area shape="rect" id="Node000001" title="Fetches the playlists of the authenticated user from the YouTube API." alt="" coords="428,13,600,40"/>
+<area shape="rect" id="Node000002" href="$classyoutube_api.html#a854ec1a2b234de3759868567b6f922fd" title="This method retrieves the access token from the response of the Google OAuth 2.0 server." alt="" coords="201,5,380,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="413,29,380,29,380,24,413,24"/>
+<area shape="rect" id="Node000003" href="$classyoutube_api.html#a14a356ef9451170e71bca441dcc5d33f" title="This method sends a request to the Google OAuth 2.0 server to obtain an access token." alt="" coords="5,13,153,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="185,29,153,29,153,24,185,24"/>
+</map>

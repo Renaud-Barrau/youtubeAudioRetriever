@@ -1,0 +1,91 @@
+\doxysection{youtubeapi.\+h}
+\hypertarget{youtubeapi_8h_source}{}\label{youtubeapi_8h_source}\mbox{\hyperlink{youtubeapi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ YOUTUBEAPI\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ YOUTUBEAPI\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QCoreApplication>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QNetworkAccessManager>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QNetworkRequest>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QNetworkReply>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QUrl>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QUrlQuery>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classyoutube_api}{youtubeApi}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00055\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classyoutube_api_a48dee190bf7f7b13c63d374af3f92816}{youtubeApi}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr})\ :\ QObject(parent)\{}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_api_a9d5205d0f7865e9690c4048f8bd5eba9}{Api}};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00068\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_api_a87c398efc09b1faf9156e0bd7a58eb14}{clientId}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_api_a361d08c89c0c96fdd46109be372c8ad1}{clientSecretCode}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00078\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_api_af2572234b9ffe7b918197b1864edd730}{refreshToken}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_api_a7f250c59f09cd59de048565aba11e812}{accessToken}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classyoutube_api_a7cb324ad00f12291ea99b8e70e898f26}{maxResults}};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \ \ \ \ QNetworkAccessManager\ \mbox{\hyperlink{classyoutube_api_ae8d18b83ff0f579730fa9fb0941a78e9}{manager}};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00098\ \ \ \ \ QNetworkReply\ *\mbox{\hyperlink{classyoutube_api_ad668b0a1b27acca0f55ccdab35c5396e}{getTokenReply}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \ \ \ \ QNetworkReply\ *\mbox{\hyperlink{classyoutube_api_a1f8b1b8cf894650a20933f3fdb3cfcfc}{checkTokenInfoReply}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{classyoutube_api_ac3def9e3be79ddac61a60c798018c90d}{videoIdArray}};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{classyoutube_api_a6ce20b9a8f9355286d3acbbebe891bc9}{videoTitleArray}};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{classyoutube_api_a1d40180b7411768eb839eb453ec9e22b}{videoThumbnailsUrlArray}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{classyoutube_api_a04882afc04caf6d967ffe4ce6c26108b}{playlistNameArray}};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ QVector<QString>\ \mbox{\hyperlink{classyoutube_api_a919978fd68e1c44521bceab88eef0512}{playlistIdArray}};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ QString\ \mbox{\hyperlink{classyoutube_api_a549e8ae32f62cc8014f0f68bbe118902}{requestSource}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \textcolor{comment}{//\ \ \ \ QString\ playlistName;}}
+\DoxyCodeLine{00137\ \textcolor{comment}{//\ \ \ \ QString\ playlistId;}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_api_abec91932711c1003ec253b2a9d31e62d}{processPlaylistsElements}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_api_a19fcc628b82a8d04d64f028c1f618b1c}{processPlaylists}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_api_af23c64dcfe3464b9791b5fd6fef03c0f}{checkTokenInfo}}();}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_api_a7646c6f546099d7b07006e3b1c62ba08}{fetchPlaylistElements}}();}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_api_a16c112616d66b7d9d3f63b1fa4c75354}{fetchPlaylists}}();}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_api_a14a356ef9451170e71bca441dcc5d33f}{getToken}}();}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_api_a854ec1a2b234de3759868567b6f922fd}{retrieveAccessToken}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classyoutube_api_aa78991fa79708e558e72cb06f28c84a1}{retrieveAccessTokenInfo}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{comment}{//\ \ \ \ void\ updatePlaylistId(int\ index);}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ YOUTUBEAPI\_H}}
+
+\end{DoxyCode}

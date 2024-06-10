@@ -1,0 +1,27 @@
+var classyoutube_api =
+[
+    [ "youtubeApi", "classyoutube_api.html#a48dee190bf7f7b13c63d374af3f92816", null ],
+    [ "checkTokenInfo", "classyoutube_api.html#af23c64dcfe3464b9791b5fd6fef03c0f", null ],
+    [ "fetchPlaylistElements", "classyoutube_api.html#a7646c6f546099d7b07006e3b1c62ba08", null ],
+    [ "fetchPlaylists", "classyoutube_api.html#a16c112616d66b7d9d3f63b1fa4c75354", null ],
+    [ "getToken", "classyoutube_api.html#a14a356ef9451170e71bca441dcc5d33f", null ],
+    [ "processPlaylists", "classyoutube_api.html#a19fcc628b82a8d04d64f028c1f618b1c", null ],
+    [ "processPlaylistsElements", "classyoutube_api.html#abec91932711c1003ec253b2a9d31e62d", null ],
+    [ "retrieveAccessToken", "classyoutube_api.html#a854ec1a2b234de3759868567b6f922fd", null ],
+    [ "retrieveAccessTokenInfo", "classyoutube_api.html#aa78991fa79708e558e72cb06f28c84a1", null ],
+    [ "accessToken", "classyoutube_api.html#a7f250c59f09cd59de048565aba11e812", null ],
+    [ "Api", "classyoutube_api.html#a9d5205d0f7865e9690c4048f8bd5eba9", null ],
+    [ "checkTokenInfoReply", "classyoutube_api.html#a1f8b1b8cf894650a20933f3fdb3cfcfc", null ],
+    [ "clientId", "classyoutube_api.html#a87c398efc09b1faf9156e0bd7a58eb14", null ],
+    [ "clientSecretCode", "classyoutube_api.html#a361d08c89c0c96fdd46109be372c8ad1", null ],
+    [ "getTokenReply", "classyoutube_api.html#ad668b0a1b27acca0f55ccdab35c5396e", null ],
+    [ "manager", "classyoutube_api.html#ae8d18b83ff0f579730fa9fb0941a78e9", null ],
+    [ "maxResults", "classyoutube_api.html#a7cb324ad00f12291ea99b8e70e898f26", null ],
+    [ "playlistIdArray", "classyoutube_api.html#a919978fd68e1c44521bceab88eef0512", null ],
+    [ "playlistNameArray", "classyoutube_api.html#a04882afc04caf6d967ffe4ce6c26108b", null ],
+    [ "refreshToken", "classyoutube_api.html#af2572234b9ffe7b918197b1864edd730", null ],
+    [ "requestSource", "classyoutube_api.html#a549e8ae32f62cc8014f0f68bbe118902", null ],
+    [ "videoIdArray", "classyoutube_api.html#ac3def9e3be79ddac61a60c798018c90d", null ],
+    [ "videoThumbnailsUrlArray", "classyoutube_api.html#a1d40180b7411768eb839eb453ec9e22b", null ],
+    [ "videoTitleArray", "classyoutube_api.html#a6ce20b9a8f9355286d3acbbebe891bc9", null ]
+];

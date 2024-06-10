@@ -1,0 +1,135 @@
+\doxysection{param\+File Class Reference}
+\hypertarget{classparam_file}{}\label{classparam_file}\index{paramFile@{paramFile}}
+
+
+The \doxylink{classparam_file}{param\+File} class provides a simple interface for reading and writing parameters to a JSON configuration file.  
+
+
+
+
+{\ttfamily \#include $<$paramfile.\+h$>$}
+
+
+
+Inheritance diagram for param\+File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classparam_file__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for param\+File\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classparam_file__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{classparam_file_a981a8360b7803cb320bc5b58c1b41c35}{read\+Param}} (const QString \&key)
+\begin{DoxyCompactList}\small\item\em Reads a parameter from the JSON configuration file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}{write\+Param}} (const QString \&key, const QString \&value)
+\begin{DoxyCompactList}\small\item\em Writes a parameter to the JSON configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classparam_file_af7159f932c4149e9c732718e687a09de}{param\+File}} (const QString \&filename)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classparam_file}{param\+File} object with the specified configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classparam_file}{param\+File} class provides a simple interface for reading and writing parameters to a JSON configuration file. 
+
+This class is derived from QObject and uses the Qt JSON module to parse and generate JSON documents. The configuration file is specified by the m\+\_\+filename member variable, which is set in the constructor.
+
+The class provides two public slots\+: \doxylink{classparam_file_a981a8360b7803cb320bc5b58c1b41c35}{read\+Param()} and \doxylink{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}{write\+Param()}. The \doxylink{classparam_file_a981a8360b7803cb320bc5b58c1b41c35}{read\+Param()} slot takes a single input parameter \textquotesingle{}key\textquotesingle{} and returns the value associated with that key in the JSON configuration file, or "{}0"{} if the key is not found. The \doxylink{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}{write\+Param()} slot takes two input parameters \textquotesingle{}key\textquotesingle{} and \textquotesingle{}value\textquotesingle{}, and writes the value to the JSON configuration file.
+
+\begin{DoxyNote}{Note}
+This class does not provide any error handling or synchronization mechanisms. It is intended to be used in a simple, single-\/threaded application where the configuration file is not modified by external processes.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+QJson\+Document, QJson\+Object, QFile 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classparam_file_af7159f932c4149e9c732718e687a09de}\index{paramFile@{paramFile}!paramFile@{paramFile}}
+\index{paramFile@{paramFile}!paramFile@{paramFile}}
+\doxysubsubsection{\texorpdfstring{paramFile()}{paramFile()}}
+{\footnotesize\ttfamily \label{classparam_file_af7159f932c4149e9c732718e687a09de} 
+param\+File\+::param\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{filename}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a new \doxylink{classparam_file}{param\+File} object with the specified configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The path to the configuration file. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classparam_file_a981a8360b7803cb320bc5b58c1b41c35}\index{paramFile@{paramFile}!readParam@{readParam}}
+\index{readParam@{readParam}!paramFile@{paramFile}}
+\doxysubsubsection{\texorpdfstring{readParam}{readParam}}
+{\footnotesize\ttfamily \label{classparam_file_a981a8360b7803cb320bc5b58c1b41c35} 
+QString param\+File\+::read\+Param (\begin{DoxyParamCaption}\item[{const QString \&}]{key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Reads a parameter from the JSON configuration file. 
+
+This method opens the configuration file specified by param\+File\+::m\+\_\+filename in read-\/only mode. If the file cannot be opened, an error message is printed to the console and the method returns "{}0"{}.
+
+The method then reads the entire contents of the file and parses it as a JSON document using QJson\+Document\+::from\+Json(). If the parsed document is a JSON object, the method checks whether it contains a key that matches the input parameter \textquotesingle{}key\textquotesingle{}. If the key is found, the method prints the value to the console, converts it to a QString using QJson\+Value\+::to\+String(), and returns the QString.
+
+If the key is not found in the JSON object, or if the parsed document is not a JSON object, the method prints an error message to the console and returns "{}0"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for in the JSON configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+QString The value associated with the input key in the JSON configuration file, or "{}0"{} if the key is not found. 
+\end{DoxyReturn}
+\Hypertarget{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a}\index{paramFile@{paramFile}!writeParam@{writeParam}}
+\index{writeParam@{writeParam}!paramFile@{paramFile}}
+\doxysubsubsection{\texorpdfstring{writeParam}{writeParam}}
+{\footnotesize\ttfamily \label{classparam_file_ab0a18c3de1a6ca9e0cc60534a9fe599a} 
+bool param\+File\+::write\+Param (\begin{DoxyParamCaption}\item[{const QString \&}]{key}{, }\item[{const QString \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Writes a parameter to the JSON configuration file. 
+
+This method opens the configuration file specified by param\+File\+::m\+\_\+filename in read-\/write mode. If the file cannot be opened, an error message is printed to the console and the method returns false.
+
+If the file is not empty, the method reads the entire contents of the file and parses it as a JSON document using QJson\+Document\+::from\+Json(). If the parsed document is a JSON object, the method sets the value of the input key \textquotesingle{}key\textquotesingle{} to an empty string and then to the input value \textquotesingle{}value\textquotesingle{} using QJson\+Object\+::operator\mbox{[}$\,$\mbox{]}.
+
+The method then sets the JSON object as the root object of the JSON document using QJson\+Document\+::set\+Object(), truncates the file to zero length using QFile\+::resize(), writes the JSON document to the file using QFile\+::write(), and closes the file.
+
+If the file is empty or the parsed document is not a JSON object, the method creates a new JSON object, sets the value of the input key \textquotesingle{}key\textquotesingle{} to the input value \textquotesingle{}value\textquotesingle{} using QJson\+Object\+::operator\mbox{[}$\,$\mbox{]}, sets the JSON object as the root object of the JSON document using QJson\+Document\+::set\+Object(), truncates the file to zero length using QFile\+::resize(), writes the JSON document to the file using QFile\+::write(), and closes the file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to write to the JSON configuration file. \\
+\hline
+{\em value} & The value to associate with the input key in the JSON configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if the parameter was successfully written to the file, or false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{paramfile_8h}{paramfile.\+h}}\item 
+\mbox{\hyperlink{paramfile_8cpp}{paramfile.\+cpp}}\end{DoxyCompactItemize}
