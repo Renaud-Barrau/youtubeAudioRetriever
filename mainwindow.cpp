@@ -8,7 +8,8 @@ mainWindow::mainWindow(QWidget *parent) :
     youtubeDownloaderObject(std::make_shared<youtubeDownloader>()),
     youtubeApiObject(std::make_shared<youtubeApi>()),
     audioReaderObject(std::make_shared<audioReader>()),
-    apiSettingsObject(std::make_shared<apiSettings>(paramFileObject))
+    apiSettingsObject(std::make_shared<apiSettings>(paramFileObject)),
+    ressourcePathsObject(std::make_shared<ressourcePaths>())
 
 
 {
@@ -19,6 +20,9 @@ mainWindow::mainWindow(QWidget *parent) :
     QObject::connect(audioReaderObject.get(), SIGNAL(updateSliderValueSignal(int)),this, SLOT(updateSliderValue(int)));
     QObject::connect(audioReaderObject.get(), SIGNAL(updateSliderRangeSignal(int)),this, SLOT(updateSliderRange(int)));
     QObject::connect(audioReaderObject.get(), SIGNAL(updateMusicNameSignal(QUrl)), this, SLOT(updateMusicLabel(QUrl)));
+
+    QObject::connect(youtubeApiObject.get(), SIGNAL(playlistListLoaded(QVector<QString>,QVector<QString>)), this, SLOT(updatePlaylistList(QVector<QString>,QVector<QString>)));
+    QObject::connect(youtubeApiObject.get(), SIGNAL(videoDataLoaded(QVector<QString>,QVector<QString>,QVector<QString>, QString)), youtubeDownloaderObject.get(), SLOT(downloadAll(QVector<QString>,QVector<QString>,QVector<QString>, QString)));
 
 
 
@@ -63,9 +67,18 @@ mainWindow::~mainWindow()
 
 void mainWindow::on_downloadButton_clicked()
 {
-    youtubeApiObject->requestSource = "fetchPlaylistElements";
-    cout << "Download button pressed" << endl;
+    if(youtubeApiObject->requestSource == "fetchPlaylists" || youtubeApiObject->requestSource == "fetchPlaylistElements"){
 
+    youtubeApiObject->requestSource = "fetchPlaylistElements";
+    youtubeDownloaderObject->musicFolder = paramFileObject->readParam("musicFolder");
+    youtubeDownloaderObject->ffmpegPath = paramFileObject->readParam("ffmpegPath");
+    youtubeApiObject->maxResults = paramFileObject->readParam("videoNumber").toInt();
+    cout << "Download button pressed" << endl;
+    youtubeApiObject->getToken();
+    }
+    else{
+        return;
+    }
 
 }
 
@@ -93,7 +106,6 @@ void mainWindow::on_locateMusicFolderButton_clicked()
 void mainWindow::on_locateFfpmegButton_clicked()
 {
     QString ffpmegPath = QFileDialog::getExistingDirectory(nullptr, "Sélectionner un fichier", "", QFileDialog::ShowDirsOnly);
-        // Vérifier si un fichier a été sélectionné
         if (!ffpmegPath.isEmpty()) {
         cout << "Chemin sélectionné : " << ffpmegPath.toStdString() << endl;
         ui->ffpmegPath->setText(ffpmegPath);
@@ -122,7 +134,6 @@ void mainWindow::updatePlaylistList(QVector<QString> playlistNameArray,QVector<Q
         }
     }
     cout << ui->playlistSelectionComboBox->currentIndex() << endl;
-//    emit playlistIndex(0);
     youtubeApiObject->playlistId = youtubeApiObject->playlistIdArray.at(0);
     youtubeApiObject->playlistName = youtubeApiObject->playlistNameArray.at(0);
 }
@@ -184,10 +195,28 @@ void mainWindow::updateMusicLabel(QUrl musicName){
     ui->musicNameLabel->setText(musicName.toString());
 }
 
+
+
+void mainWindow::on_musicProgressSlider_sliderMoved(int value){
+    audioReaderObject->setPosition(value);
+}
+
+
+
 void mainWindow::on_apiCredentials_triggered(){
     apiSettingsObject->exec();
 }
 
-void mainWindow::on_musicProgressSlider_sliderMoved(int value){
-    audioReaderObject->setPosition(value);
+void mainWindow::on_ressourcePaths_triggered(){
+    ressourcePathsObject->exec();
+}
+
+
+void mainWindow::on_aboutThisProject_triggered(){
+    QUrl url("https://renaud-barrau.github.io/youtubeAudioRetriever/docs/html/index.html");
+    QDesktopServices::openUrl(url);
+}
+void mainWindow::on_aboutQt_triggered(){
+    QUrl url("https://www.qt.io/");
+    QDesktopServices::openUrl(url);
 }

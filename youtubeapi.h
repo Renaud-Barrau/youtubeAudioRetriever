@@ -132,9 +132,15 @@ public:
      */
     QString requestSource;
 
+    /**
+     * @brief A string indicating a temporary playlist name.
+     */
+   QString playlistName;
 
-//    QString playlistName;
-//    QString playlistId;
+    /**
+     * @brief A string indicating a temporary playlist id.
+     */
+   QString playlistId;
 
 
 
@@ -147,6 +153,15 @@ public:
     void retrieveAccessToken();
     void retrieveAccessTokenInfo();
 
+signals:
+    /**
+     * @brief A signal emitted when playlist names and IDs are loaded.
+     */
+    void playlistListLoaded(QVector<QString> playlistNameArray,QVector<QString> playlistIdArray);
+    /**
+     * @brief A signal emitted when video names, IDs and thumbnails urls are loaded.
+     */
+    void videoDataLoaded(QVector<QString> videoTitleArray,QVector<QString> videoIdArray,QVector<QString> videoThumbnailsUrlArray,QString playlistName);
 
 //    void updatePlaylistId(int index);
 

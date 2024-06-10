@@ -6,6 +6,7 @@
 #include <QString>
 #include <QFileDialog>
 #include <QTreeView>
+#include <QDesktopServices>
 #include <QStandardItemModel>
 #include <QFileSystemModel>
 #include <QMovie>
@@ -19,6 +20,7 @@
 #include "paramfile.h"
 #include <youtubeDownloader.h>
 #include <youtubeapi.h>
+#include <ressourcepaths.h>
 
 using namespace std;
 
@@ -39,6 +41,7 @@ public:
     std::shared_ptr<youtubeApi> youtubeApiObject;
     std::shared_ptr<audioReader> audioReaderObject;
     std::shared_ptr<apiSettings> apiSettingsObject;
+    std::shared_ptr<ressourcePaths> ressourcePathsObject;
 
     explicit mainWindow(QWidget *parent = nullptr);
     ~mainWindow();
@@ -80,6 +83,14 @@ private slots:
     void updateMusicLabel(QUrl musicName);
 
     void on_apiCredentials_triggered();
+    void on_ressourcePaths_triggered();
+
+    void on_aboutThisProject_triggered();
+    void on_aboutQt_triggered();
+
+
+
+
 
     void on_musicProgressSlider_sliderMoved(int value);
 

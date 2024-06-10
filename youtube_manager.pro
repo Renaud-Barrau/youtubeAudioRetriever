@@ -15,6 +15,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     paramfile.cpp \
+    ressourcepaths.cpp \
     youtubeapi.cpp \
     youtubedownloader.cpp
 
@@ -23,12 +24,14 @@ HEADERS += \
     audioreader.h \
     mainwindow.h \
     paramfile.h \
+    ressourcepaths.h \
     youtubeapi.h \
     youtubedownloader.h
 
 FORMS += \
     apisettings.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    ressourcepaths.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

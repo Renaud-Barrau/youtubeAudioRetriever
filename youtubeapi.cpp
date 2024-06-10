@@ -71,7 +71,8 @@ void youtubeApi::retrieveAccessToken(){
     else {
         cout << "Error:" << getTokenReply->errorString().toStdString() << endl;
 
-    }if(youtubeApi::requestSource == "fetchPlaylistElements"){
+    }
+    if(youtubeApi::requestSource == "fetchPlaylistElements"){
         //        emit fetchPlaylistElementSignal();
         youtubeApi::fetchPlaylistElements();
     }
@@ -154,7 +155,7 @@ void youtubeApi::processPlaylists(const QByteArray &data)
         cout << "Playlist Title: " << playlistTitle.toStdString() << " | Playlist Id : " << playlistId.toStdString() << endl;
 
     }
-    // emit playlistListLoaded(youtubeApi::playlistNameArray,youtubeApi::playlistIdArray);
+    emit playlistListLoaded(youtubeApi::playlistNameArray,youtubeApi::playlistIdArray);
 }
 
 
@@ -239,7 +240,7 @@ void youtubeApi::processPlaylistsElements(const QByteArray &data)
         youtubeApi::videoThumbnailsUrlArray.append(videoThumbnailUrl);
 
     }
-//    emit videoDataLoaded(youtubeApi::videoTitleArray,youtubeApi::videoIdArray,youtubeApi::videoThumbnailsUrlArray,youtubeApi::playlistName);
+    emit videoDataLoaded(youtubeApi::videoTitleArray,youtubeApi::videoIdArray,youtubeApi::videoThumbnailsUrlArray,youtubeApi::playlistName);
 }
 
 

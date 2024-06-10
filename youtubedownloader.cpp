@@ -109,9 +109,10 @@ void youtubeDownloader::downloadAll(QVector<QString> videoTitleArray,QVector<QSt
     }
 
     QStringList fileList = dir.entryList(QStringList() << "*", QDir::Files);
-
+    cout << "taille : " << videoTitleArray.size() << endl;
     youtubeDownloader::increment = 100 / videoTitleArray.size();
     youtubeDownloader::progressBarValue = 0;
+    cout << "genial" <<  endl;
     for(int i = 0; i < videoTitleArray.size(); ++i){
         if (fileList.contains(videoTitleArray.at(i) + ".mp3")) {
             cout << "File " << videoTitleArray.at(i).toStdString() << " exist" << endl;

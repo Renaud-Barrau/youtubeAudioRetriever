@@ -298,15 +298,15 @@
     <property name="title">
      <string>Help</string>
     </property>
-    <addaction name="actionAbout_this_project"/>
-    <addaction name="actionAbout_Qt"/>
+    <addaction name="aboutThisProject"/>
+    <addaction name="aboutQt"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="title">
      <string>Settings</string>
     </property>
     <addaction name="apiCredentials"/>
-    <addaction name="actionRessources_paths"/>
+    <addaction name="ressourcePaths"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -314,12 +314,12 @@
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionAbout_this_project">
+  <action name="aboutThisProject">
    <property name="text">
     <string>About this project</string>
    </property>
   </action>
-  <action name="actionAbout_Qt">
+  <action name="aboutQt">
    <property name="text">
     <string>About Qt</string>
    </property>
@@ -338,7 +338,7 @@
     <font/>
    </property>
   </action>
-  <action name="actionRessources_paths">
+  <action name="ressourcePaths">
    <property name="text">
     <string>Ressources paths</string>
    </property>
