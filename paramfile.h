@@ -1,13 +1,8 @@
 /**
  * @file paramfile.h
- * @brief This file handle the read/write access to the params.json file that stores important data, sush as :
- * - API credentials for OAUTH identification (Api key, client ID, client secret code, refresh token)
- * - path for ffmpeg dependency
- * - path for music folder output
+ * @brief Header of the paramFile class
  *
- * Read and write function make use of QJsonDocument and QjsonObject to deals with the param file and browse in the different keys.
- */
-
+*/
 
 #ifndef PARAMFILE_H
 #define PARAMFILE_H
@@ -23,13 +18,29 @@
 using namespace std;
 
 /**
- * @class paramFile
- * @brief The paramFile class represent the object in charge of loading and saving important data into a parameter file.
+ * @brief The paramFile class provides a simple interface for reading and writing parameters to a JSON configuration file.
+ *
+ * This class is derived from QObject and uses the Qt JSON module to parse and generate JSON documents.
+ * The configuration file is specified by the m\_filename member variable, which is set in the constructor.
+ *
+ * The class provides two public slots: readParam() and writeParam().
+ * The readParam() slot takes a single input parameter 'key' and returns the value associated with that key in the JSON configuration file,
+ * or "0" if the key is not found.
+ * The writeParam() slot takes two input parameters 'key' and 'value', and writes the value to the JSON configuration file.
+ *
+ * @note This class does not provide any error handling or synchronization mechanisms.
+ * It is intended to be used in a simple, single-threaded application where the configuration file is not modified by external processes.
+ *
+ * @see QJsonDocument, QJsonObject, QFile
  */
 class paramFile : public QObject
 {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructs a new paramFile object with the specified configuration file.
+     * @param filename The path to the configuration file.
+     */
     explicit paramFile(const QString &filename) : m_filename(filename){
         };
 
@@ -39,6 +50,9 @@ public slots:
     bool writeParam(const QString &key, const QString &value);
 
 private:
+    /**
+     * @brief The path to the configuration file.
+     */
     QString m_filename;
 };
 
