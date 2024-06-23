@@ -12,6 +12,7 @@ CONFIG += c++17
 SOURCES += \
     apisettings.cpp \
     audioreader.cpp \
+    loghandler.cpp \
     main.cpp \
     mainwindow.cpp \
     paramfile.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 HEADERS += \
     apisettings.h \
     audioreader.h \
+    loghandler.h \
     mainwindow.h \
     paramfile.h \
     ressourcepaths.h \

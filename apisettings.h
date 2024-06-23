@@ -5,6 +5,7 @@
 
 #include "paramfile.h"
 #include <QDialog>
+#include <QDebug>
 
 namespace Ui {
 class apiSettings;

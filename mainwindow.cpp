@@ -9,7 +9,7 @@ mainWindow::mainWindow(QWidget *parent) :
     youtubeApiObject(std::make_shared<youtubeApi>()),
     audioReaderObject(std::make_shared<audioReader>()),
     apiSettingsObject(std::make_shared<apiSettings>(paramFileObject)),
-    ressourcePathsObject(std::make_shared<ressourcePaths>())
+    ressourcePathsObject(std::make_shared<ressourcePaths>(paramFileObject))
 
 
 {
@@ -28,10 +28,10 @@ mainWindow::mainWindow(QWidget *parent) :
 
 //////////          DOWNLOAD FRAME           //////////
 
-    ui->musicFolderRepository->setText(paramFileObject->readParam("musicFolder"));
-    ui->ffpmegPath->setText(paramFileObject->readParam("ffmpegPath"));
-    ui->musicFolderRepository->setWordWrap(true);
-    ui->ffpmegPath->setWordWrap(true);
+    // ui->musicFolderRepository->setText(paramFileObject->readParam("musicFolder"));
+    // ui->ffpmegPath->setText(paramFileObject->readParam("ffmpegPath"));
+    // ui->musicFolderRepository->setWordWrap(true);
+    // ui->ffpmegPath->setWordWrap(true);
 
     ui->videoNumberTextEdit->setWordWrapMode(QTextOption::NoWrap);
     ui->videoNumberTextEdit->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -52,11 +52,8 @@ mainWindow::mainWindow(QWidget *parent) :
 
 
 
-//    ui->playlistSelectionComboBox->addItem("elem1");
-//    ui->playlistSelectionComboBox->addItem("elem2");
-//    ui->playlistSelectionComboBox->addItem("elem3");
-
     ui->playlistSelectionComboBox->setCurrentIndex(0);
+    ui->videoNumberTextEdit->setPlainText(paramFileObject->readParam("videoNumber"));
 
 }
 
@@ -67,6 +64,7 @@ mainWindow::~mainWindow()
 
 void mainWindow::on_downloadButton_clicked()
 {
+    qInfo() << "Download button pressed";
     if(youtubeApiObject->requestSource == "fetchPlaylists" || youtubeApiObject->requestSource == "fetchPlaylistElements"){
 
     youtubeApiObject->requestSource = "fetchPlaylistElements";
@@ -74,9 +72,11 @@ void mainWindow::on_downloadButton_clicked()
     youtubeDownloaderObject->ffmpegPath = paramFileObject->readParam("ffmpegPath");
     youtubeApiObject->maxResults = paramFileObject->readParam("videoNumber").toInt();
     cout << "Download button pressed" << endl;
+    qInfo() << "Params fetched, going for Token request";
     youtubeApiObject->getToken();
     }
     else{
+        qFatal() << "requestSource should be either \"fetchPlaylists\" or \"fetchPlaylistElements\"";
         return;
     }
 
@@ -88,34 +88,6 @@ void mainWindow::on_checkBox_stateChanged(int arg1)
 }
 
 
-
-void mainWindow::on_locateMusicFolderButton_clicked()
-{
-    QString folderPath = QFileDialog::getExistingDirectory(nullptr, "Sélectionner un dossier", "", QFileDialog::ShowDirsOnly);
-     // Vérifier si un dossier a été sélectionné
-     if (!folderPath.isEmpty()) {
-        cout << "Chemin sélectionné : " << folderPath.toStdString() << endl;
-        ui->musicFolderRepository->setText(folderPath);
-        paramFileObject->writeParam("musicFolder", folderPath);
-     }
-     else{
-         cout << "Error while selecting folder" << endl;
-     }
-}
-
-void mainWindow::on_locateFfpmegButton_clicked()
-{
-    QString ffpmegPath = QFileDialog::getExistingDirectory(nullptr, "Sélectionner un fichier", "", QFileDialog::ShowDirsOnly);
-        if (!ffpmegPath.isEmpty()) {
-        cout << "Chemin sélectionné : " << ffpmegPath.toStdString() << endl;
-        ui->ffpmegPath->setText(ffpmegPath);
-        paramFileObject->writeParam("ffmpegPath", ffpmegPath);
-    }
-    else{
-        cout << "Error while selecting folder" << endl;
-    }
-}
-
 void mainWindow::updateProgressBarValue(int value){
     ui->downloadProgressBar->setValue(value);
 }
@@ -123,6 +95,9 @@ void mainWindow::updateProgressBarValue(int value){
 void mainWindow::on_playlistSelectionComboBox_activated(int index)
 {
     cout << "selected playlist index : " << index << endl;
+    qInfo() << "selected playlist index : " << index;
+    youtubeApiObject->playlistId = youtubeApiObject->playlistIdArray.at(index);
+    youtubeApiObject->playlistName = youtubeApiObject->playlistNameArray.at(index);
     // emit playlistIndex(index);
 }
 
@@ -141,6 +116,8 @@ void mainWindow::updatePlaylistList(QVector<QString> playlistNameArray,QVector<Q
 void mainWindow::on_fetchPlaylistButton_clicked()
 {
     cout << "fetch playlist button pressed " << endl;
+    qInfo() << "fetch playlist button pressed " ;
+
     youtubeApiObject->requestSource = "fetchPlaylists";
 
     youtubeApiObject->Api = paramFileObject->readParam("apiKey");
@@ -148,6 +125,7 @@ void mainWindow::on_fetchPlaylistButton_clicked()
     youtubeApiObject->clientSecretCode = paramFileObject->readParam("clientSecretCode");
     youtubeApiObject->refreshToken = paramFileObject->readParam("refreshToken");
 
+    qInfo() << "Params fetched, going for Token request";
     youtubeApiObject->getToken();
 
 }
@@ -165,17 +143,22 @@ void mainWindow::on_videoNumberTextEdit_textChanged()
             textTemp.chop(1);
 //            emit saveVideoNumber("videoNumber",textTemp);
             paramFileObject->writeParam("videoNumber",textTemp);
+            qInfo() << "VideoNumber saved";
 
 
         }
         else{
             cout << "number must be between 1 and 50" << endl;
+            qCritical() << "number must be between 1 and 50";
         }
         QString text = ui->videoNumberTextEdit->toPlainText();
         text.chop(1);
         ui->videoNumberTextEdit->setPlainText(text);
 
     }
+    // else{
+    //     qCritical() << "Wrong format for videoNumberTextEdit : should end with \\n";
+    // }
 }
 
 void mainWindow::on_playPauseButton_clicked()
@@ -213,10 +196,34 @@ void mainWindow::on_ressourcePaths_triggered(){
 
 
 void mainWindow::on_aboutThisProject_triggered(){
+    qInfo() << "aboutThisProject button pressed";
     QUrl url("https://renaud-barrau.github.io/youtubeAudioRetriever/docs/html/index.html");
-    QDesktopServices::openUrl(url);
+    if(QDesktopServices::openUrl(url)){
+        qInfo() << "aboutThisProject web page opened";
+    }
+    else{
+        qCritical() << "failed to open web link";
+    }
+
 }
 void mainWindow::on_aboutQt_triggered(){
+    qInfo() << "aboutQt button pressed";
     QUrl url("https://www.qt.io/");
-    QDesktopServices::openUrl(url);
+    if(QDesktopServices::openUrl(url)){
+        qInfo() << "aboutQt web page opened";
+    }
+    else{
+        qCritical() << "failed to open web link";
+    }
+}
+
+void mainWindow::on_logs_triggered(){
+    qInfo() << "Logs button pressed";
+    QUrl url = QUrl::fromLocalFile(QCoreApplication::applicationDirPath());
+    if(QDesktopServices::openUrl(url)){
+        qInfo() << "Succefully opened file explorerto logs folder";
+    }
+    else{
+        qCritical() << "failed to open file explorer";
+    }
 }

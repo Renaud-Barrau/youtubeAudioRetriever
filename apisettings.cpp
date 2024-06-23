@@ -74,5 +74,6 @@ void apiSettings::on_saveParamsButton_clicked()
     paramFileObject->writeParam("clientId", ui->clientIdTextEdit->toPlainText());
     paramFileObject->writeParam("clientSecretCode", ui->clientSecretCodeTextEdit->toPlainText());
     paramFileObject->writeParam("refreshToken", ui->refreshTokenTextEdit->toPlainText());
+    qInfo() << "Api settings saved";
 }
 
