@@ -24,7 +24,7 @@ mainWindow::mainWindow(QWidget *parent) :
     QObject::connect(youtubeApiObject.get(), SIGNAL(playlistListLoaded(QVector<QString>,QVector<QString>)), this, SLOT(updatePlaylistList(QVector<QString>,QVector<QString>)));
     QObject::connect(youtubeApiObject.get(), SIGNAL(videoDataLoaded(QVector<QString>,QVector<QString>,QVector<QString>, QString)), youtubeDownloaderObject.get(), SLOT(downloadAll(QVector<QString>,QVector<QString>,QVector<QString>, QString)));
 
-
+    QObject::connect(youtubeDownloaderObject.get(),  SIGNAL(progressBarValueChanged(int)), this, SLOT(updateProgressBarValue(int)));
 
 //////////          DOWNLOAD FRAME           //////////
 
@@ -55,6 +55,8 @@ mainWindow::mainWindow(QWidget *parent) :
     ui->playlistSelectionComboBox->setCurrentIndex(0);
     ui->videoNumberTextEdit->setPlainText(paramFileObject->readParam("videoNumber"));
 
+
+
 }
 
 mainWindow::~mainWindow()
@@ -76,7 +78,7 @@ void mainWindow::on_downloadButton_clicked()
     youtubeApiObject->getToken();
     }
     else{
-        qFatal() << "requestSource should be either \"fetchPlaylists\" or \"fetchPlaylistElements\"";
+        qCritical() << "requestSource should be either \"fetchPlaylists\" or \"fetchPlaylistElements\"";
         return;
     }
 

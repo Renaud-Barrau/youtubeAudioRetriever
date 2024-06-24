@@ -39,6 +39,10 @@ public:
      */
     QString command;
     /**
+     * @brief The command string to be executed for linking audio and thumbnail files.
+     */
+    QString linkCommand;
+    /**
      * @brief The path to the directory where the downloaded audio files will be saved.
      */
     QString musicFolder;
@@ -60,11 +64,19 @@ public:
      * audio.
      */
     QQueue<QString> downloadQueue;
+    /**
+     * @brief A queue of command strings to be executed for linking audio files (mp3) with thumbnails (jpg)
+     */
+    QQueue<QString> linkCoverQueue;
 
+    QString playlistNameTemp;
 
     void formatCommand(QString videoTitle, QString videoId, QString playlistName);
+    QString formatLinkCommand(QString videoTitle, QString imageTitle, QString outputName);
     void execCommand(QString command);
     void startNextDownload();
+
+    void embedCoverImage();
 
 
 public slots:
@@ -75,7 +87,7 @@ public slots:
 
 signals:
 
-    //void progressBarUpdate(int);
+    void progressBarValueChanged(int);
 };
 
 #endif // YOUTUBEDOWNLOADER_H

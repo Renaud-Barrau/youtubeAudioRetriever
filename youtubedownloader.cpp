@@ -29,7 +29,7 @@
 * @param playlistName The name of the playlist of the wanted video.
 */
 void youtubeDownloader::formatCommand(QString videoTitle, QString videoId, QString playlistName){
-    command = "yt-dlp.exe -x --audio-format mp3 --audio-quality 192 --write-thumbnail --ffmpeg-location ";
+    command = "yt-dlp.exe -x --audio-format mp3 --audio-quality 192 --write-thumbnail --convert-thumbnails jpg --ffmpeg-location ";
     command += youtubeDownloader::ffmpegPath;
     command += " -P \"";
     command += youtubeDownloader::musicFolder;
@@ -59,8 +59,9 @@ void youtubeDownloader::execCommand(QString command){
     process->startCommand(command);
     connect(process, &QProcess::finished,this, [=]() {
         process->deleteLater();
+
         youtubeDownloader::progressBarValue += youtubeDownloader::increment;
-        // emit progressBarUpdate(youtubeDownloader::progressBarValue);
+        emit progressBarValueChanged(youtubeDownloader::progressBarValue);
         startNextDownload();
     });
 }
@@ -92,6 +93,8 @@ void youtubeDownloader::execCommand(QString command){
  */
 void youtubeDownloader::downloadAll(QVector<QString> videoTitleArray,QVector<QString> videoIdArray,QVector<QString> videoThumbnailsUrlArray, QString playlistName){
     cout << playlistName.toStdString() << endl;
+    emit progressBarValueChanged(0);
+    youtubeDownloader::playlistNameTemp=playlistName;
     QString newFolderPath = youtubeDownloader::musicFolder + "/" + playlistName;
     cout << "chemin playlist" << newFolderPath.toStdString() << endl;
     QDir dir(newFolderPath);
@@ -110,9 +113,8 @@ void youtubeDownloader::downloadAll(QVector<QString> videoTitleArray,QVector<QSt
 
     QStringList fileList = dir.entryList(QStringList() << "*", QDir::Files);
     cout << "taille : " << videoTitleArray.size() << endl;
-    youtubeDownloader::increment = 100 / videoTitleArray.size();
+    youtubeDownloader::increment = 90 / videoTitleArray.size();
     youtubeDownloader::progressBarValue = 0;
-    cout << "genial" <<  endl;
     for(int i = 0; i < videoTitleArray.size(); ++i){
         if (fileList.contains(videoTitleArray.at(i) + ".mp3")) {
             cout << "File " << videoTitleArray.at(i).toStdString() << " exist" << endl;
@@ -143,28 +145,87 @@ void youtubeDownloader::downloadAll(QVector<QString> videoTitleArray,QVector<QSt
  * @return None
  */
 void youtubeDownloader::startNextDownload() {
+
     if (!downloadQueue.isEmpty()) {
         cout << "end of downloading, starting a new one" << endl;
-        QString command = downloadQueue.dequeue();
-        youtubeDownloader::execCommand(command);
+        youtubeDownloader::execCommand(downloadQueue.dequeue());
     }
     else{
         // emit progressBarUpdate(100);
         cout << "all download finished" << endl;
+        youtubeDownloader::embedCoverImage();
 
     }
 }
 
 
+QString youtubeDownloader::formatLinkCommand(QString videoTitle, QString imageTitle, QString outputName){
+    linkCommand = youtubeDownloader::ffmpegPath.replace("/","\\");
+    linkCommand += "\\ffmpeg.exe";
+    linkCommand += " -i ";
+    linkCommand+= "\"";
+    linkCommand += videoTitle;
+    linkCommand+= "\"";
+    linkCommand += " -i ";
+    linkCommand+= "\"";
+    linkCommand += imageTitle;
+    linkCommand+= "\"";
+    linkCommand += " -map 0 -map 1 -c copy -id3v2_version 3 -metadata:s:v title=\"Album cover\" -metadata:s:v comment=\"Cover (front)\" ";
+    linkCommand+= "\"";
+    linkCommand += outputName;
+    linkCommand+= "\"";
 
-//void youtubeDownloader::updateParams(QString key, QString value){
-//    if(key == "musicFolder"){
-//        youtubeDownloader::musicFolder = value;
-//    }
-//    else if(key == "ffpmegPath"){
-//        youtubeDownloader::ffmpegPath = value;
-//    }
-//    else{
-//    }
+    cout << youtubeDownloader::linkCommand.toStdString() << endl;
+    return linkCommand;
+}
 
-//}
+
+void youtubeDownloader::embedCoverImage() {
+    QDir dir(youtubeDownloader::musicFolder + "/" + youtubeDownloader::playlistNameTemp);
+    QStringList audioFiles = dir.entryList(QStringList() << "*.mp3", QDir::Files);
+    foreach (QString audioFile, audioFiles) {
+        QString baseName = audioFile.left(audioFile.lastIndexOf('.'));
+        QString imageFile = baseName + ".jpg";
+
+        if (dir.exists(imageFile)) {
+            QString audioFilePath = dir.absoluteFilePath(audioFile);    //Video name + path
+            QString imageFilePath = dir.absoluteFilePath(imageFile);
+            QString tempAudioFilePath = dir.absoluteFilePath(baseName + "_temp.mp3");
+            QString outputAudioFilePath = audioFilePath;  // The final output path will be the same as the original audio file path
+
+            // Rename the original audio file to a temporary name
+            if (QFile::rename(audioFilePath, tempAudioFilePath)) {
+                qDebug() << "Successfully renamed" << audioFile << "to" << baseName + "_temp.mp3";
+
+                QProcess process;
+
+                QString temp = youtubeDownloader::formatLinkCommand(tempAudioFilePath,imageFilePath, outputAudioFilePath);
+                process.startCommand(temp);
+                process.waitForFinished();
+                if (process.exitStatus() == QProcess::NormalExit && process.exitCode() == 0) {
+                    qDebug() << "Successfully embedded cover for" << audioFile;
+
+                    // Remove the temporary audio file
+                    if(QFile::remove(tempAudioFilePath)){
+                        qDebug() << "Successfully removed temp audio file" << tempAudioFilePath;
+                    }
+
+                    if(QFile::remove(imageFilePath)){
+                        qDebug() << "Successfully removed thumbnail file" << imageFilePath;
+                    }
+                } else {
+                    qDebug() << "Failed to embed cover for" << audioFile;
+                    qDebug() << process.readAllStandardError();
+
+                    // Restore the original file if embedding fails
+                    QFile::rename(tempAudioFilePath, audioFilePath);
+                }
+            } else {
+                qDebug() << "Failed to rename" << audioFile << "to" << baseName + "_temp.mp3";
+            }
+        } else {
+            qDebug() << "No cover image found for" << audioFile;
+        }
+    }
+    emit progressBarValueChanged(100);
+}
