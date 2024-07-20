@@ -1,7 +1,9 @@
 var hierarchy =
 [
+    [ "logHandler", "classlog_handler.html", null ],
     [ "QDialog", null, [
-      [ "apiSettings", "classapi_settings.html", null ]
+      [ "apiSettings", "classapi_settings.html", null ],
+      [ "ressourcePaths", "classressource_paths.html", null ]
     ] ],
     [ "QMainWindow", null, [
       [ "mainWindow", "classmain_window.html", null ]

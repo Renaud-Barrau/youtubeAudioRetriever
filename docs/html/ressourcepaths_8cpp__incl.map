@@ -1,0 +1,25 @@
+<map id="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/ressourcepaths.cpp" name="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/ressourcepaths.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="157,5,355,64"/>
+<area shape="rect" id="Node000002" href="$ressourcepaths_8h.html" title=" " alt="" coords="119,112,241,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,66,203,102,199,98,230,63"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="264,112,403,139"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="283,63,314,98,310,102,279,66"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="45,187,112,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="164,141,110,179,107,175,161,137"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="136,187,224,213"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="183,139,183,171,177,171,177,139"/>
+<area shape="rect" id="Node000005" href="$paramfile_8h.html" title="Header of the paramFile class." alt="" coords="249,187,333,213"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="201,137,260,176,257,180,198,141"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,261,75,288"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="249,216,90,262,88,257,247,211"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="99,261,152,288"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="263,216,167,258,165,253,261,211"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="176,261,275,288"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="281,216,249,252,245,248,277,212"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="299,261,416,288"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="304,212,338,248,334,252,300,216"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="440,261,536,288"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="326,211,440,253,438,258,324,216"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="560,261,632,288"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="334,208,546,258,544,263,332,214"/>
+</map>

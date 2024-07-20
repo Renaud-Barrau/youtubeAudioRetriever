@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['videoidarray_0',['videoIdArray',['../classyoutube_api.html#ac3def9e3be79ddac61a60c798018c90d',1,'youtubeApi']]],
-  ['videothumbnailsurlarray_1',['videoThumbnailsUrlArray',['../classyoutube_api.html#a1d40180b7411768eb839eb453ec9e22b',1,'youtubeApi']]],
-  ['videotitlearray_2',['videoTitleArray',['../classyoutube_api.html#a6ce20b9a8f9355286d3acbbebe891bc9',1,'youtubeApi']]]
+  ['refreshtoken_0',['refreshToken',['../classyoutube_api.html#af2572234b9ffe7b918197b1864edd730',1,'youtubeApi']]],
+  ['ressourcepathsobject_1',['ressourcePathsObject',['../classmain_window.html#a2b4e44de538b2622448b3a69d7c9bcb9',1,'mainWindow']]]
 ];

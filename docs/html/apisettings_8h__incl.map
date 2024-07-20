@@ -1,21 +1,23 @@
-<map id="apisettings.h" name="apisettings.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="243,5,338,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="157,80,225,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,35,222,73,219,68,272,30"/>
-<area shape="rect" id="Node000003" href="$paramfile_8h.html" title="Header of the paramFile class." alt="" coords="249,80,333,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="293,33,293,64,288,64,288,33"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="357,80,424,107"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="310,30,362,68,359,73,307,35"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="5,155,75,181"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="249,109,90,155,88,150,247,104"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="99,155,152,181"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="263,110,167,151,165,147,261,105"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="176,155,275,181"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="281,109,249,145,245,141,277,105"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="299,155,416,181"/>
-<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="304,105,338,141,334,145,300,109"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="440,155,536,181"/>
-<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="326,105,440,146,438,151,324,110"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="560,155,632,181"/>
-<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="334,102,546,151,544,157,332,107"/>
+<map id="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/apisettings.h" name="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/apisettings.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="241,5,439,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="157,112,225,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="293,67,226,106,223,102,290,62"/>
+<area shape="rect" id="Node000003" href="$paramfile_8h.html" title="Header of the paramFile class." alt="" coords="249,112,333,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="326,66,307,100,303,97,322,63"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="357,112,424,139"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="359,63,378,97,374,100,354,66"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="449,112,517,139"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="388,62,451,101,448,106,385,67"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,187,75,213"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="249,141,90,187,88,182,247,136"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="99,187,152,213"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="263,142,167,183,165,179,261,137"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="176,187,275,213"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="281,141,249,177,245,173,277,137"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="299,187,416,213"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="304,137,338,173,334,177,300,141"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="440,187,536,213"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="326,137,440,178,438,183,324,142"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="560,187,632,213"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="334,134,546,183,544,189,332,139"/>
 </map>

@@ -1,49 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>youtubeAudioRetriever: Class Members</title>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>Doxygen Awesome: Class Members</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">youtubeAudioRetriever<span id="projectnumber">&#160;1.0.0</span>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Doxygen Awesome
    </div>
+   <div id="projectbrief">Modern Doxygen theme</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Generated by Doxygen 1.11.0 -->
+<!-- Generated by Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +81,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +100,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('functions.html',''); initResizable(true); });
+$(function(){initNavTree('functions.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -105,36 +135,44 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <li>apiSettingsObject&#160;:&#160;<a class="el" href="classmain_window.html#a2add55538bd1a4f83db04dd9123fa3b1">mainWindow</a></li>
 <li>audioOutput&#160;:&#160;<a class="el" href="classaudio_reader.html#ac78b2a9c82bb8ce9f3b03d37cd3cc7da">audioReader</a></li>
 <li>audioReader()&#160;:&#160;<a class="el" href="classaudio_reader.html#a942d6e9a6ec93b434d49cf723a929666">audioReader</a></li>
-<li>audioReaderObject&#160;:&#160;<a class="el" href="classmain_window.html#a4bc083c44a0953360bb0203130ccfd57">mainWindow</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>changeAudio()&#160;:&#160;<a class="el" href="classaudio_reader.html#adb8c04a107c75e24dafcb5f92b4315d3">audioReader</a></li>
+<li>checkedPixmap&#160;:&#160;<a class="el" href="classmain_window.html#a510900d16b70f89b9df3402d37a6bf77">mainWindow</a></li>
 <li>checkTokenInfo()&#160;:&#160;<a class="el" href="classyoutube_api.html#af23c64dcfe3464b9791b5fd6fef03c0f">youtubeApi</a></li>
 <li>checkTokenInfoReply&#160;:&#160;<a class="el" href="classyoutube_api.html#a1f8b1b8cf894650a20933f3fdb3cfcfc">youtubeApi</a></li>
 <li>clientId&#160;:&#160;<a class="el" href="classyoutube_api.html#a87c398efc09b1faf9156e0bd7a58eb14">youtubeApi</a></li>
 <li>clientSecretCode&#160;:&#160;<a class="el" href="classyoutube_api.html#a361d08c89c0c96fdd46109be372c8ad1">youtubeApi</a></li>
+<li>close()&#160;:&#160;<a class="el" href="classlog_handler.html#a8296222594b8ddbebc21f8c77225e4ab">logHandler</a></li>
 <li>command&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a7158e78581e300cac28da1f4dfd9a17f">youtubeDownloader</a></li>
+<li>customMessageHandler()&#160;:&#160;<a class="el" href="classlog_handler.html#abce9dc2d2e2ded3f56a4c5525bb63365">logHandler</a></li>
 </ul>
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>downloadAll()&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28">youtubeDownloader</a></li>
 <li>downloadQueue&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a128e2cb90c3bdee987c41cc49745d077">youtubeDownloader</a></li>
+<li>downloadUpdateSignal()&#160;:&#160;<a class="el" href="classyoutube_api.html#acfb9d46a2fea8d31a36bfe5a56b1c2b0">youtubeApi</a>, <a class="el" href="classyoutube_downloader.html#a546a72bf777b438211a0b70e1f335cc1">youtubeDownloader</a></li>
 </ul>
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>embedCoverImage()&#160;:&#160;<a class="el" href="classyoutube_downloader.html#ad36b0c1d3abeaec9293400515f354bc1">youtubeDownloader</a></li>
+<li>errorPixmap&#160;:&#160;<a class="el" href="classmain_window.html#ad0aea357b0579c93874de4fe0ec13cd0">mainWindow</a></li>
 <li>execCommand()&#160;:&#160;<a class="el" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b">youtubeDownloader</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>fetchedState&#160;:&#160;<a class="el" href="classmain_window.html#a09e1e0bc81b89bce1d613a3d14f22c57">mainWindow</a></li>
 <li>fetchPlaylistElements()&#160;:&#160;<a class="el" href="classyoutube_api.html#a7646c6f546099d7b07006e3b1c62ba08">youtubeApi</a></li>
 <li>fetchPlaylists()&#160;:&#160;<a class="el" href="classyoutube_api.html#a16c112616d66b7d9d3f63b1fa4c75354">youtubeApi</a></li>
+<li>fetchUpdateSignal()&#160;:&#160;<a class="el" href="classyoutube_api.html#a0b9858484c71aa8a969656a295ffc850">youtubeApi</a></li>
 <li>ffmpegPath&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97">youtubeDownloader</a></li>
 <li>formatCommand()&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2">youtubeDownloader</a></li>
+<li>formatLinkCommand()&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a25b643db9569d62fc605fbd4ca55a899">youtubeDownloader</a></li>
 </ul>
 
 
@@ -146,6 +184,14 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>increment&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4">youtubeDownloader</a></li>
+<li>init()&#160;:&#160;<a class="el" href="classlog_handler.html#a6fa6f3283a9a3e4d630ac3d7056eadc8">logHandler</a></li>
+<li>instance()&#160;:&#160;<a class="el" href="classlog_handler.html#afaff874693562df4e2994a80df339372">logHandler</a></li>
+</ul>
+
+
+<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>linkCommand&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a6179e5f8e6471afd768ee415eef25d27">youtubeDownloader</a></li>
+<li>linkCoverQueue&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a7d395c4b567295e00e8d9a2a3e35fdb0">youtubeDownloader</a></li>
 </ul>
 
 
@@ -153,29 +199,36 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <li>mainWindow()&#160;:&#160;<a class="el" href="classmain_window.html#aeac52e1db2d23d399e59332dd291e1df">mainWindow</a></li>
 <li>manager&#160;:&#160;<a class="el" href="classyoutube_api.html#ae8d18b83ff0f579730fa9fb0941a78e9">youtubeApi</a></li>
 <li>maxResults&#160;:&#160;<a class="el" href="classyoutube_api.html#a7cb324ad00f12291ea99b8e70e898f26">youtubeApi</a></li>
+<li>movie&#160;:&#160;<a class="el" href="classmain_window.html#ab9734a342358a32156a1b15ae2f0be1e">mainWindow</a></li>
 <li>musicFolder&#160;:&#160;<a class="el" href="classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46">youtubeDownloader</a></li>
 </ul>
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
 <li>paramFile()&#160;:&#160;<a class="el" href="classparam_file.html#af7159f932c4149e9c732718e687a09de">paramFile</a></li>
-<li>paramFileObject&#160;:&#160;<a class="el" href="classapi_settings.html#a4cfd00030a55cc8c94ee78b6a084a605">apiSettings</a>, <a class="el" href="classmain_window.html#a2303fb0876ba030f8a75b5e83f49119e">mainWindow</a></li>
+<li>paramFileObject&#160;:&#160;<a class="el" href="classapi_settings.html#a4cfd00030a55cc8c94ee78b6a084a605">apiSettings</a>, <a class="el" href="classmain_window.html#a2303fb0876ba030f8a75b5e83f49119e">mainWindow</a>, <a class="el" href="classressource_paths.html#ac842f56e7dd9bd26748c6ee188792532">ressourcePaths</a></li>
 <li>player&#160;:&#160;<a class="el" href="classaudio_reader.html#a06e880228fdce5d3995fc0b20e7057ef">audioReader</a></li>
+<li>playlistId&#160;:&#160;<a class="el" href="classyoutube_api.html#a37c446bc1f98bc767e39463403a42f74">youtubeApi</a></li>
 <li>playlistIdArray&#160;:&#160;<a class="el" href="classyoutube_api.html#a919978fd68e1c44521bceab88eef0512">youtubeApi</a></li>
+<li>playlistListLoaded()&#160;:&#160;<a class="el" href="classyoutube_api.html#a6c390fa4b40966cbfaeaabc41e723972">youtubeApi</a></li>
+<li>playlistName&#160;:&#160;<a class="el" href="classyoutube_api.html#a894ac382b24e2cbdab473d77e4e1c823">youtubeApi</a></li>
 <li>playlistNameArray&#160;:&#160;<a class="el" href="classyoutube_api.html#a04882afc04caf6d967ffe4ce6c26108b">youtubeApi</a></li>
+<li>playlistNameTemp&#160;:&#160;<a class="el" href="classyoutube_downloader.html#aaa30c367f8e1406a44c1b64564055df7">youtubeDownloader</a></li>
 <li>playLocalAudio()&#160;:&#160;<a class="el" href="classaudio_reader.html#aae7b2e928ad9492cbe8481cad9c86b0c">audioReader</a></li>
 <li>playYouTubeVideo()&#160;:&#160;<a class="el" href="classaudio_reader.html#a77ef14cee612339f17b81119baea8db5">audioReader</a></li>
 <li>positionTimer&#160;:&#160;<a class="el" href="classaudio_reader.html#a8f3e89d813e53d99ea2ad73677c417c4">audioReader</a></li>
 <li>processPlaylists()&#160;:&#160;<a class="el" href="classyoutube_api.html#a19fcc628b82a8d04d64f028c1f618b1c">youtubeApi</a></li>
 <li>processPlaylistsElements()&#160;:&#160;<a class="el" href="classyoutube_api.html#abec91932711c1003ec253b2a9d31e62d">youtubeApi</a></li>
 <li>progressBarValue&#160;:&#160;<a class="el" href="classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae">youtubeDownloader</a></li>
+<li>progressBarValueChanged()&#160;:&#160;<a class="el" href="classyoutube_downloader.html#a7f6dc1bfaa0c0fdad73da7eb2734723b">youtubeDownloader</a></li>
 </ul>
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>readParam()&#160;:&#160;<a class="el" href="classparam_file.html#a981a8360b7803cb320bc5b58c1b41c35">paramFile</a></li>
 <li>refreshToken&#160;:&#160;<a class="el" href="classyoutube_api.html#af2572234b9ffe7b918197b1864edd730">youtubeApi</a></li>
-<li>requestSource&#160;:&#160;<a class="el" href="classyoutube_api.html#a549e8ae32f62cc8014f0f68bbe118902">youtubeApi</a></li>
+<li>ressourcePaths()&#160;:&#160;<a class="el" href="classressource_paths.html#afe2bee07df17637c3b0744db0fda14f7">ressourcePaths</a></li>
+<li>ressourcePathsObject&#160;:&#160;<a class="el" href="classmain_window.html#a2b4e44de538b2622448b3a69d7c9bcb9">mainWindow</a></li>
 <li>retrieveAccessToken()&#160;:&#160;<a class="el" href="classyoutube_api.html#a854ec1a2b234de3759868567b6f922fd">youtubeApi</a></li>
 <li>retrieveAccessTokenInfo()&#160;:&#160;<a class="el" href="classyoutube_api.html#aa78991fa79708e558e72cb06f28c84a1">youtubeApi</a></li>
 </ul>
@@ -203,6 +256,7 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 
 
 <h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>videoDataLoaded()&#160;:&#160;<a class="el" href="classyoutube_api.html#aae0990a8568395819197f7d21a0b568a">youtubeApi</a></li>
 <li>videoIdArray&#160;:&#160;<a class="el" href="classyoutube_api.html#ac3def9e3be79ddac61a60c798018c90d">youtubeApi</a></li>
 <li>videoThumbnailsUrlArray&#160;:&#160;<a class="el" href="classyoutube_api.html#a1d40180b7411768eb839eb453ec9e22b">youtubeApi</a></li>
 <li>videoTitleArray&#160;:&#160;<a class="el" href="classyoutube_api.html#a6ce20b9a8f9355286d3acbbebe891bc9">youtubeApi</a></li>
@@ -225,13 +279,14 @@ $(function(){initNavTree('functions.html',''); initResizable(true); });
 <h3><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
 <li>~apiSettings()&#160;:&#160;<a class="el" href="classapi_settings.html#a763ade9a6e2c2862a9b37a73503c0951">apiSettings</a></li>
 <li>~mainWindow()&#160;:&#160;<a class="el" href="classmain_window.html#a2c4caa71599521dbde5bc35b230ed648">mainWindow</a></li>
+<li>~ressourcePaths()&#160;:&#160;<a class="el" href="classressource_paths.html#a85a4f69e93b4c96bbc02009cfd59ef6e">ressourcePaths</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

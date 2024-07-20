@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ffmpegpath_0',['ffmpegPath',['../classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97',1,'youtubeDownloader']]]
+  ['errorpixmap_0',['errorPixmap',['../classmain_window.html#ad0aea357b0579c93874de4fe0ec13cd0',1,'mainWindow']]]
 ];

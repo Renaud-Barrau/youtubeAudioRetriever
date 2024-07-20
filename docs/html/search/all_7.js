@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['mainwindow_2',['mainWindow',['../classmain_window.html',1,'mainWindow'],['../classmain_window.html#aeac52e1db2d23d399e59332dd291e1df',1,'mainWindow::mainWindow()']]],
-  ['mainwindow_2ecpp_3',['mainwindow.cpp',['../mainwindow_8cpp.html',1,'']]],
-  ['mainwindow_2eh_4',['mainwindow.h',['../mainwindow_8h.html',1,'']]],
-  ['manager_5',['manager',['../classyoutube_api.html#ae8d18b83ff0f579730fa9fb0941a78e9',1,'youtubeApi']]],
-  ['maxresults_6',['maxResults',['../classyoutube_api.html#a7cb324ad00f12291ea99b8e70e898f26',1,'youtubeApi']]],
-  ['musicfolder_7',['musicFolder',['../classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46',1,'youtubeDownloader']]]
+  ['increment_0',['increment',['../classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4',1,'youtubeDownloader']]],
+  ['init_1',['init',['../classlog_handler.html#a6fa6f3283a9a3e4d630ac3d7056eadc8',1,'logHandler']]],
+  ['installation_2',['Installation',['../C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/doxygen-awesome-css/README.md#autotoc_md5',1,'Installation'],['../md_docs_2extensions.html#autotoc_md14',1,'Installation'],['../md_docs_2extensions.html#autotoc_md16',1,'Installation'],['../md_docs_2extensions.html#autotoc_md18',1,'Installation'],['../md_docs_2extensions.html#autotoc_md20',1,'Installation'],['../md_docs_2extensions.html#autotoc_md22',1,'Installation'],['../md_docs_2extensions.html#autotoc_md24',1,'Installation']]],
+  ['installation_20instructions_3',['Further installation instructions',['../C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/doxygen-awesome-css/README.md#autotoc_md10',1,'']]],
+  ['instance_4',['instance',['../classlog_handler.html#afaff874693562df4e2994a80df339372',1,'logHandler']]],
+  ['instructions_5',['Further installation instructions',['../C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/doxygen-awesome-css/README.md#autotoc_md10',1,'']]],
+  ['interactive_20toc_6',['Interactive TOC',['../md_docs_2extensions.html#extension-toc',1,'']]]
 ];

@@ -24,8 +24,51 @@
 */
 var NAVTREE =
 [
-  [ "youtubeAudioRetriever", "index.html", [
-    [ "youtubeAudioRetriever", "md__r_e_a_d_m_e.html", null ],
+  [ "Doxygen Awesome", "index.html", [
+    [ "youtubeAudioRetriever", "index.html", null ],
+    [ "Extensions", "md_docs_2extensions.html", [
+      [ "Dark Mode Toggle", "md_docs_2extensions.html#extension-dark-mode-toggle", [
+        [ "Installation", "md_docs_2extensions.html#autotoc_md14", null ],
+        [ "Customizing", "md_docs_2extensions.html#autotoc_md15", null ]
+      ] ],
+      [ "Fragment Copy Button", "md_docs_2extensions.html#extension-copy-button", [
+        [ "Installation", "md_docs_2extensions.html#autotoc_md16", null ],
+        [ "Customizing", "md_docs_2extensions.html#autotoc_md17", null ]
+      ] ],
+      [ "Paragraph Linking", "md_docs_2extensions.html#extension-para", [
+        [ "Installation", "md_docs_2extensions.html#autotoc_md18", null ],
+        [ "Customizing", "md_docs_2extensions.html#autotoc_md19", null ]
+      ] ],
+      [ "Interactive TOC", "md_docs_2extensions.html#extension-toc", [
+        [ "Installation", "md_docs_2extensions.html#autotoc_md20", null ],
+        [ "Customizing", "md_docs_2extensions.html#autotoc_md21", null ]
+      ] ],
+      [ "Tabs", "md_docs_2extensions.html#extension-tabs", [
+        [ "Installation", "md_docs_2extensions.html#autotoc_md22", null ],
+        [ "Usage", "md_docs_2extensions.html#autotoc_md23", null ]
+      ] ],
+      [ "Page Navigation", "md_docs_2extensions.html#extension-page-navigation", [
+        [ "Installation", "md_docs_2extensions.html#autotoc_md24", null ],
+        [ "Usage", "md_docs_2extensions.html#autotoc_md25", null ]
+      ] ]
+    ] ],
+    [ "Customization", "md_docs_2customization.html", [
+      [ "CSS-Variables", "md_docs_2customization.html#autotoc_md27", [
+        [ "Setup", "md_docs_2customization.html#autotoc_md28", null ],
+        [ "Available variables", "md_docs_2customization.html#autotoc_md29", null ]
+      ] ],
+      [ "Doxygen generator", "md_docs_2customization.html#autotoc_md30", null ],
+      [ "Share your customizations", "md_docs_2customization.html#autotoc_md31", null ]
+    ] ],
+    [ "Tips & Tricks", "md_docs_2tricks.html", [
+      [ "Diagrams with Graphviz", "md_docs_2tricks.html#tricks-graphviz", null ],
+      [ "Disable Dark Mode", "md_docs_2tricks.html#tricks-darkmode", null ],
+      [ "Choosing Sidebar Width", "md_docs_2tricks.html#tricks-sidebar", null ],
+      [ "Formatting Tables", "md_docs_2tricks.html#tricks-tables", [
+        [ "Centering", "md_docs_2tricks.html#autotoc_md33", null ],
+        [ "Full Width", "md_docs_2tricks.html#autotoc_md34", null ]
+      ] ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],

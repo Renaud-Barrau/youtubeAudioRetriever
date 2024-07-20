@@ -1,12 +1,12 @@
-<map id="youtubeapi.h" name="youtubeapi.h">
-<area shape="rect" id="Node000001" title="Header of the youtubeApi class." alt="" coords="83,5,178,32"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="5,155,80,181"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,44,85,61,70,81,54,120,47,155,41,154,49,119,66,79,81,58,100,40"/>
-<area shape="rect" id="Node000003" href="$mainwindow_8h.html" title=" " alt="" coords="79,80,182,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,48,133,80,128,80,128,48"/>
-<area shape="rect" id="Node000005" href="$youtubeapi_8cpp.html" title="Implementation of the youtubeApi class." alt="" coords="205,80,315,107"/>
-<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="168,38,238,77,236,82,165,42"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="105,119,59,156,56,152,102,115"/>
-<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title=" " alt="" coords="104,155,221,181"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="145,120,159,153,155,155,140,122"/>
+<map id="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/youtubeapi.h" name="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/youtubeapi.h">
+<area shape="rect" id="Node000001" title="Header of the youtubeApi class." alt="" coords="141,5,340,64"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title=" " alt="" coords="5,219,204,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,75,149,93,132,113,120,139,112,167,106,218,101,218,107,166,115,137,128,111,146,89,167,71"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8h.html" title=" " alt="" coords="141,112,340,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,80,243,112,238,112,238,80"/>
+<area shape="rect" id="Node000005" href="$youtubeapi_8cpp.html" title="Implementation of the youtubeApi class." alt="" coords="364,112,562,171"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="316,68,403,109,401,114,314,73"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="193,182,143,220,140,216,190,178"/>
+<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title=" " alt="" coords="228,219,426,277"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="276,181,306,217,301,220,272,184"/>
 </map>

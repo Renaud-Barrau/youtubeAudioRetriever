@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['youtubeapi_0',['youtubeApi',['../classyoutube_api.html#a48dee190bf7f7b13c63d374af3f92816',1,'youtubeApi']]],
-  ['youtubedownloader_1',['youtubeDownloader',['../classyoutube_downloader.html#a29b4871f2cd7b4d32a2c2be5d008eb16',1,'youtubeDownloader']]]
+  ['videodataloaded_0',['videoDataLoaded',['../classyoutube_api.html#aae0990a8568395819197f7d21a0b568a',1,'youtubeApi']]]
 ];

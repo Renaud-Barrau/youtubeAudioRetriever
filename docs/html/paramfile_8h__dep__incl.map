@@ -1,17 +1,22 @@
-<map id="paramfile.h" name="paramfile.h">
-<area shape="rect" id="Node000001" title="Header of the paramFile class." alt="" coords="210,5,294,32"/>
-<area shape="rect" id="Node000002" href="$apisettings_8h.html" title=" " alt="" coords="94,80,189,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,43,162,82,159,77,219,38"/>
-<area shape="rect" id="Node000004" href="$mainwindow_8h.html" title=" " alt="" coords="138,155,241,181"/>
-<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="243,47,197,155,192,153,238,45"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="240,229,315,256"/>
-<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="258,47,279,229,273,229,252,48"/>
-<area shape="rect" id="Node000007" href="$paramfile_8cpp.html" title="Implementation of the paramFile class." alt="" coords="315,80,413,107"/>
-<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="286,38,346,77,343,82,283,43"/>
-<area shape="rect" id="Node000003" href="$apisettings_8cpp.html" title=" " alt="" coords="5,155,115,181"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,119,76,156,72,152,114,115"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="160,118,183,153,179,156,156,121"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="218,189,264,227,260,231,215,194"/>
-<area shape="rect" id="Node000006" href="$mainwindow_8cpp.html" title=" " alt="" coords="99,229,216,256"/>
-<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="180,197,165,230,160,228,175,195"/>
+<map id="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/paramfile.h" name="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/paramfile.h">
+<area shape="rect" id="Node000001" title="Header of the paramFile class." alt="" coords="320,5,518,64"/>
+<area shape="rect" id="Node000002" href="$apisettings_8h.html" title=" " alt="" coords="48,112,246,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="331,72,223,114,221,109,329,67"/>
+<area shape="rect" id="Node000004" href="$mainwindow_8h.html" title=" " alt="" coords="228,219,426,277"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="345,75,326,92,311,113,303,139,303,167,308,194,316,217,311,219,303,195,298,167,298,138,306,111,322,89,342,71"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="543,325,741,384"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="534,44,601,54,666,68,720,87,740,98,755,110,769,138,772,167,767,197,754,227,716,283,675,327,671,323,712,279,749,225,761,196,767,167,764,139,750,114,737,102,718,91,664,73,600,60,534,50"/>
+<area shape="rect" id="Node000007" href="$paramfile_8cpp.html" title="Implementation of the paramFile class." alt="" coords="543,112,741,171"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="495,68,582,109,580,114,492,73"/>
+<area shape="rect" id="Node000008" href="$ressourcepaths_8h.html" title=" " alt="" coords="320,112,518,171"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="422,80,422,112,417,112,417,80"/>
+<area shape="rect" id="Node000003" href="$apisettings_8cpp.html" title=" " alt="" coords="5,219,204,277"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,186,119,219,114,217,127,184"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="211,176,279,216,277,221,208,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="429,280,556,322,555,327,427,285"/>
+<area shape="rect" id="Node000006" href="$mainwindow_8cpp.html" title=" " alt="" coords="228,325,426,384"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="330,293,330,325,325,325,325,293"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="386,184,354,220,350,217,382,180"/>
+<area shape="rect" id="Node000009" href="$ressourcepaths_8cpp.html" title=" " alt="" coords="451,219,649,277"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="468,178,516,216,513,220,465,182"/>
 </map>

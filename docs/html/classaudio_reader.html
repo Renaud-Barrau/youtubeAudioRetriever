@@ -1,49 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>youtubeAudioRetriever: audioReader Class Reference</title>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>Doxygen Awesome: audioReader Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">youtubeAudioRetriever<span id="projectnumber">&#160;1.0.0</span>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Doxygen Awesome
    </div>
+   <div id="projectbrief">Modern Doxygen theme</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Generated by Doxygen 1.11.0 -->
+<!-- Generated by Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +81,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +100,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classaudio_reader.html',''); initResizable(true); });
+$(function(){initNavTree('classaudio_reader.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -110,22 +140,7 @@ $(function(){initNavTree('classaudio_reader.html',''); initResizable(true); });
 <div class="dynheader">
 Inheritance diagram for audioReader:</div>
 <div class="dyncontent">
-<div class="center"><img src="classaudio_reader__inherit__graph.png" border="0" usemap="#aaudio_reader_inherit__map" alt="Inheritance graph"/></div>
-<map name="aaudio_reader_inherit__map" id="aaudio_reader_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,99,107"/>
-<area shape="rect" title=" " alt="" coords="17,5,87,32"/>
-<area shape="poly" title=" " alt="" coords="55,48,55,80,49,80,49,48"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for audioReader:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader__coll__graph.png" border="0" usemap="#aaudio_reader_coll__map" alt="Collaboration graph"/></div>
-<map name="aaudio_reader_coll__map" id="aaudio_reader_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,99,107"/>
-<area shape="rect" title=" " alt="" coords="17,5,87,32"/>
-<area shape="poly" title=" " alt="" coords="55,48,55,80,49,80,49,48"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classaudio_reader__inherit__graph.svg" width="104" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
@@ -181,7 +196,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">audioReader::audioReader </td>
           <td>(</td>
-          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -191,24 +206,6 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader_a942d6e9a6ec93b434d49cf723a929666_cgraph.png" border="0" usemap="#aclassaudio_reader_a942d6e9a6ec93b434d49cf723a929666_cgraph" alt=""/></div>
-<map name="aclassaudio_reader_a942d6e9a6ec93b434d49cf723a929666_cgraph" id="aclassaudio_reader_a942d6e9a6ec93b434d49cf723a929666_cgraph">
-<area shape="rect" title=" " alt="" coords="5,113,179,140"/>
-<area shape="rect" href="classaudio_reader.html#a670038b6b31216b6f3d2d60d4cfc9cb8" title=" " alt="" coords="227,72,400,115"/>
-<area shape="poly" title=" " alt="" coords="179,111,211,106,212,111,180,116"/>
-<area shape="rect" href="classaudio_reader.html#a73f013c29143efa2de026460f058fdce" title=" " alt="" coords="227,139,400,181"/>
-<area shape="poly" title=" " alt="" coords="180,137,212,142,211,147,179,142"/>
-<area shape="rect" href="classaudio_reader.html#a6695fdc6cf386cf6aaaf42b4ae1034ab" title=" " alt="" coords="448,5,623,48"/>
-<area shape="poly" title=" " alt="" coords="386,69,447,50,448,56,387,74"/>
-<area shape="rect" href="classaudio_reader.html#ab0b86172a900938868ce726d4da74ca3" title=" " alt="" coords="449,72,622,115"/>
-<area shape="poly" title=" " alt="" coords="400,91,434,91,434,96,400,96"/>
-<area shape="rect" href="classaudio_reader.html#a9aff0c5ee0d20106e7882c77b6723113" title=" " alt="" coords="449,139,622,181"/>
-<area shape="poly" title=" " alt="" coords="400,157,434,157,434,163,400,163"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -325,7 +322,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void audioReader::togglePlayback </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -350,7 +347,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void audioReader::updateMusicNameSignal </td>
           <td>(</td>
-          <td class="paramtype">QUrl</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">QUrl</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -360,18 +357,6 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader_a6695fdc6cf386cf6aaaf42b4ae1034ab_icgraph.png" border="0" usemap="#aclassaudio_reader_a6695fdc6cf386cf6aaaf42b4ae1034ab_icgraph" alt=""/></div>
-<map name="aclassaudio_reader_a6695fdc6cf386cf6aaaf42b4ae1034ab_icgraph" id="aclassaudio_reader_a6695fdc6cf386cf6aaaf42b4ae1034ab_icgraph">
-<area shape="rect" title=" " alt="" coords="448,5,623,48"/>
-<area shape="rect" href="classaudio_reader.html#a670038b6b31216b6f3d2d60d4cfc9cb8" title=" " alt="" coords="227,5,400,48"/>
-<area shape="poly" title=" " alt="" coords="432,29,400,29,400,24,432,24"/>
-<area shape="rect" href="classaudio_reader.html#a942d6e9a6ec93b434d49cf723a929666" title=" " alt="" coords="5,13,179,40"/>
-<area shape="poly" title=" " alt="" coords="211,29,179,29,179,24,211,24"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -387,7 +372,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void audioReader::updateSliderRange </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -397,28 +382,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8_cgraph.png" border="0" usemap="#aclassaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8_cgraph" alt=""/></div>
-<map name="aclassaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8_cgraph" id="aclassaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,39,179,81"/>
-<area shape="rect" href="classaudio_reader.html#a6695fdc6cf386cf6aaaf42b4ae1034ab" title=" " alt="" coords="227,5,402,48"/>
-<area shape="poly" title=" " alt="" coords="178,44,211,39,212,45,179,50"/>
-<area shape="rect" href="classaudio_reader.html#ab0b86172a900938868ce726d4da74ca3" title=" " alt="" coords="228,72,401,115"/>
-<area shape="poly" title=" " alt="" coords="179,70,213,75,212,81,178,76"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8_icgraph.png" border="0" usemap="#aclassaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8_icgraph" alt=""/></div>
-<map name="aclassaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8_icgraph" id="aclassaudio_reader_a670038b6b31216b6f3d2d60d4cfc9cb8_icgraph">
-<area shape="rect" title=" " alt="" coords="227,5,400,48"/>
-<area shape="rect" href="classaudio_reader.html#a942d6e9a6ec93b434d49cf723a929666" title=" " alt="" coords="5,13,179,40"/>
-<area shape="poly" title=" " alt="" coords="211,29,179,29,179,24,211,24"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -434,7 +397,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void audioReader::updateSliderRangeSignal </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -444,18 +407,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader_ab0b86172a900938868ce726d4da74ca3_icgraph.png" border="0" usemap="#aclassaudio_reader_ab0b86172a900938868ce726d4da74ca3_icgraph" alt=""/></div>
-<map name="aclassaudio_reader_ab0b86172a900938868ce726d4da74ca3_icgraph" id="aclassaudio_reader_ab0b86172a900938868ce726d4da74ca3_icgraph">
-<area shape="rect" title=" " alt="" coords="448,5,621,48"/>
-<area shape="rect" href="classaudio_reader.html#a670038b6b31216b6f3d2d60d4cfc9cb8" title=" " alt="" coords="227,5,400,48"/>
-<area shape="poly" title=" " alt="" coords="433,29,401,29,401,24,433,24"/>
-<area shape="rect" href="classaudio_reader.html#a942d6e9a6ec93b434d49cf723a929666" title=" " alt="" coords="5,13,179,40"/>
-<area shape="poly" title=" " alt="" coords="211,29,179,29,179,24,211,24"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -471,7 +422,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void audioReader::updateSliderValue </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -481,26 +432,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader_a73f013c29143efa2de026460f058fdce_cgraph.png" border="0" usemap="#aclassaudio_reader_a73f013c29143efa2de026460f058fdce_cgraph" alt=""/></div>
-<map name="aclassaudio_reader_a73f013c29143efa2de026460f058fdce_cgraph" id="aclassaudio_reader_a73f013c29143efa2de026460f058fdce_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,179,48"/>
-<area shape="rect" href="classaudio_reader.html#a9aff0c5ee0d20106e7882c77b6723113" title=" " alt="" coords="227,5,400,48"/>
-<area shape="poly" title=" " alt="" coords="179,24,211,24,211,29,179,29"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader_a73f013c29143efa2de026460f058fdce_icgraph.png" border="0" usemap="#aclassaudio_reader_a73f013c29143efa2de026460f058fdce_icgraph" alt=""/></div>
-<map name="aclassaudio_reader_a73f013c29143efa2de026460f058fdce_icgraph" id="aclassaudio_reader_a73f013c29143efa2de026460f058fdce_icgraph">
-<area shape="rect" title=" " alt="" coords="227,5,400,48"/>
-<area shape="rect" href="classaudio_reader.html#a942d6e9a6ec93b434d49cf723a929666" title=" " alt="" coords="5,13,179,40"/>
-<area shape="poly" title=" " alt="" coords="211,29,179,29,179,24,211,24"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -516,7 +447,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void audioReader::updateSliderValueSignal </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -526,18 +457,6 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classaudio_reader_a9aff0c5ee0d20106e7882c77b6723113_icgraph.png" border="0" usemap="#aclassaudio_reader_a9aff0c5ee0d20106e7882c77b6723113_icgraph" alt=""/></div>
-<map name="aclassaudio_reader_a9aff0c5ee0d20106e7882c77b6723113_icgraph" id="aclassaudio_reader_a9aff0c5ee0d20106e7882c77b6723113_icgraph">
-<area shape="rect" title=" " alt="" coords="448,5,621,48"/>
-<area shape="rect" href="classaudio_reader.html#a73f013c29143efa2de026460f058fdce" title=" " alt="" coords="227,5,400,48"/>
-<area shape="poly" title=" " alt="" coords="433,29,401,29,401,24,433,24"/>
-<area shape="rect" href="classaudio_reader.html#a942d6e9a6ec93b434d49cf723a929666" title=" " alt="" coords="5,13,179,40"/>
-<area shape="poly" title=" " alt="" coords="211,29,179,29,179,24,211,24"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -585,8 +504,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="audioreader_8h_source.html">audioreader.h</a></li>
-<li><a class="el" href="audioreader_8cpp.html">audioreader.cpp</a></li>
+<li>C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/<a class="el" href="audioreader_8h_source.html">audioreader.h</a></li>
+<li>C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/<a class="el" href="audioreader_8cpp.html">audioreader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -594,7 +513,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classaudio_reader.html">audioReader</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

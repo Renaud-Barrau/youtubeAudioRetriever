@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setposition_0',['setPosition',['../classaudio_reader.html#aada341fac191aff6a5a25f5b8a1b8f2d',1,'audioReader']]],
-  ['startnextdownload_1',['startNextDownload',['../classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d',1,'youtubeDownloader']]]
+  ['navigation_0',['Page Navigation',['../md_docs_2extensions.html#extension-page-navigation',1,'']]],
+  ['npm_20xpm_20dependency_1',['npm/xpm dependency',['../C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/doxygen-awesome-css/README.md#autotoc_md7',1,'']]]
 ];

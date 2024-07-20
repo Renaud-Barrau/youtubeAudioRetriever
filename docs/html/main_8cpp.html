@@ -1,49 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>youtubeAudioRetriever: main.cpp File Reference</title>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>Doxygen Awesome: C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">youtubeAudioRetriever<span id="projectnumber">&#160;1.0.0</span>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Doxygen Awesome
    </div>
+   <div id="projectbrief">Modern Doxygen theme</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Generated by Doxygen 1.11.0 -->
+<!-- Generated by Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +81,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +100,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('main_8cpp.html',''); initResizable(true); });
+$(function(){initNavTree('main_8cpp.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,7 +128,7 @@ $(function(){initNavTree('main_8cpp.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;QApplication&gt;</code><br />
@@ -121,138 +151,11 @@ $(function(){initNavTree('main_8cpp.html',''); initResizable(true); });
 <code>#include &lt;<a class="el" href="youtubedownloader_8h_source.html">youtubeDownloader.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainWindow.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="paramfile_8h_source.html">paramfile.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="loghandler_8h_source.html">logHandler.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#amain_8cpp" alt=""/></div>
-<map name="amain_8cpp" id="amain_8cpp">
-<area shape="rect" title=" " alt="" coords="1680,5,1754,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,101,107"/>
-<area shape="poly" title=" " alt="" coords="1679,23,949,40,476,58,274,69,116,83,115,77,273,64,476,53,949,35,1679,18"/>
-<area shape="rect" title=" " alt="" coords="125,80,227,107"/>
-<area shape="poly" title=" " alt="" coords="1679,22,1466,22,1115,28,688,46,464,61,242,83,242,77,463,56,688,40,1115,22,1466,17,1679,17"/>
-<area shape="rect" title=" " alt="" coords="252,80,380,107"/>
-<area shape="poly" title=" " alt="" coords="1680,23,1485,26,1170,35,790,53,399,83,395,83,395,78,398,77,790,48,1170,30,1485,21,1680,18"/>
-<area shape="rect" title=" " alt="" coords="2124,229,2187,256"/>
-<area shape="poly" title=" " alt="" coords="1720,32,1721,63,1728,103,1744,145,1756,163,1771,179,1798,194,1836,205,1930,216,2028,220,2104,227,2110,228,2109,233,2103,232,2028,225,1930,221,1835,210,1796,199,1767,183,1751,167,1739,147,1723,105,1716,64,1714,33"/>
-<area shape="rect" title=" " alt="" coords="3035,229,3138,256"/>
-<area shape="poly" title=" " alt="" coords="1755,17,1843,19,1964,27,2103,45,2173,59,2241,78,2266,91,2291,104,2355,111,2464,113,2756,111,2908,112,3043,117,3146,130,3181,140,3203,153,3210,164,3211,175,3198,195,3173,212,3142,226,3140,221,3170,207,3194,191,3206,174,3205,166,3199,157,3179,145,3145,135,3043,123,2908,117,2756,116,2464,118,2354,116,2290,109,2264,96,2239,82,2171,64,2102,50,1964,32,1843,24,1755,22"/>
-<area shape="rect" title=" " alt="" coords="2302,80,2428,107"/>
-<area shape="poly" title=" " alt="" coords="1755,21,1979,43,2284,77,2287,78,2286,83,2283,83,1978,48,1754,26"/>
-<area shape="rect" title=" " alt="" coords="1780,155,1886,181"/>
-<area shape="poly" title=" " alt="" coords="1729,31,1816,140,1812,144,1725,34"/>
-<area shape="rect" title=" " alt="" coords="1910,155,1999,181"/>
-<area shape="poly" title=" " alt="" coords="1739,30,1923,144,1920,149,1736,35"/>
-<area shape="rect" title=" " alt="" coords="1063,229,1235,256"/>
-<area shape="poly" title=" " alt="" coords="1686,35,1196,226,1194,221,1684,30"/>
-<area shape="rect" title=" " alt="" coords="778,229,904,256"/>
-<area shape="poly" title=" " alt="" coords="1680,29,1561,51,1414,83,1121,160,897,227,895,222,1120,155,1412,77,1560,46,1679,24"/>
-<area shape="rect" title=" " alt="" coords="928,229,1039,256"/>
-<area shape="poly" title=" " alt="" coords="1680,33,1500,83,1240,162,1038,227,1036,221,1239,157,1499,77,1678,27"/>
-<area shape="rect" title=" " alt="" coords="664,304,717,331"/>
-<area shape="poly" title=" " alt="" coords="1680,24,1370,40,1153,57,931,83,758,97,534,117,422,133,322,157,278,171,240,189,208,208,184,231,179,243,182,253,193,262,212,271,269,286,344,297,512,309,649,313,649,318,511,315,343,302,268,291,210,276,190,267,177,256,173,242,180,228,205,204,237,184,276,166,320,151,421,128,533,112,758,92,930,77,1152,52,1370,35,1679,19"/>
-<area shape="rect" title=" " alt="" coords="2452,80,2531,107"/>
-<area shape="poly" title=" " alt="" coords="1755,19,2035,34,2232,51,2437,77,2436,82,2231,57,2034,39,1754,24"/>
-<area shape="rect" title=" " alt="" coords="2555,80,2636,107"/>
-<area shape="poly" title=" " alt="" coords="1755,18,1883,22,2074,31,2303,49,2539,77,2539,82,2302,54,2074,37,1882,27,1755,23"/>
-<area shape="rect" title=" " alt="" coords="2661,80,2714,107"/>
-<area shape="poly" title=" " alt="" coords="1755,17,1897,16,2115,23,2376,41,2512,56,2646,77,2645,83,2511,62,2375,46,2115,28,1897,22,1755,22"/>
-<area shape="rect" title=" " alt="" coords="2739,80,2815,107"/>
-<area shape="poly" title=" " alt="" coords="1755,17,1908,19,2144,27,2429,45,2577,59,2724,77,2723,83,2577,64,2428,50,2144,32,1908,24,1755,23"/>
-<area shape="rect" href="youtubeapi_8h.html" title="Header of the youtubeApi class." alt="" coords="1556,155,1654,181"/>
-<area shape="poly" title=" " alt="" coords="1710,34,1626,144,1622,141,1705,31"/>
-<area shape="rect" href="youtubedownloader_8h.html" title="Header of the youtubeDownloader class." alt="" coords="618,155,763,181"/>
-<area shape="poly" title=" " alt="" coords="1680,24,1424,42,1250,59,1072,83,897,117,752,153,751,148,896,112,1071,77,1249,54,1424,36,1679,19"/>
-<area shape="rect" href="mainwindow_8h.html" title=" " alt="" coords="2121,80,2228,107"/>
-<area shape="poly" title=" " alt="" coords="1755,23,2106,79,2105,84,1754,29"/>
-<area shape="rect" href="paramfile_8h.html" title="Header of the paramFile class." alt="" coords="1964,229,2049,256"/>
-<area shape="poly" title=" " alt="" coords="1716,33,1708,62,1704,102,1708,143,1715,162,1725,179,1755,192,1813,206,1949,230,1949,236,1812,212,1753,197,1722,183,1710,165,1703,144,1699,102,1703,61,1710,32"/>
-<area shape="poly" title=" " alt="" coords="1654,172,1888,198,2105,227,2110,227,2109,233,2105,232,1887,203,1654,177"/>
-<area shape="poly" title=" " alt="" coords="1556,180,1244,229,1243,224,1555,174"/>
-<area shape="poly" title=" " alt="" coords="1556,175,1289,195,1108,211,920,232,919,226,1107,206,1289,189,1556,170"/>
-<area shape="poly" title=" " alt="" coords="1556,176,1343,197,1055,231,1055,226,1342,191,1556,171"/>
-<area shape="rect" title=" " alt="" coords="2176,304,2245,331"/>
-<area shape="poly" title=" " alt="" coords="1655,172,1885,199,1997,214,2062,227,2178,293,2176,298,2060,232,1996,220,1884,204,1654,177"/>
-<area shape="rect" title=" " alt="" coords="1445,229,1568,256"/>
-<area shape="poly" title=" " alt="" coords="1589,184,1537,222,1534,218,1586,180"/>
-<area shape="rect" title=" " alt="" coords="2263,229,2310,256"/>
-<area shape="poly" title=" " alt="" coords="1654,171,1889,193,2200,227,2247,233,2247,238,2199,232,1889,198,1654,176"/>
-<area shape="rect" title=" " alt="" coords="1592,229,1674,256"/>
-<area shape="poly" title=" " alt="" coords="1612,181,1625,214,1620,216,1607,183"/>
-<area shape="rect" title=" " alt="" coords="1696,304,1813,331"/>
-<area shape="poly" title=" " alt="" coords="1655,175,1741,196,1778,210,1802,228,1808,245,1804,263,1782,295,1778,292,1799,261,1803,245,1798,231,1776,215,1739,201,1654,180"/>
-<area shape="rect" title=" " alt="" coords="1837,304,1933,331"/>
-<area shape="poly" title=" " alt="" coords="1655,176,1749,199,1792,213,1823,227,1853,257,1875,289,1870,292,1849,260,1819,232,1790,218,1747,204,1653,182"/>
-<area shape="rect" title=" " alt="" coords="1698,229,1787,256"/>
-<area shape="poly" title=" " alt="" coords="1630,180,1706,219,1704,224,1628,184"/>
-<area shape="rect" title=" " alt="" coords="1259,229,1327,256"/>
-<area shape="poly" title=" " alt="" coords="1557,183,1343,231,1342,226,1555,177"/>
-<area shape="rect" title=" " alt="" coords="1352,229,1421,256"/>
-<area shape="poly" title=" " alt="" coords="1568,184,1437,228,1435,222,1566,179"/>
-<area shape="rect" title=" " alt="" coords="2080,304,2151,331"/>
-<area shape="poly" title=" " alt="" coords="1655,177,1854,227,1969,262,2067,296,2066,301,1967,268,1852,232,1654,183"/>
-<area shape="poly" title=" " alt="" coords="764,178,1054,224,1053,229,763,183"/>
-<area shape="poly" title=" " alt="" coords="718,179,802,220,800,225,715,184"/>
-<area shape="poly" title=" " alt="" coords="742,179,918,223,917,228,741,185"/>
-<area shape="poly" title=" " alt="" coords="693,182,693,288,688,288,688,182"/>
-<area shape="poly" title=" " alt="" coords="617,174,539,179,456,189,383,206,357,217,339,231,334,243,339,254,367,265,427,275,623,289,892,296,1200,299,1801,299,2028,299,2160,302,2160,307,2028,305,1801,304,1200,305,892,302,623,294,427,280,366,271,335,258,328,243,335,228,354,213,382,201,455,183,539,173,617,168"/>
-<area shape="poly" title=" " alt="" coords="699,180,725,219,745,238,767,254,800,264,851,272,995,284,1181,290,1389,293,1796,295,1957,297,2065,302,2064,307,1957,302,1796,300,1389,298,1181,296,995,289,850,277,799,269,765,258,741,242,721,222,695,183"/>
-<area shape="rect" title=" " alt="" coords="195,229,274,256"/>
-<area shape="poly" title=" " alt="" coords="618,182,293,232,289,233,288,227,293,227,617,177"/>
-<area shape="rect" title=" " alt="" coords="349,229,418,256"/>
-<area shape="poly" title=" " alt="" coords="635,185,434,231,433,226,633,179"/>
-<area shape="rect" title=" " alt="" coords="443,229,490,256"/>
-<area shape="poly" title=" " alt="" coords="651,184,505,231,504,226,649,179"/>
-<area shape="rect" title=" " alt="" coords="514,229,573,256"/>
-<area shape="poly" title=" " alt="" coords="666,184,584,224,582,220,664,179"/>
-<area shape="rect" title=" " alt="" coords="597,229,653,256"/>
-<area shape="poly" title=" " alt="" coords="681,184,648,220,644,216,677,180"/>
-<area shape="poly" title=" " alt="" coords="2121,109,1901,155,1900,150,2120,103"/>
-<area shape="poly" title=" " alt="" coords="2137,110,2008,152,2007,147,2135,105"/>
-<area shape="poly" title=" " alt="" coords="2121,104,1669,161,1669,156,2120,99"/>
-<area shape="poly" title=" " alt="" coords="2228,101,2508,152,2525,179,2531,205,2525,231,2508,258,2492,271,2467,282,2401,299,2327,310,2261,316,2261,311,2327,305,2400,294,2465,277,2489,267,2504,254,2520,229,2525,205,2520,181,2505,157,2227,107"/>
-<area shape="poly" title=" " alt="" coords="2181,107,2200,184,2206,226,2202,257,2184,281,2160,298,2157,294,2180,277,2197,255,2201,226,2195,185,2176,108"/>
-<area shape="poly" title=" " alt="" coords="2121,100,779,165,779,160,2121,95"/>
-<area shape="rect" title=" " alt="" coords="2692,155,2758,181"/>
-<area shape="poly" title=" " alt="" coords="2229,101,2247,104,2366,118,2461,125,2556,133,2678,152,2677,157,2556,139,2460,130,2366,123,2246,109,2228,107"/>
-<area shape="rect" title=" " alt="" coords="2782,155,2866,181"/>
-<area shape="poly" title=" " alt="" coords="2229,101,2247,104,2391,119,2506,126,2620,133,2767,152,2766,157,2620,139,2505,131,2391,124,2246,109,2228,107"/>
-<area shape="rect" title=" " alt="" coords="2889,155,3033,181"/>
-<area shape="poly" title=" " alt="" coords="2228,102,2247,104,2421,121,2559,129,2697,136,2874,152,2874,157,2697,142,2559,134,2421,127,2246,109,2228,107"/>
-<area shape="rect" title=" " alt="" coords="3056,155,3189,181"/>
-<area shape="poly" title=" " alt="" coords="2228,102,2247,104,2468,123,2642,129,2817,134,3041,152,3041,157,2817,140,2642,134,2468,128,2246,109,2228,107"/>
-<area shape="rect" title=" " alt="" coords="2022,155,2087,181"/>
-<area shape="poly" title=" " alt="" coords="2155,109,2090,149,2087,144,2152,105"/>
-<area shape="rect" title=" " alt="" coords="2382,155,2495,181"/>
-<area shape="poly" title=" " alt="" coords="2221,105,2378,148,2377,153,2220,110"/>
-<area shape="rect" title=" " alt="" coords="2426,229,2494,256"/>
-<area shape="poly" title=" " alt="" coords="2210,105,2263,126,2321,152,2380,186,2431,218,2428,223,2377,190,2318,157,2261,131,2208,110"/>
-<area shape="rect" href="apisettings_8h.html" title=" " alt="" coords="2212,155,2307,181"/>
-<area shape="poly" title=" " alt="" coords="2191,105,2235,143,2232,147,2187,109"/>
-<area shape="poly" title=" " alt="" coords="2167,108,2139,144,2100,183,2043,223,2040,219,2097,179,2135,140,2163,105"/>
-<area shape="rect" href="audioreader_8h.html" title=" " alt="" coords="2569,155,2668,181"/>
-<area shape="poly" title=" " alt="" coords="2228,101,2247,104,2551,152,2554,153,2553,158,2550,157,2246,109,2227,106"/>
-<area shape="poly" title=" " alt="" coords="2295,179,2412,221,2410,226,2294,184"/>
-<area shape="poly" title=" " alt="" coords="2216,184,2064,228,2063,223,2215,179"/>
-<area shape="rect" title=" " alt="" coords="2334,229,2401,256"/>
-<area shape="poly" title=" " alt="" coords="2280,180,2338,218,2335,222,2277,184"/>
-<area shape="poly" title=" " alt="" coords="1964,249,1800,259,732,316,732,311,1800,253,1963,244"/>
-<area shape="poly" title=" " alt="" coords="2043,254,2162,296,2160,301,2041,259"/>
-<area shape="poly" title=" " alt="" coords="1964,259,1814,302,1812,297,1963,254"/>
-<area shape="poly" title=" " alt="" coords="1987,259,1921,298,1918,293,1984,254"/>
-<area shape="poly" title=" " alt="" coords="2027,254,2086,293,2083,298,2024,259"/>
-<area shape="rect" title=" " alt="" coords="1957,304,2056,331"/>
-<area shape="poly" title=" " alt="" coords="2009,257,2009,288,2004,288,2004,257"/>
-<area shape="poly" title=" " alt="" coords="2569,180,2203,237,2202,231,2568,174"/>
-<area shape="poly" title=" " alt="" coords="2669,177,2681,179,3020,230,3019,235,2681,184,2668,182"/>
-<area shape="poly" title=" " alt="" coords="2615,183,2591,221,2573,241,2552,258,2497,278,2418,294,2260,314,2260,309,2418,289,2495,273,2549,254,2570,238,2587,218,2610,180"/>
-<area shape="poly" title=" " alt="" coords="2569,180,2461,200,2326,231,2325,226,2460,195,2568,175"/>
-<area shape="poly" title=" " alt="" coords="2669,178,2769,202,2811,215,2834,228,2840,243,2834,258,2819,267,2795,275,2725,287,2632,294,2526,298,2315,302,2167,307,2167,302,2314,297,2526,293,2632,289,2724,281,2794,270,2816,263,2830,254,2835,243,2830,231,2809,220,2768,207,2668,183"/>
-<area shape="rect" title=" " alt="" coords="2620,229,2723,256"/>
-<area shape="poly" title=" " alt="" coords="2630,180,2656,215,2651,218,2625,183"/>
-<area shape="rect" title=" " alt="" coords="2748,229,2820,256"/>
-<area shape="poly" title=" " alt="" coords="2648,179,2742,220,2740,225,2646,184"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="main_8cpp__incl.svg" width="3702" height="368"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -270,12 +173,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int main </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em>[]</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -288,7 +191,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

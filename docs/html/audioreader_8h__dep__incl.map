@@ -1,11 +1,11 @@
-<map id="audioreader.h" name="audioreader.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="78,5,177,32"/>
-<area shape="rect" id="Node000002" href="$audioreader_8cpp.html" title=" " alt="" coords="5,80,119,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,45,75,81,71,78,104,42"/>
-<area shape="rect" id="Node000003" href="$mainwindow_8h.html" title=" " alt="" coords="143,80,245,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,42,184,78,181,81,147,45"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="97,155,171,181"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="176,120,146,156,142,153,172,117"/>
-<area shape="rect" id="Node000005" href="$mainwindow_8cpp.html" title=" " alt="" coords="196,155,312,181"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="216,117,246,153,242,156,212,120"/>
+<map id="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/audioreader.h" name="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/audioreader.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="116,5,314,64"/>
+<area shape="rect" id="Node000002" href="$audioreader_8cpp.html" title=" " alt="" coords="5,112,204,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,77,137,114,133,110,172,73"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8h.html" title=" " alt="" coords="228,112,426,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,73,298,110,295,114,255,77"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="116,219,314,277"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="287,183,248,220,244,216,284,180"/>
+<area shape="rect" id="Node000005" href="$mainwindow_8cpp.html" title=" " alt="" coords="339,219,537,277"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="370,180,409,216,406,220,367,183"/>
 </map>

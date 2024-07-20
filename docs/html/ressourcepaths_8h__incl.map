@@ -1,0 +1,21 @@
+<map id="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/ressourcepaths.h" name="C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/ressourcepaths.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="81,5,279,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="45,112,112,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,66,106,104,103,99,146,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="136,112,224,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,64,183,96,177,96,177,64"/>
+<area shape="rect" id="Node000004" href="$paramfile_8h.html" title="Header of the paramFile class." alt="" coords="249,112,333,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="217,62,265,100,262,104,214,66"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,187,75,213"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="249,141,90,187,88,182,247,136"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="99,187,152,213"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="263,142,167,183,165,179,261,137"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="176,187,275,213"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="281,141,249,177,245,173,277,137"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="299,187,416,213"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="304,137,338,173,334,177,300,141"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="440,187,536,213"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="326,137,440,178,438,183,324,142"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="560,187,632,213"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="334,134,546,183,544,189,332,139"/>
+</map>

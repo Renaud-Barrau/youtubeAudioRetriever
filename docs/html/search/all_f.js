@@ -1,12 +1,11 @@
 var searchData=
 [
-  ['youtubeapi_0',['youtubeApi',['../classyoutube_api.html',1,'youtubeApi'],['../classyoutube_api.html#a48dee190bf7f7b13c63d374af3f92816',1,'youtubeApi::youtubeApi()']]],
-  ['youtubeapi_2ecpp_1',['youtubeapi.cpp',['../youtubeapi_8cpp.html',1,'']]],
-  ['youtubeapi_2eh_2',['youtubeapi.h',['../youtubeapi_8h.html',1,'']]],
-  ['youtubeapiobject_3',['youtubeApiObject',['../classmain_window.html#a816f68c5e364f61bc00ced57eed5e062',1,'mainWindow']]],
-  ['youtubeaudioretriever_4',['youtubeAudioRetriever',['../md__r_e_a_d_m_e.html',1,'']]],
-  ['youtubedownloader_5',['youtubeDownloader',['../classyoutube_downloader.html',1,'youtubeDownloader'],['../classyoutube_downloader.html#a29b4871f2cd7b4d32a2c2be5d008eb16',1,'youtubeDownloader::youtubeDownloader()']]],
-  ['youtubedownloader_2ecpp_6',['youtubedownloader.cpp',['../youtubedownloader_8cpp.html',1,'']]],
-  ['youtubedownloader_2eh_7',['youtubedownloader.h',['../youtubedownloader_8h.html',1,'']]],
-  ['youtubedownloaderobject_8',['youtubeDownloaderObject',['../classmain_window.html#a79cc37fd38f16bae20a7e899d8b01cd1',1,'mainWindow']]]
+  ['ui_0',['Ui',['../namespace_ui.html',1,'']]],
+  ['ui_1',['ui',['../classmain_window.html#aa0e40d0240b1ed74cfdbbfc0bce5fca4',1,'mainWindow']]],
+  ['updatemusicnamesignal_2',['updateMusicNameSignal',['../classaudio_reader.html#a6695fdc6cf386cf6aaaf42b4ae1034ab',1,'audioReader']]],
+  ['updatesliderrange_3',['updateSliderRange',['../classaudio_reader.html#a670038b6b31216b6f3d2d60d4cfc9cb8',1,'audioReader']]],
+  ['updatesliderrangesignal_4',['updateSliderRangeSignal',['../classaudio_reader.html#ab0b86172a900938868ce726d4da74ca3',1,'audioReader']]],
+  ['updateslidervalue_5',['updateSliderValue',['../classaudio_reader.html#a73f013c29143efa2de026460f058fdce',1,'audioReader']]],
+  ['updateslidervaluesignal_6',['updateSliderValueSignal',['../classaudio_reader.html#a9aff0c5ee0d20106e7882c77b6723113',1,'audioReader']]],
+  ['usage_7',['Usage',['../md_docs_2extensions.html#autotoc_md23',1,'Usage'],['../md_docs_2extensions.html#autotoc_md25',1,'Usage']]]
 ];

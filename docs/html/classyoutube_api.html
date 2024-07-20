@@ -1,49 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>youtubeAudioRetriever: youtubeApi Class Reference</title>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>Doxygen Awesome: youtubeApi Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">youtubeAudioRetriever<span id="projectnumber">&#160;1.0.0</span>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Doxygen Awesome
    </div>
+   <div id="projectbrief">Modern Doxygen theme</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Generated by Doxygen 1.11.0 -->
+<!-- Generated by Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,7 +81,7 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search');
   $(function() { init_search(); });
 });
 /* @license-end */
@@ -70,7 +100,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classyoutube_api.html',''); initResizable(true); });
+$(function(){initNavTree('classyoutube_api.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -97,6 +127,7 @@ $(function(){initNavTree('classyoutube_api.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classyoutube_api-members.html">List of all members</a>  </div>
@@ -111,24 +142,24 @@ $(function(){initNavTree('classyoutube_api.html',''); initResizable(true); });
 <div class="dynheader">
 Inheritance diagram for youtubeApi:</div>
 <div class="dyncontent">
-<div class="center"><img src="classyoutube_api__inherit__graph.png" border="0" usemap="#ayoutube_api_inherit__map" alt="Inheritance graph"/></div>
-<map name="ayoutube_api_inherit__map" id="ayoutube_api_inherit__map">
-<area shape="rect" title="The youtubeApi class is responsible for interacting with the YouTube API." alt="" coords="5,80,92,107"/>
-<area shape="rect" title=" " alt="" coords="14,5,83,32"/>
-<area shape="poly" title=" " alt="" coords="51,48,51,80,46,80,46,48"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for youtubeApi:</div>
-<div class="dyncontent">
-<div class="center"><img src="classyoutube_api__coll__graph.png" border="0" usemap="#ayoutube_api_coll__map" alt="Collaboration graph"/></div>
-<map name="ayoutube_api_coll__map" id="ayoutube_api_coll__map">
-<area shape="rect" title="The youtubeApi class is responsible for interacting with the YouTube API." alt="" coords="5,80,92,107"/>
-<area shape="rect" title=" " alt="" coords="14,5,83,32"/>
-<area shape="poly" title=" " alt="" coords="51,48,51,80,46,80,46,48"/>
-</map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="classyoutube_api__inherit__graph.svg" width="98" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a6c390fa4b40966cbfaeaabc41e723972" id="r_a6c390fa4b40966cbfaeaabc41e723972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c390fa4b40966cbfaeaabc41e723972">playlistListLoaded</a> (QVector&lt; QString &gt; <a class="el" href="#a04882afc04caf6d967ffe4ce6c26108b">playlistNameArray</a>, QVector&lt; QString &gt; <a class="el" href="#a919978fd68e1c44521bceab88eef0512">playlistIdArray</a>)</td></tr>
+<tr class="memdesc:a6c390fa4b40966cbfaeaabc41e723972"><td class="mdescLeft">&#160;</td><td class="mdescRight">A signal emitted when playlist names and IDs are loaded.  <br /></td></tr>
+<tr class="separator:a6c390fa4b40966cbfaeaabc41e723972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae0990a8568395819197f7d21a0b568a" id="r_aae0990a8568395819197f7d21a0b568a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae0990a8568395819197f7d21a0b568a">videoDataLoaded</a> (QVector&lt; QString &gt; <a class="el" href="#a6ce20b9a8f9355286d3acbbebe891bc9">videoTitleArray</a>, QVector&lt; QString &gt; <a class="el" href="#ac3def9e3be79ddac61a60c798018c90d">videoIdArray</a>, QVector&lt; QString &gt; <a class="el" href="#a1d40180b7411768eb839eb453ec9e22b">videoThumbnailsUrlArray</a>, QString <a class="el" href="#a894ac382b24e2cbdab473d77e4e1c823">playlistName</a>)</td></tr>
+<tr class="memdesc:aae0990a8568395819197f7d21a0b568a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A signal emitted when video names, IDs and thumbnails urls are loaded.  <br /></td></tr>
+<tr class="separator:aae0990a8568395819197f7d21a0b568a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9858484c71aa8a969656a295ffc850" id="r_a0b9858484c71aa8a969656a295ffc850"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b9858484c71aa8a969656a295ffc850">fetchUpdateSignal</a> (bool)</td></tr>
+<tr class="memdesc:a0b9858484c71aa8a969656a295ffc850"><td class="mdescLeft">&#160;</td><td class="mdescRight">A signal emitted to update fetch icon to a green checked mark or a red cross.  <br /></td></tr>
+<tr class="separator:a0b9858484c71aa8a969656a295ffc850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb9d46a2fea8d31a36bfe5a56b1c2b0" id="r_acfb9d46a2fea8d31a36bfe5a56b1c2b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfb9d46a2fea8d31a36bfe5a56b1c2b0">downloadUpdateSignal</a> (bool)</td></tr>
+<tr class="memdesc:acfb9d46a2fea8d31a36bfe5a56b1c2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A signal emitted to update downlaod icon to a green checked mark or a red cross.  <br /></td></tr>
+<tr class="separator:acfb9d46a2fea8d31a36bfe5a56b1c2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a48dee190bf7f7b13c63d374af3f92816" id="r_a48dee190bf7f7b13c63d374af3f92816"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a48dee190bf7f7b13c63d374af3f92816">youtubeApi</a> (QObject *parent=nullptr)</td></tr>
@@ -202,9 +233,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a919978fd68e1c44521bceab88eef0512" id="r_a919978fd68e1c44521bceab88eef0512"><td class="memItemLeft" align="right" valign="top">QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a919978fd68e1c44521bceab88eef0512">playlistIdArray</a></td></tr>
 <tr class="memdesc:a919978fd68e1c44521bceab88eef0512"><td class="mdescLeft">&#160;</td><td class="mdescRight">A vector of strings containing the playlist IDs.  <br /></td></tr>
 <tr class="separator:a919978fd68e1c44521bceab88eef0512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a549e8ae32f62cc8014f0f68bbe118902" id="r_a549e8ae32f62cc8014f0f68bbe118902"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a549e8ae32f62cc8014f0f68bbe118902">requestSource</a></td></tr>
-<tr class="memdesc:a549e8ae32f62cc8014f0f68bbe118902"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string indicating the source of the request.  <br /></td></tr>
-<tr class="separator:a549e8ae32f62cc8014f0f68bbe118902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894ac382b24e2cbdab473d77e4e1c823" id="r_a894ac382b24e2cbdab473d77e4e1c823"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a894ac382b24e2cbdab473d77e4e1c823">playlistName</a></td></tr>
+<tr class="memdesc:a894ac382b24e2cbdab473d77e4e1c823"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string indicating a temporary playlist name.  <br /></td></tr>
+<tr class="separator:a894ac382b24e2cbdab473d77e4e1c823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c446bc1f98bc767e39463403a42f74" id="r_a37c446bc1f98bc767e39463403a42f74"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37c446bc1f98bc767e39463403a42f74">playlistId</a></td></tr>
+<tr class="memdesc:a37c446bc1f98bc767e39463403a42f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">A string indicating a temporary playlist id.  <br /></td></tr>
+<tr class="separator:a37c446bc1f98bc767e39463403a42f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classyoutube_api.html" title="The youtubeApi class is responsible for interacting with the YouTube API.">youtubeApi</a> class is responsible for interacting with the YouTube API. </p>
@@ -225,7 +259,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">youtubeApi::youtubeApi </td>
           <td>(</td>
-          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -248,7 +282,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void youtubeApi::checkTokenInfo </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -257,16 +291,33 @@ Public Attributes</h2></td></tr>
 <p>Checks the validity of the current access token. </p>
 <p>This method first checks if the access token is empty. If it is, the method prints an error message and returns. Otherwise, the method sends a GET request to the Google OAuth 2.0 token info endpoint to retrieve information about the token. The endpoint URL is "https://oauth2.googleapis.com/tokeninfo", and the query parameter is the current access token. The method then connects the finished() signal of the QNetworkReply object to the <a class="el" href="#aa78991fa79708e558e72cb06f28c84a1" title="Retrieves the access token information from the Google OAuth 2.0 API.">retrieveAccessTokenInfo()</a> slot.</p>
 <dl class="section note"><dt>Note</dt><dd>This method was a test method used during development, and is not used in the application. </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classyoutube_api_af23c64dcfe3464b9791b5fd6fef03c0f_cgraph.png" border="0" usemap="#aclassyoutube_api_af23c64dcfe3464b9791b5fd6fef03c0f_cgraph" alt=""/></div>
-<map name="aclassyoutube_api_af23c64dcfe3464b9791b5fd6fef03c0f_cgraph" id="aclassyoutube_api_af23c64dcfe3464b9791b5fd6fef03c0f_cgraph">
-<area shape="rect" title="Checks the validity of the current access token." alt="" coords="5,13,190,40"/>
-<area shape="rect" href="classyoutube_api.html#aa78991fa79708e558e72cb06f28c84a1" title="Retrieves the access token information from the Google OAuth 2.0 API." alt="" coords="238,5,417,48"/>
-<area shape="poly" title=" " alt="" coords="190,24,222,24,222,29,190,29"/>
-</map>
+
 </div>
+</div>
+<a id="acfb9d46a2fea8d31a36bfe5a56b1c2b0" name="acfb9d46a2fea8d31a36bfe5a56b1c2b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb9d46a2fea8d31a36bfe5a56b1c2b0">&#9670;&#160;</a></span>downloadUpdateSignal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void youtubeApi::downloadUpdateSignal </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A signal emitted to update downlaod icon to a green checked mark or a red cross. </p>
 
 </div>
 </div>
@@ -279,33 +330,21 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void youtubeApi::fetchPlaylistElements </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Fetches the elements of a playlist from the YouTube API. </p>
-<p>This method first checks if the youtubeApi::playlistId is empty. If it is, the method prints an error message and returns. Otherwise, the method constructs a URL for the YouTube API's <code>playlistItems</code> endpoint, with the following query parameters:</p><ul>
+<p>This method first checks if the <a class="el" href="#a37c446bc1f98bc767e39463403a42f74" title="A string indicating a temporary playlist id.">youtubeApi::playlistId</a> is empty. If it is, the method prints an error message and returns. Otherwise, the method constructs a URL for the YouTube API's <code>playlistItems</code> endpoint, with the following query parameters:</p><ul>
 <li><code>part</code>: set to <code>snippet</code>, to retrieve the basic metadata of the playlist items.</li>
 <li><code>mine</code>: set to <code>true</code>, to retrieve only the playlist items that belong to the authenticated user.</li>
-<li><code>playlistId</code>: set to the ID of the playlist to retrieve : youtubeApi::playlistId.</li>
+<li><code>playlistId</code>: set to the ID of the playlist to retrieve : <a class="el" href="#a37c446bc1f98bc767e39463403a42f74" title="A string indicating a temporary playlist id.">youtubeApi::playlistId</a>.</li>
 <li><code>key</code>: set to the API key of the application : <a class="el" href="#a9d5205d0f7865e9690c4048f8bd5eba9" title="The API key for the YouTube API.">youtubeApi::Api</a>.</li>
 <li><code>maxResults</code>: set to the maximum number of playlist items to retrieve in a single request : <a class="el" href="#a7cb324ad00f12291ea99b8e70e898f26" title="The maximum number of results to be returned by the YouTube API in a single request.">youtubeApi::maxResults</a>.</li>
 </ul>
 <p>The method then sets the <code>Authorization</code> and <code>Accept</code> headers of the request, and sends a GET request to the constructed URL. When the request is finished, the method checks if there was an error. If there was, the method prints an error message and returns. Otherwise, the method calls the <a class="el" href="#abec91932711c1003ec253b2a9d31e62d" title="Processes the JSON data containing the elements of a YouTube playlist.">processPlaylistsElements()</a> method to process the JSON response. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classyoutube_api_a7646c6f546099d7b07006e3b1c62ba08_icgraph.png" border="0" usemap="#aclassyoutube_api_a7646c6f546099d7b07006e3b1c62ba08_icgraph" alt=""/></div>
-<map name="aclassyoutube_api_a7646c6f546099d7b07006e3b1c62ba08_icgraph" id="aclassyoutube_api_a7646c6f546099d7b07006e3b1c62ba08_icgraph">
-<area shape="rect" title="Fetches the elements of a playlist from the YouTube API." alt="" coords="428,5,593,48"/>
-<area shape="rect" href="classyoutube_api.html#a854ec1a2b234de3759868567b6f922fd" title="This method retrieves the access token from the response of the Google OAuth 2.0 server." alt="" coords="201,5,380,48"/>
-<area shape="poly" title=" " alt="" coords="413,29,380,29,380,24,413,24"/>
-<area shape="rect" href="classyoutube_api.html#a14a356ef9451170e71bca441dcc5d33f" title="This method sends a request to the Google OAuth 2.0 server to obtain an access token." alt="" coords="5,13,153,40"/>
-<area shape="poly" title=" " alt="" coords="185,29,153,29,153,24,185,24"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -318,7 +357,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void youtubeApi::fetchPlaylists </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -326,18 +365,33 @@ Here is the caller graph for this function:</div>
 
 <p>Fetches the playlists of the authenticated user from the YouTube API. </p>
 <p>This method sends a GET request to the YouTube API's playlists endpoint with the appropriate query parameters and headers. When the request is finished, it checks for errors and, if there are none, calls the <a class="el" href="#a19fcc628b82a8d04d64f028c1f618b1c" title="Processes the JSON data containing the user&#39;s playlists and extracts their titles and IDs.">processPlaylists()</a> method to parse the JSON response and extract the playlist data. </p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classyoutube_api_a16c112616d66b7d9d3f63b1fa4c75354_icgraph.png" border="0" usemap="#aclassyoutube_api_a16c112616d66b7d9d3f63b1fa4c75354_icgraph" alt=""/></div>
-<map name="aclassyoutube_api_a16c112616d66b7d9d3f63b1fa4c75354_icgraph" id="aclassyoutube_api_a16c112616d66b7d9d3f63b1fa4c75354_icgraph">
-<area shape="rect" title="Fetches the playlists of the authenticated user from the YouTube API." alt="" coords="428,13,600,40"/>
-<area shape="rect" href="classyoutube_api.html#a854ec1a2b234de3759868567b6f922fd" title="This method retrieves the access token from the response of the Google OAuth 2.0 server." alt="" coords="201,5,380,48"/>
-<area shape="poly" title=" " alt="" coords="413,29,380,29,380,24,413,24"/>
-<area shape="rect" href="classyoutube_api.html#a14a356ef9451170e71bca441dcc5d33f" title="This method sends a request to the Google OAuth 2.0 server to obtain an access token." alt="" coords="5,13,153,40"/>
-<area shape="poly" title=" " alt="" coords="185,29,153,29,153,24,185,24"/>
-</map>
+
 </div>
+</div>
+<a id="a0b9858484c71aa8a969656a295ffc850" name="a0b9858484c71aa8a969656a295ffc850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b9858484c71aa8a969656a295ffc850">&#9670;&#160;</a></span>fetchUpdateSignal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void youtubeApi::fetchUpdateSignal </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A signal emitted to update fetch icon to a green checked mark or a red cross. </p>
 
 </div>
 </div>
@@ -350,7 +404,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void youtubeApi::getToken </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -367,20 +421,37 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classyoutube_api_a14a356ef9451170e71bca441dcc5d33f_cgraph.png" border="0" usemap="#aclassyoutube_api_a14a356ef9451170e71bca441dcc5d33f_cgraph" alt=""/></div>
-<map name="aclassyoutube_api_a14a356ef9451170e71bca441dcc5d33f_cgraph" id="aclassyoutube_api_a14a356ef9451170e71bca441dcc5d33f_cgraph">
-<area shape="rect" title="This method sends a request to the Google OAuth 2.0 server to obtain an access token." alt="" coords="5,43,153,69"/>
-<area shape="rect" href="classyoutube_api.html#a854ec1a2b234de3759868567b6f922fd" title="This method retrieves the access token from the response of the Google OAuth 2.0 server." alt="" coords="201,35,380,77"/>
-<area shape="poly" title=" " alt="" coords="153,53,185,53,185,59,153,59"/>
-<area shape="rect" href="classyoutube_api.html#a7646c6f546099d7b07006e3b1c62ba08" title="Fetches the elements of a playlist from the YouTube API." alt="" coords="432,5,597,48"/>
-<area shape="poly" title=" " alt="" coords="380,42,416,37,416,42,381,47"/>
-<area shape="rect" href="classyoutube_api.html#a16c112616d66b7d9d3f63b1fa4c75354" title="Fetches the playlists of the authenticated user from the YouTube API." alt="" coords="428,72,600,99"/>
-<area shape="poly" title=" " alt="" coords="381,65,413,69,412,75,380,70"/>
-</map>
+
 </div>
+</div>
+<a id="a6c390fa4b40966cbfaeaabc41e723972" name="a6c390fa4b40966cbfaeaabc41e723972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c390fa4b40966cbfaeaabc41e723972">&#9670;&#160;</a></span>playlistListLoaded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void youtubeApi::playlistListLoaded </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QString &gt;</td>          <td class="paramname"><span class="paramname"><em>playlistNameArray</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QString &gt;</td>          <td class="paramname"><span class="paramname"><em>playlistIdArray</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A signal emitted when playlist names and IDs are loaded. </p>
 
 </div>
 </div>
@@ -445,7 +516,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void youtubeApi::retrieveAccessToken </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -455,35 +526,13 @@ Here is the call graph for this function:</div>
 <p>The method is called when the finished() signal of the reply object is emitted. It first checks if the reply object has no error. If there is an error, it prints the error string to the console.</p>
 <p>If there is no error, the method reads the entire response data from the reply object, and converts it to a QJsonDocument object. It then extracts the access token, token type, and expiration time from the JSON object, and prints them to the console.</p>
 <p>Finally, the method sets the accessToken member variable of the <a class="el" href="classyoutube_api.html" title="The youtubeApi class is responsible for interacting with the YouTube API.">youtubeApi</a> object to the retrieved access token.</p>
-<p>Depending of the state of the <a class="el" href="#a549e8ae32f62cc8014f0f68bbe118902" title="A string indicating the source of the request.">youtubeApi::requestSource</a> variable, <a class="el" href="#a7646c6f546099d7b07006e3b1c62ba08" title="Fetches the elements of a playlist from the YouTube API.">fetchPlaylistElements()</a> or <a class="el" href="#a16c112616d66b7d9d3f63b1fa4c75354" title="Fetches the playlists of the authenticated user from the YouTube API.">fetchPlaylists()</a> are called. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Depending of the state of the youtubeApi::requestSource variable, <a class="el" href="#a7646c6f546099d7b07006e3b1c62ba08" title="Fetches the elements of a playlist from the YouTube API.">fetchPlaylistElements()</a> or <a class="el" href="#a16c112616d66b7d9d3f63b1fa4c75354" title="Fetches the playlists of the authenticated user from the YouTube API.">fetchPlaylists()</a> are called. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">None</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classyoutube_api_a854ec1a2b234de3759868567b6f922fd_cgraph.png" border="0" usemap="#aclassyoutube_api_a854ec1a2b234de3759868567b6f922fd_cgraph" alt=""/></div>
-<map name="aclassyoutube_api_a854ec1a2b234de3759868567b6f922fd_cgraph" id="aclassyoutube_api_a854ec1a2b234de3759868567b6f922fd_cgraph">
-<area shape="rect" title="This method retrieves the access token from the response of the Google OAuth 2.0 server." alt="" coords="5,35,185,77"/>
-<area shape="rect" href="classyoutube_api.html#a7646c6f546099d7b07006e3b1c62ba08" title="Fetches the elements of a playlist from the YouTube API." alt="" coords="236,5,402,48"/>
-<area shape="poly" title=" " alt="" coords="185,42,220,37,221,42,185,47"/>
-<area shape="rect" href="classyoutube_api.html#a16c112616d66b7d9d3f63b1fa4c75354" title="Fetches the playlists of the authenticated user from the YouTube API." alt="" coords="233,72,405,99"/>
-<area shape="poly" title=" " alt="" coords="185,65,217,69,217,75,185,70"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classyoutube_api_a854ec1a2b234de3759868567b6f922fd_icgraph.png" border="0" usemap="#aclassyoutube_api_a854ec1a2b234de3759868567b6f922fd_icgraph" alt=""/></div>
-<map name="aclassyoutube_api_a854ec1a2b234de3759868567b6f922fd_icgraph" id="aclassyoutube_api_a854ec1a2b234de3759868567b6f922fd_icgraph">
-<area shape="rect" title="This method retrieves the access token from the response of the Google OAuth 2.0 server." alt="" coords="201,5,380,48"/>
-<area shape="rect" href="classyoutube_api.html#a14a356ef9451170e71bca441dcc5d33f" title="This method sends a request to the Google OAuth 2.0 server to obtain an access token." alt="" coords="5,13,153,40"/>
-<area shape="poly" title=" " alt="" coords="185,29,153,29,153,24,185,24"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -496,7 +545,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void youtubeApi::retrieveAccessTokenInfo </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -505,16 +554,47 @@ Here is the caller graph for this function:</div>
 <p>Retrieves the access token information from the Google OAuth 2.0 API. </p>
 <p>This method is called when the QNetworkReply object, checkTokenInfoReply, emits the finished() signal. It checks if the reply has no error and if so, it reads the response data and parses it as a JSON object. It then retrieves the scope and expires_in fields from the JSON object and prints them to the console.</p>
 <dl class="section note"><dt>Note</dt><dd>This method was a test method used during development, and is not used in the application. </dd></dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classyoutube_api_aa78991fa79708e558e72cb06f28c84a1_icgraph.png" border="0" usemap="#aclassyoutube_api_aa78991fa79708e558e72cb06f28c84a1_icgraph" alt=""/></div>
-<map name="aclassyoutube_api_aa78991fa79708e558e72cb06f28c84a1_icgraph" id="aclassyoutube_api_aa78991fa79708e558e72cb06f28c84a1_icgraph">
-<area shape="rect" title="Retrieves the access token information from the Google OAuth 2.0 API." alt="" coords="238,5,417,48"/>
-<area shape="rect" href="classyoutube_api.html#af23c64dcfe3464b9791b5fd6fef03c0f" title="Checks the validity of the current access token." alt="" coords="5,13,190,40"/>
-<area shape="poly" title=" " alt="" coords="222,29,190,29,190,24,222,24"/>
-</map>
+
 </div>
+</div>
+<a id="aae0990a8568395819197f7d21a0b568a" name="aae0990a8568395819197f7d21a0b568a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae0990a8568395819197f7d21a0b568a">&#9670;&#160;</a></span>videoDataLoaded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void youtubeApi::videoDataLoaded </td>
+          <td>(</td>
+          <td class="paramtype">QVector&lt; QString &gt;</td>          <td class="paramname"><span class="paramname"><em>videoTitleArray</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QString &gt;</td>          <td class="paramname"><span class="paramname"><em>videoIdArray</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QString &gt;</td>          <td class="paramname"><span class="paramname"><em>videoThumbnailsUrlArray</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString</td>          <td class="paramname"><span class="paramname"><em>playlistName</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A signal emitted when video names, IDs and thumbnails urls are loaded. </p>
 
 </div>
 </div>
@@ -647,6 +727,22 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a37c446bc1f98bc767e39463403a42f74" name="a37c446bc1f98bc767e39463403a42f74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c446bc1f98bc767e39463403a42f74">&#9670;&#160;</a></span>playlistId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString youtubeApi::playlistId</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A string indicating a temporary playlist id. </p>
+
+</div>
+</div>
 <a id="a919978fd68e1c44521bceab88eef0512" name="a919978fd68e1c44521bceab88eef0512"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a919978fd68e1c44521bceab88eef0512">&#9670;&#160;</a></span>playlistIdArray</h2>
 
@@ -660,6 +756,22 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>A vector of strings containing the playlist IDs. </p>
+
+</div>
+</div>
+<a id="a894ac382b24e2cbdab473d77e4e1c823" name="a894ac382b24e2cbdab473d77e4e1c823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a894ac382b24e2cbdab473d77e4e1c823">&#9670;&#160;</a></span>playlistName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString youtubeApi::playlistName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A string indicating a temporary playlist name. </p>
 
 </div>
 </div>
@@ -692,22 +804,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>The refresh token for the OAuth 2.0 authentication process. </p>
-
-</div>
-</div>
-<a id="a549e8ae32f62cc8014f0f68bbe118902" name="a549e8ae32f62cc8014f0f68bbe118902"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a549e8ae32f62cc8014f0f68bbe118902">&#9670;&#160;</a></span>requestSource</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QString youtubeApi::requestSource</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A string indicating the source of the request. </p>
 
 </div>
 </div>
@@ -760,8 +856,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="youtubeapi_8h_source.html">youtubeapi.h</a></li>
-<li><a class="el" href="youtubeapi_8cpp.html">youtubeapi.cpp</a></li>
+<li>C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/<a class="el" href="youtubeapi_8h_source.html">youtubeapi.h</a></li>
+<li>C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/<a class="el" href="youtubeapi_8cpp.html">youtubeapi.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -769,7 +865,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classyoutube_api.html">youtubeApi</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>

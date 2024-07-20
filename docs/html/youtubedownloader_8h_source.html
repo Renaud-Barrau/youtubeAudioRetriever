@@ -1,49 +1,79 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.11.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>youtubeAudioRetriever: youtubedownloader.h Source File</title>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>Doxygen Awesome: C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/youtubedownloader.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
-  <td id="projectalign">
-   <div id="projectname">youtubeAudioRetriever<span id="projectnumber">&#160;1.0.0</span>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.drawio.svg"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Doxygen Awesome
    </div>
+   <div id="projectbrief">Modern Doxygen theme</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Generated by Doxygen 1.11.0 -->
+<!-- Generated by Doxygen 1.10.0 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 var searchBox = new SearchBox("searchBox", "search/",'.html');
-/* @license-end */
-</script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function() { codefold.init(0); });
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -51,12 +81,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search');
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -70,7 +105,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('youtubedownloader_8h_source.html',''); initResizable(true); });
+$(function(){initNavTree('youtubedownloader_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,7 +131,7 @@ $(function(){initNavTree('youtubedownloader_8h_source.html',''); initResizable(t
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">youtubedownloader.h</div></div>
+  <div class="headertitle"><div class="title">C:/Users/rbarr/Documents/GitHub/youtubeAudioRetriever/youtubedownloader.h</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="youtubedownloader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
@@ -132,50 +167,63 @@ $(function(){initNavTree('youtubedownloader_8h_source.html',''); initResizable(t
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a7158e78581e300cac28da1f4dfd9a17f">   40</a></span>    QString <a class="code hl_variable" href="classyoutube_downloader.html#a7158e78581e300cac28da1f4dfd9a17f">command</a>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46">   44</a></span>    QString <a class="code hl_variable" href="classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46">musicFolder</a>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97">   48</a></span>    QString <a class="code hl_variable" href="classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97">ffmpegPath</a>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4">   53</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4">increment</a>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae">progressBarValue</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a128e2cb90c3bdee987c41cc49745d077">   62</a></span>    QQueue&lt;QString&gt; <a class="code hl_variable" href="classyoutube_downloader.html#a128e2cb90c3bdee987c41cc49745d077">downloadQueue</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2">formatCommand</a>(QString videoTitle, QString videoId, QString playlistName);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b">execCommand</a>(QString <a class="code hl_variable" href="classyoutube_downloader.html#a7158e78581e300cac28da1f4dfd9a17f">command</a>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d">startNextDownload</a>();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">public</span> slots:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28">downloadAll</a>(QVector&lt;QString&gt;,QVector&lt;QString&gt;,QVector&lt;QString&gt;,QString playlistName);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">//    void updateParams(QString,QString);</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a6179e5f8e6471afd768ee415eef25d27">   44</a></span>    QString <a class="code hl_variable" href="classyoutube_downloader.html#a6179e5f8e6471afd768ee415eef25d27">linkCommand</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46">   48</a></span>    QString <a class="code hl_variable" href="classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46">musicFolder</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97">   52</a></span>    QString <a class="code hl_variable" href="classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97">ffmpegPath</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4">   57</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4">increment</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae">   61</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae">progressBarValue</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a128e2cb90c3bdee987c41cc49745d077">   66</a></span>    QQueue&lt;QString&gt; <a class="code hl_variable" href="classyoutube_downloader.html#a128e2cb90c3bdee987c41cc49745d077">downloadQueue</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a7d395c4b567295e00e8d9a2a3e35fdb0">   70</a></span>    QQueue&lt;QString&gt; <a class="code hl_variable" href="classyoutube_downloader.html#a7d395c4b567295e00e8d9a2a3e35fdb0">linkCoverQueue</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#aaa30c367f8e1406a44c1b64564055df7">   72</a></span>    QString <a class="code hl_variable" href="classyoutube_downloader.html#aaa30c367f8e1406a44c1b64564055df7">playlistNameTemp</a>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>signals:</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">//void progressBarUpdate(int);</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
-</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2">formatCommand</a>(QString videoTitle, QString videoId, QString playlistName);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    QString <a class="code hl_function" href="classyoutube_downloader.html#a25b643db9569d62fc605fbd4ca55a899">formatLinkCommand</a>(QString videoTitle, QString imageTitle, QString outputName);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b">execCommand</a>(QString <a class="code hl_variable" href="classyoutube_downloader.html#a7158e78581e300cac28da1f4dfd9a17f">command</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d">startNextDownload</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classyoutube_downloader.html#ad36b0c1d3abeaec9293400515f354bc1">embedCoverImage</a>();</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif </span><span class="comment">// YOUTUBEDOWNLOADER_H</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28">downloadAll</a>(QVector&lt;QString&gt;,QVector&lt;QString&gt;,QVector&lt;QString&gt;,QString playlistName);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">//    void updateParams(QString,QString);</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>signals:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a7f6dc1bfaa0c0fdad73da7eb2734723b">   89</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classyoutube_downloader.html#a7f6dc1bfaa0c0fdad73da7eb2734723b">progressBarValueChanged</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classyoutube_downloader.html#a546a72bf777b438211a0b70e1f335cc1">   90</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="classyoutube_downloader.html#a546a72bf777b438211a0b70e1f335cc1">downloadUpdateSignal</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif </span><span class="comment">// YOUTUBEDOWNLOADER_H</span></div>
 <div class="ttc" id="aclassyoutube_downloader_html"><div class="ttname"><a href="classyoutube_downloader.html">youtubeDownloader</a></div><div class="ttdoc">The youtubeDownloader class is used to download and extract audio from YouTube videos using the yt-dl...</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:31</div></div>
-<div class="ttc" id="aclassyoutube_downloader_html_a0540178ae7ef75167056cc33edef12a4"><div class="ttname"><a href="classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4">youtubeDownloader::increment</a></div><div class="ttdeci">int increment</div><div class="ttdoc">The value by which the progress bar will be incremented after each successful download.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:53</div></div>
-<div class="ttc" id="aclassyoutube_downloader_html_a06ba9dd3d11aa108623d6108ca7d8a28"><div class="ttname"><a href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28">youtubeDownloader::downloadAll</a></div><div class="ttdeci">void downloadAll(QVector&lt; QString &gt;, QVector&lt; QString &gt;, QVector&lt; QString &gt;, QString playlistName)</div><div class="ttdoc">Downloads all the videos in a playlist and extracts their audio.</div><div class="ttdef"><b>Definition</b> youtubedownloader.cpp:93</div></div>
-<div class="ttc" id="aclassyoutube_downloader_html_a118d28eadd74aaa9131519ef5c7d9f3d"><div class="ttname"><a href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d">youtubeDownloader::startNextDownload</a></div><div class="ttdeci">void startNextDownload()</div><div class="ttdoc">Starts the next download in the queue, if any.</div><div class="ttdef"><b>Definition</b> youtubedownloader.cpp:144</div></div>
-<div class="ttc" id="aclassyoutube_downloader_html_a128e2cb90c3bdee987c41cc49745d077"><div class="ttname"><a href="classyoutube_downloader.html#a128e2cb90c3bdee987c41cc49745d077">youtubeDownloader::downloadQueue</a></div><div class="ttdeci">QQueue&lt; QString &gt; downloadQueue</div><div class="ttdoc">A queue of command strings to be executed for downloading and extracting audio.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:62</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a0540178ae7ef75167056cc33edef12a4"><div class="ttname"><a href="classyoutube_downloader.html#a0540178ae7ef75167056cc33edef12a4">youtubeDownloader::increment</a></div><div class="ttdeci">int increment</div><div class="ttdoc">The value by which the progress bar will be incremented after each successful download.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:57</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a06ba9dd3d11aa108623d6108ca7d8a28"><div class="ttname"><a href="classyoutube_downloader.html#a06ba9dd3d11aa108623d6108ca7d8a28">youtubeDownloader::downloadAll</a></div><div class="ttdeci">void downloadAll(QVector&lt; QString &gt;, QVector&lt; QString &gt;, QVector&lt; QString &gt;, QString playlistName)</div><div class="ttdoc">Downloads all the videos in a playlist and extracts their audio.</div><div class="ttdef"><b>Definition</b> youtubedownloader.cpp:94</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a118d28eadd74aaa9131519ef5c7d9f3d"><div class="ttname"><a href="classyoutube_downloader.html#a118d28eadd74aaa9131519ef5c7d9f3d">youtubeDownloader::startNextDownload</a></div><div class="ttdeci">void startNextDownload()</div><div class="ttdoc">Starts the next download in the queue, if any.</div><div class="ttdef"><b>Definition</b> youtubedownloader.cpp:150</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a128e2cb90c3bdee987c41cc49745d077"><div class="ttname"><a href="classyoutube_downloader.html#a128e2cb90c3bdee987c41cc49745d077">youtubeDownloader::downloadQueue</a></div><div class="ttdeci">QQueue&lt; QString &gt; downloadQueue</div><div class="ttdoc">A queue of command strings to be executed for downloading and extracting audio.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:66</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a25b643db9569d62fc605fbd4ca55a899"><div class="ttname"><a href="classyoutube_downloader.html#a25b643db9569d62fc605fbd4ca55a899">youtubeDownloader::formatLinkCommand</a></div><div class="ttdeci">QString formatLinkCommand(QString videoTitle, QString imageTitle, QString outputName)</div><div class="ttdef"><b>Definition</b> youtubedownloader.cpp:165</div></div>
 <div class="ttc" id="aclassyoutube_downloader_html_a29b4871f2cd7b4d32a2c2be5d008eb16"><div class="ttname"><a href="classyoutube_downloader.html#a29b4871f2cd7b4d32a2c2be5d008eb16">youtubeDownloader::youtubeDownloader</a></div><div class="ttdeci">youtubeDownloader(QObject *parent=nullptr)</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:34</div></div>
-<div class="ttc" id="aclassyoutube_downloader_html_a5323dd8eb6785bf65e93f376b16d4f97"><div class="ttname"><a href="classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97">youtubeDownloader::ffmpegPath</a></div><div class="ttdeci">QString ffmpegPath</div><div class="ttdoc">The path to the ffmpeg bin folder.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:48</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a5323dd8eb6785bf65e93f376b16d4f97"><div class="ttname"><a href="classyoutube_downloader.html#a5323dd8eb6785bf65e93f376b16d4f97">youtubeDownloader::ffmpegPath</a></div><div class="ttdeci">QString ffmpegPath</div><div class="ttdoc">The path to the ffmpeg bin folder.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:52</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a546a72bf777b438211a0b70e1f335cc1"><div class="ttname"><a href="classyoutube_downloader.html#a546a72bf777b438211a0b70e1f335cc1">youtubeDownloader::downloadUpdateSignal</a></div><div class="ttdeci">void downloadUpdateSignal(bool)</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a6179e5f8e6471afd768ee415eef25d27"><div class="ttname"><a href="classyoutube_downloader.html#a6179e5f8e6471afd768ee415eef25d27">youtubeDownloader::linkCommand</a></div><div class="ttdeci">QString linkCommand</div><div class="ttdoc">The command string to be executed for linking audio and thumbnail files.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:44</div></div>
 <div class="ttc" id="aclassyoutube_downloader_html_a7158e78581e300cac28da1f4dfd9a17f"><div class="ttname"><a href="classyoutube_downloader.html#a7158e78581e300cac28da1f4dfd9a17f">youtubeDownloader::command</a></div><div class="ttdeci">QString command</div><div class="ttdoc">The command string to be executed for downloading and extracting audio.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:40</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a7d395c4b567295e00e8d9a2a3e35fdb0"><div class="ttname"><a href="classyoutube_downloader.html#a7d395c4b567295e00e8d9a2a3e35fdb0">youtubeDownloader::linkCoverQueue</a></div><div class="ttdeci">QQueue&lt; QString &gt; linkCoverQueue</div><div class="ttdoc">A queue of command strings to be executed for linking audio files (mp3) with thumbnails (jpg)</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:70</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_a7f6dc1bfaa0c0fdad73da7eb2734723b"><div class="ttname"><a href="classyoutube_downloader.html#a7f6dc1bfaa0c0fdad73da7eb2734723b">youtubeDownloader::progressBarValueChanged</a></div><div class="ttdeci">void progressBarValueChanged(int)</div></div>
 <div class="ttc" id="aclassyoutube_downloader_html_a9fba11b5e23ebc4cea08150b1cc94db2"><div class="ttname"><a href="classyoutube_downloader.html#a9fba11b5e23ebc4cea08150b1cc94db2">youtubeDownloader::formatCommand</a></div><div class="ttdeci">void formatCommand(QString videoTitle, QString videoId, QString playlistName)</div><div class="ttdoc">Formats the command to extract and download audio from a YouTube video using the yt-dlp....</div><div class="ttdef"><b>Definition</b> youtubedownloader.cpp:31</div></div>
-<div class="ttc" id="aclassyoutube_downloader_html_abdb051381e17ed27b061f254bb371d46"><div class="ttname"><a href="classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46">youtubeDownloader::musicFolder</a></div><div class="ttdeci">QString musicFolder</div><div class="ttdoc">The path to the directory where the downloaded audio files will be saved.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:44</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_aaa30c367f8e1406a44c1b64564055df7"><div class="ttname"><a href="classyoutube_downloader.html#aaa30c367f8e1406a44c1b64564055df7">youtubeDownloader::playlistNameTemp</a></div><div class="ttdeci">QString playlistNameTemp</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:72</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_abdb051381e17ed27b061f254bb371d46"><div class="ttname"><a href="classyoutube_downloader.html#abdb051381e17ed27b061f254bb371d46">youtubeDownloader::musicFolder</a></div><div class="ttdeci">QString musicFolder</div><div class="ttdoc">The path to the directory where the downloaded audio files will be saved.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:48</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_ad36b0c1d3abeaec9293400515f354bc1"><div class="ttname"><a href="classyoutube_downloader.html#ad36b0c1d3abeaec9293400515f354bc1">youtubeDownloader::embedCoverImage</a></div><div class="ttdeci">void embedCoverImage()</div><div class="ttdef"><b>Definition</b> youtubedownloader.cpp:186</div></div>
 <div class="ttc" id="aclassyoutube_downloader_html_ae2ca25de6505a546ff66698e45eb6f1b"><div class="ttname"><a href="classyoutube_downloader.html#ae2ca25de6505a546ff66698e45eb6f1b">youtubeDownloader::execCommand</a></div><div class="ttdeci">void execCommand(QString command)</div><div class="ttdoc">Executes the command to extract and download audio from a YouTube video using the yt-dlp....</div><div class="ttdef"><b>Definition</b> youtubedownloader.cpp:57</div></div>
-<div class="ttc" id="aclassyoutube_downloader_html_aee62a4b7718a33f605aec99a8c008aae"><div class="ttname"><a href="classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae">youtubeDownloader::progressBarValue</a></div><div class="ttdeci">int progressBarValue</div><div class="ttdoc">The current value of the progress bar.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:57</div></div>
+<div class="ttc" id="aclassyoutube_downloader_html_aee62a4b7718a33f605aec99a8c008aae"><div class="ttname"><a href="classyoutube_downloader.html#aee62a4b7718a33f605aec99a8c008aae">youtubeDownloader::progressBarValue</a></div><div class="ttdeci">int progressBarValue</div><div class="ttdoc">The current value of the progress bar.</div><div class="ttdef"><b>Definition</b> youtubedownloader.h:61</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="youtubedownloader_8h.html">youtubedownloader.h</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
 </body>
